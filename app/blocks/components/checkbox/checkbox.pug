@@ -1,0 +1,18 @@
+mixin checkbox(data)
+    .checkbox(class=data.class)
+        input.checkbox__input(type='checkbox' id=data.id name=data.name checked=data.checked)&attributes(attributes)
+        label.checkbox__title(for=data.id)=data.title
+
+//- Примеры использования
+
+//- +checkbox({
+//-     id: "anonimity",
+//-     title: "Доставить анонимно",
+//- })
+
+//- +checkbox({
+//-     id: "postcard",
+//-     title: "Добавить открытку",
+//-     class: "postcard-checkbox",
+//-     checked: true,
+//- })(data-toggle-postcard)

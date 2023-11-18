@@ -1,0 +1,12 @@
+mixin nav(list, listLink)
+    nav.nav&attributes(attributes)
+        ul.nav__list
+            each item in list
+                li.nav__item
+                    a.nav__link(href=`${item.link}`)=item.text
+
+//- Примеры использования
+
+//- +nav(["О нас", "Доставка"])
+
+//- +nav(["О нас", "Доставка", "Контакты"])(class="header__nav")

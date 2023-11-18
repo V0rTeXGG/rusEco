@@ -1,0 +1,25 @@
+mixin tooltip(data)
+    .tippy-toggler(data-tippy data-tippy-placement=(data.placement) data-tippy-content=(data.text) data-tippy-close=(data.close) data-tippy-maxWidth=(data.maxWidth) data-tippy-trigger=(data.trigger))
+        svg
+            use(href=`#icon-tooltip`)
+        if !data.text
+            .hidden(data-tippy-content)
+                block
+
+//- Примеры использования
+
+//- +tooltip({
+//-     text: "Также как граница обучения кадров требует определения и уточнения кластеризации усилий.",
+//- })
+
+//- +tooltip({})
+//-     a(href="#") Lorem ipsum dolor
+//-     p Lorem ipsum, dolor sit amet consectetur
+
+//- +tooltip({
+//-     text: "Также как граница обучения кадров требует определения и уточнения кластеризации усилий.",
+//-     placement: "top-start",
+//-     maxWidth: 200,
+//-     trigger: "click",
+//-     close: true,
+//- })

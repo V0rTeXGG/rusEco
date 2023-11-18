@@ -1,0 +1,93 @@
+@use "sass:list";
+
+@mixin text-gradient {
+  background: $color-gradient;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+
+@mixin media($status, $size) {
+  @media screen and (#{$status}-width: #{$size}px) {
+    @content;
+  }
+}
+
+@mixin hover {
+  @media (any-hover: hover) {
+    &:hover {
+      @content;
+    }
+  }
+}
+
+@mixin size($width, $height: $width) {
+  width: #{$width};
+
+  @if $height {
+    height: #{$height};
+  }
+}
+
+@mixin adaptive-image($width, $height: $width) {
+  display: block;
+  aspect-ratio: list.slash($width, $height);
+  img {
+    width: 100%;
+    height: 100%;
+    object-position: center;
+    object-fit: cover;
+  }
+}
+@mixin flex($align, $justify, $gap) {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: #{$align};
+  justify-content: #{$justify};
+  gap: #{$gap};
+}
+
+@mixin grid($columns, $gap) {
+  display: grid;
+  grid-template-columns: #{$columns};
+  grid-gap: #{$gap};
+}
+
+@mixin bgImage($repeat, $position, $size, $url) {
+  background-repeat: #{$repeat};
+  background-position: #{$position};
+  background-size: #{$size};
+
+  @if $url {
+    background-image: url(#{$url});
+  }
+}
+
+@mixin imgMask($url) {
+  mask-image: url(#{$url});
+  mask-size: contain;
+  mask-repeat: no-repeat;
+}
+
+@mixin adaptive-height {
+  // добавить к блоку с высотой экрана, чтобы учесть все возможные сайдбары и строку поиска
+  height: 100vh;
+  height: calc(var(--vh, 1vh) * 100);
+}
+
+// Safari 10.1+
+@mixin safari-only {
+  @media not all and (min-resolution: 0.001dpcm) {
+    @supports (-webkit-appearance: none) {
+      @content;
+    }
+  }
+}
+
+// Firefox 29+
+@mixin firefox-only {
+  @media all and (min--moz-device-pixel-ratio: 0) and (min-resolution: 3e1dpcm) {
+    @content;
+  }
+}

@@ -1,0 +1,57 @@
+.select {
+  position: relative;
+  color: $color-black;
+  &__active {
+	padding: 10px 20px;
+	border-radius: 7px;
+	border: 1px solid $color-black;
+	font-size: 16px;
+	cursor: pointer;
+	position: relative;
+	&:before {
+	  content: '';
+	  position: absolute;
+	  @include size(22px, 22px);
+	  //@include bgImage(no-repeat, center, contain, '../../img/image/select-arrow.svg'); // add your img
+	  top: 50%;
+	  right: 20px;
+	  transform: translate(0, -50%);
+	  transition: $transition;
+	}
+	&.open {
+	  &:before {
+		transform: translate(0, -50%) rotate(180deg);
+	  }
+	}
+  }
+  &__text {
+	display: -webkit-box;
+	-webkit-line-clamp: 1;
+	overflow: hidden;
+	-webkit-box-orient: vertical;
+  }
+  &__drop {
+	display: none;
+	position: absolute;
+	z-index: 1;
+	width: 100%;
+	padding: 10px 20px;
+	border-radius: 7px;
+	border: 1px solid $color-black;
+	font-size: 16px;
+	background-color: #fff;
+  }
+
+  &__item {
+	display: block;
+	cursor: pointer;
+	color: $color-black;
+	&.active {
+	  font-weight: 600;
+	}
+  }
+
+  &__input {
+	display: none;
+  }
+}

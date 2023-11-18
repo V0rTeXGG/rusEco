@@ -1,0 +1,29 @@
+include ../breadcrumbs/breadcrumbs
+
+mixin heading(data)
+    div(class=`${data.class ? `heading ${data.class}` : "heading"}`)
+        .container
+            .heading__row(style=`${data.bg ? `background-image: url(img/image-content/${data.bg});` : ""}`)
+                +breadcrumbs(data.breadcrumbs)
+                .title-page
+                    if data.title
+                        h1.h1 #{data.title}
+                    else
+                        h1.h1 #{data.breadcrumbs[data.breadcrumbs.length - 1]}
+                if data.text
+                    .text-page
+                        p #{data.text}
+
+//- Примеры использования
+
+//- +heading({
+//-     breadcrumbs: ["Корзина"],
+//- })
+
+//- +heading({
+//-     breadcrumbs: ["Каталог"],
+//-     title: "Страница каталога",
+//-     text: "Рыбатекст поможет дизайнеру сгенерировать несколько абзацев",
+//-     class: "heading--small-banner",
+//-     bg: "heading-small-pic.jpg"
+//- })

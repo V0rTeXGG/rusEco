@@ -1,0 +1,29 @@
+.logo-slider {
+  margin-bottom: 100px;
+}
+
+.logo-slide {
+  width: 215px;
+
+  &__img {
+    max-height: 153px;
+    margin: 0 auto 15px auto;
+  }
+}
+
+.swiper {
+  &-wrapper {
+    margin-bottom: 100px;
+  }
+
+  &-pagination {
+    position: initial;
+
+    &-progressbar &-progressbar-fill {
+      background: $color-gradient;
+    }
+  }
+}
+
+
+

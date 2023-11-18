@@ -1,0 +1,14 @@
+mixin map(data, script = true)
+    .map.map--no-touch(data-map-overlay)
+        .map__holder(data-map data-map-icon=data.icon data-map-coords=data.coords data-map-icon-caption=data.caption data-map-balloon=data.balloon)
+    if script
+        script(src="//api-maps.yandex.ru/2.1/?lang=ru_RU")
+
+//- Пример использования
+
+//- +map({
+//-     icon: "https://texterra.ru/favicon.svg",
+//-     coords: "55.809786, 38.989092",
+//-     caption: "ул. Ленина, 99, Орехово-Зуево",
+//-     balloon: "<p>ул. Ленина, 99, Орехово-Зуево<br>Время работы: 9:00 - 18:00</p>",
+//- })

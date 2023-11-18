@@ -1,0 +1,87 @@
+@layer reset {
+  header,
+  main,
+  footer,
+  .modal {
+    *:not(svg):not(svg *):not(strong):not(em):not(b) {
+      all: unset;
+      display: revert;
+      list-style: none;
+    }
+  }
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+  color: unset;
+  cursor: pointer;
+  transition: $transition;
+}
+button {
+  background-color: transparent;
+  font-family: inherit;
+  font-size: inherit;
+  cursor: pointer;
+}
+img {
+  display: block;
+  width: auto;
+  max-width: 100%;
+}
+.hidden {
+  display: none !important;
+}
+body {
+  min-height: 100vh;
+  position: relative;
+  font-style: normal;
+  line-height: 1.5;
+  height: 100%;
+}
+html {
+  height: auto;
+  -webkit-text-size-adjust: none;
+  &.disable-scrolling {
+    overflow: hidden;
+    margin-right: calc(-1 * (100vw - 100%));
+  }
+}
+html,
+body {
+  min-height: 100vh;
+  font-variant-ligatures: no-common-ligatures;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  scroll-behavior: smooth;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  position: relative;
+  overflow-x: hidden;
+  font-family: $font-Circe;
+  font-size: 18px;
+  line-height: 130%;
+}
+.main,
+.page {
+  margin-top: 137px;
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+}
+.container {
+  position: relative;
+  margin: 0 auto;
+  width: 100%;
+  padding: 0 20px;
+  max-width: 1480px;
+}
+.section {
+  &--no-overflow {
+    overflow: hidden;
+  }
+}

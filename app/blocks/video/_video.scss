@@ -1,0 +1,18 @@
+.video-item {
+  position: relative;
+  width: 100%;
+
+  &__image {
+    aspect-ratio: 16/9;
+  }
+
+  &__icon {
+    position: absolute;
+    z-index: 2;
+    left: 20px;
+    top: 20px;
+    width: 22px;
+    height: 15px;
+
+  }
+}

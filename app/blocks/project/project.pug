@@ -1,0 +1,9 @@
+mixin project(data)
+  .project-card
+    .project-card__img-wrapper
+      img.project-card__img(src=`../../img/image-content/${data.img}`)
+    .project-card__content
+      p.project-card__subtitle=data.subtitle
+      p.project-card__title=data.title
+      a.button.button--border(href="")
+        span Смотреть проект

@@ -1,0 +1,16 @@
+mixin counter(data)
+    .counter(data-counter-box="")
+        span.count.count--minus(data-counter="minus")
+        input.input(value=data.min data-counter-min=data.min data-counter-max=data.max data-counter-input="input")
+        span.count.count--plus(data-counter="plus")
+
+//- Примеры использования
+
+//- +counter({
+//-   min: 0,
+//- })
+
+//- +counter({
+//-   min: 0,
+//-   max: 9999
+//- })

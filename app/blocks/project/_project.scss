@@ -1,0 +1,43 @@
+.project-card {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  margin-bottom: 100px;
+  padding-bottom: 100px;
+  border-bottom: 1px solid $color-grey-light;
+
+  &:last-of-type{
+    padding: 0;
+    margin-bottom: 50px;
+    border: none;
+  }
+
+  &__img-wrapper {
+    max-width: 705px;
+    max-height: 580px;
+  }
+
+  &__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  &__content {
+    margin: 100px 0 0 133px;
+  }
+
+  &__subtitle {
+    margin-bottom: 30px;
+    font-size: 27px;
+    color: $color-grey;
+  }
+
+  &__title {
+    margin-bottom: 50px;
+    font-size: 41px;
+    line-height: 120%;
+  }
+}
+

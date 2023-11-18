@@ -1,0 +1,52 @@
+.tippy-toggler {
+  @include size(34px, 34px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  border: 1px solid $color-black;
+  cursor: pointer;
+  transition: $transition;
+  position: relative;
+  z-index: 1;
+  &:hover {
+	background-color: $color-black;
+	svg {
+	  fill: $color-white;
+	}
+  }
+  &:not(:last-child) {
+	margin-bottom: 50px;
+  }
+  svg {
+	width: 10px;
+	height: 17px;
+	@include size(10px, 17px);
+	transition: $transition;
+	fill: $color-black;
+  }
+}
+.tippy-content {
+  padding: 15px;
+}
+.tippy-close {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  @include size(10px, 10px);
+  &::before,
+  &::after {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 5px;
+	@include size(2px, 10px);
+	background-color: $color-white;
+  }
+  &::before {
+	transform: rotate(45deg);
+  }
+  &::after {
+	transform: rotate(-45deg);
+  }
+}

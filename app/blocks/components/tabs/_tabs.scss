@@ -1,0 +1,30 @@
+.tabs {
+  &__nav {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	margin-bottom: 20px;
+	&-item {
+	  display: flex;
+	  align-items: center;
+	  justify-content: center;
+	  width: 200px;
+	  border: 1px solid $color-white;
+	  padding: 5px 10px;
+	  font-size: 16px;
+	  border-radius: 5px;
+	  cursor: pointer;
+	  &.active {
+		border-color: $color-black;
+		color: $color-black;
+	  }
+	}
+  }
+
+  &__fold {
+	display: none;
+	&.open {
+	  display: block;
+	}
+  }
+}

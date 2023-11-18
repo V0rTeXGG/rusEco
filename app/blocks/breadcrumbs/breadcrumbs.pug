@@ -1,0 +1,19 @@
+mixin breadcrumbs(arr)
+    .breadcrumbs
+        span.breadcrumbs__item
+            a(href="/")
+                span Главная
+        each link, index in arr
+            if index + 1 < arr.length
+                span.breadcrumbs__item
+                    a(href="#")
+                        span= link
+            else
+                span.breadcrumbs__item
+                    span= link
+
+//- Примеры использования
+
+//- +breadcrumbs(["Тест 1"])
+
+//- +breadcrumbs(["Тест 1", "Тест 2", "Тест 3, 4"])

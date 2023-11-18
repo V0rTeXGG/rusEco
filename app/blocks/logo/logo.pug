@@ -1,0 +1,9 @@
+mixin logo(image)
+    a.logo(href="/")&attributes(attributes)
+        img(src=`img/image/${image}`)
+
+//- Примеры использования
+
+//- +logo("logo.svg")
+
+//- +logo("logo.svg")(class="header__logo")

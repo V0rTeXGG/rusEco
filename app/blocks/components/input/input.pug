@@ -1,0 +1,48 @@
+mixin input(data)
+    -
+        if (data.temp) {
+            if (data.temp === "name") {
+                data.label = "ФИО";
+                data.type = "text";
+                data.placeholder = "Иванов Иван Иванович";
+                data.required = true;
+            }
+
+            if (data.temp === "phone") {
+                data.label = "Телефон *";
+                data.type = "tel";
+                data.placeholder = "+7 (777) 000 00-00";
+                data.required = true;
+                data.error = "phone";
+            }
+
+            if (data.temp === "email") {
+                data.label = "Email";
+                data.type = "email";
+                data.placeholder = "Введите вашу электронную почту";
+                data.required = true;
+                data.error = "email";
+            }
+        }
+    .inputholder.form__inputholder(class=(data.width ? `inputholder--width-${data.width}` : ""))
+        if data.label
+            label.inputholder__label(data-default-label)=data.label
+        input.inputholder__input(type=(data.type || "text") placeholder=(data.placeholder) data-required=(data.required) data-text-error=(data.error))&attributes(attributes)
+
+//- Примеры использования
+
+//- +input({
+//-     temp: "email",
+//- })
+
+//- +input({
+//-     temp: "phone",
+//- })(data-mask-tel class="example-class")
+
+//- +input({
+//-     label: "Адрес",
+//-     placeholder: "Введите адрес",
+//-     required: true,
+//-     error: "address",
+//-     width: "half"
+//- })

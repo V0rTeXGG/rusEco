@@ -1,0 +1,27 @@
+include ../logo/logo.pug
+include ../nav/nav.pug
+
+header.header(data-lock-scroll)
+    .container
+        .header__row
+          +logo("logo.svg")(class="header__logo")
+          .header__menu
+            +nav([
+              {text:"Каталог",
+              link: '/catalog'},
+              {text:"Услуги",
+              link: '/services'},
+              {text:"Проекты",
+              link: '/project'},
+              {text:"Новости",
+              link: '/news'},
+              {text:"О компании",
+              link:'/about'},
+              {text:"Контакты",
+              link: 'contacts'}])(class="header__nav")
+            a(href="/en").header__lang En
+            a(href="tel:+74952830748").header__phone +7 495 283 07 48
+            a(href="/cart").header__cart
+              svg.header__cart-icon
+                use(href="#icon-cart")
+              span.header__cart-item 1

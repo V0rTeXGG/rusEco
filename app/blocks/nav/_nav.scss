@@ -1,0 +1,39 @@
+.nav {
+  max-width: 658px;
+  width: 100%;
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+
+  &__link {
+    position: relative;
+    cursor: pointer;
+    transition: all $transition;
+
+    &:before {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: -3px;
+      width: 0;
+      height: 1px;
+      background: $color-gradient;
+      transition: all $transition;
+    }
+
+    &:hover {
+      color: $color-blue;
+    }
+
+    &:hover {
+      &:before {
+        width: 100%;
+      }
+    }
+  }
+}
+

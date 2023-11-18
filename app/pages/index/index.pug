@@ -1,0 +1,119 @@
+extends ../../template/template.pug
+include ../../blocks/project/project
+include ../../blocks/video/video.pug
+include ../../blocks/product-card/product-card.pug
+include ../../blocks/news/news
+block mainwrapper
+  section.section.banner
+    .container
+      .banner__container
+        h1  Интеллектуальные системы освещения
+        .banner__img-wrapper
+          img.banner__img(src="../../img/image-content/banner-img.png")
+  section.section.section--pb-100.projects
+    .container.projects
+      h2  Реализованные проекты
+      +project({img: 'project-1.png', subtitle: "Уличное и дорожное освещение", title: "Бульварное кольцо"})
+      +project({
+        img: 'project-2.png',
+        subtitle: "Архитерктурное освещение",
+        title: "Введенский Владычный женский монастырь"
+      })
+      +project({
+        img: 'project-3.png',
+        subtitle: "Промышленные и складские объекты",
+        title: "Складской комплекс класса «А»"
+      })
+      +project({
+        img: 'project-4.png',
+        subtitle: "Уличное и дорожное освещение",
+        title: "Цифровые модули «Ситипорт» на территории ИЦ «Сколково»"
+      })
+      a.button.button--border.button--center(href="")
+        span Все проекты
+  section.section.catalog
+    .container
+      h2 Продукция
+      .catalog__content
+        +product-card({category: 'Уличные светильники', name: 'RSL006', image: 'product-1.png', background: 'product-bg-circle.png'}).product-card--large
+        +product-card({category: 'Техническое освещение', name: 'NVH-04', image: 'product-2.png', background: 'product-bg-square.png'})
+        +product-card({category: 'Архитектурное освещение', name: 'NVS03', image: 'product-3.png', background: 'product-bg-polygon.png'})
+  section.section.partner
+    .container
+      h2 Наши партнёры
+      .slider.logo-slider
+        .swiper(data-swipper="partner")
+          .swiper-wrapper
+            a.swiper-slide.logo-slide
+              img.logo-slide__img(src="../../img/image-content/parther-1.png")
+              p.logo-slide__name Газпром
+            a.swiper-slide.logo-slide
+              img.logo-slide__img(src="../../img/image-content/parther-2.png")
+              p.logo-slide__name ОАО Центральная ППК
+            a.swiper-slide.logo-slide
+              img.logo-slide__img(src="../../img/image-content/parther-3.png")
+              p.logo-slide__name Инновационный центр «Сколково»
+            a.swiper-slide.logo-slide
+              img.logo-slide__img(src="../../img/image-content/parther-1.png")
+              p.logo-slide__name Газпром
+            a.swiper-slide.logo-slide
+              img.logo-slide__img(src="../../img/image-content/parther-2.png")
+              p.logo-slide__name ОАО Центральная ППК
+            a.swiper-slide.logo-slide
+              img.logo-slide__img(src="../../img/image-content/parther-3.png")
+              p.logo-slide__name Инновационный центр «Сколково»
+            a.swiper-slide.logo-slide
+              img.logo-slide__img(src="../../img/image-content/parther-1.png")
+              p.logo-slide__name Инновационный центр «Сколково»
+            a.swiper-slide.logo-slide
+              img.logo-slide__img(src="../../img/image-content/parther-2.png")
+              p.logo-slide__name Инновационный центр «Сколково»
+          .swiper-pagination(data-swiper="partner-pagination")
+  section.section.partner
+    .container
+      h2 Нам доверяют
+      .slider.logo-slider
+        .swiper(data-swipper="partner")
+          .swiper-wrapper
+            a.swiper-slide.logo-slide
+              img.logo-slide__img(src="../../img/image-content/parther-1.png")
+              p.logo-slide__name Газпром
+            a.swiper-slide.logo-slide
+              img.logo-slide__img(src="../../img/image-content/parther-2.png")
+              p.logo-slide__name ОАО Центральная ППК
+            a.swiper-slide.logo-slide
+              img.logo-slide__img(src="../../img/image-content/parther-3.png")
+              p.logo-slide__name Инновационный центр «Сколково»
+            a.swiper-slide.logo-slide
+              img.logo-slide__img(src="../../img/image-content/parther-1.png")
+              p.logo-slide__name Газпром
+            a.swiper-slide.logo-slide
+              img.logo-slide__img(src="../../img/image-content/parther-2.png")
+              p.logo-slide__name ОАО Центральная ППК
+            a.swiper-slide.logo-slide
+              img.logo-slide__img(src="../../img/image-content/parther-3.png")
+              p.logo-slide__name Инновационный центр «Сколково»
+            a.swiper-slide.logo-slide
+              img.logo-slide__img(src="../../img/image-content/parther-1.png")
+              p.logo-slide__name Инновационный центр «Сколково»
+            a.swiper-slide.logo-slide
+              img.logo-slide__img(src="../../img/image-content/parther-2.png")
+              p.logo-slide__name Инновационный центр «Сколково»
+          .swiper-pagination(data-swiper="partner-pagination")
+  section.section.video
+    .container
+      h2 Наши видео
+      .video__content
+        +video-item({image: 'video-1.png'})
+        +video-item({image: 'video-2.png'})
+        +video-item({image: 'video-3.png'})
+      a(href="").video__link Перейти на канал
+        svg.video__link-icon
+          use(href="#icon-arrow-up")
+  section.section.news
+    .container
+      h2 Новости
+      .news__content
+        +news({image: 'news-1.png', date: '27 сентября 2021', title: 'Сейчас всё чаще звучит грохот грядущих изменений'})
+        +news({date: '27 сентября 2021', title: 'Эксперты утверждают, что новая модель организационной деятельности одухотворила всех причастных', underline: true})
+        +news({date: '27 сентября 2021', title: 'Базовый вектор развития оправдал надежды граждан'})

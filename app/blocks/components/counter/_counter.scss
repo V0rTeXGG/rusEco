@@ -1,0 +1,50 @@
+.counter {
+  display: flex;
+  width: fit-content;
+  border-radius: 4px;
+  background-color: lightgrey;
+  .input {
+	width: 30px;
+	flex: 0 0 30px;
+	text-align: center;
+  }
+}
+.count {
+  @include size(50px, 50px);
+  flex: 0 0 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  cursor: pointer;
+  transition: $transition;
+  &:before {
+	position: absolute;
+	content: '';
+	@include size(13px, 1px);
+	background-color: $color-black;
+	right: 50%;
+	bottom: 50%;
+	transform: translate(50%, 50%);
+	transition: $transition;
+  }
+  &--plus {
+	&:after {
+	  position: absolute;
+	  content: '';
+	  @include size(1px, 13px);
+	  background-color: $color-black;
+	  right: 50%;
+	  bottom: 50%;
+	  transform: translate(50%, 50%);
+	  transition: $transition;
+	}
+  }
+  &--disable {
+	pointer-events: none;
+	&:before,
+	&:after {
+	  opacity: .3;
+	}
+  }
+}

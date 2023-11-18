@@ -1,0 +1,60 @@
+.inputholder {
+  width: 100%;
+  position: relative;
+  &__input,
+  &__textarea {
+    font-family: inherit;
+  }
+  &__input {
+	width: 100%;
+	padding: 10px 20px;
+	border-radius: 7px;
+	border: 1px solid $color-black;
+	font-size: 16px;
+	&::placeholder {
+	  color: $color-black;
+	  font-size: 16px;
+	}
+	&.error {
+	  border-color: $color-red;
+	  &::placeholder {
+		color: $color-red;
+	  }
+	}
+  }
+  &__textarea {
+	width: 100%;
+	min-height: 100px;
+	padding: 10px 20px;
+	border-radius: 7px;
+	border: 1px solid $color-black;
+	font-size: 16px;
+	display: block;
+	&::placeholder {
+	  color: $color-black;
+	  font-size: 16px;
+	}
+	&.error {
+	  border-color: $color-red;
+	  &::placeholder {
+		color: $color-red;
+	  }
+	}
+  }
+}
+.error-text {
+  font-size: 12px;
+  line-height: 1.1;
+  margin-top: 4px;
+  color: $color-red;
+  display: none;
+  &--backend {
+	display: block;
+  }
+}
+.error {
+  border-color: #da1b1b;
+  &+.error-text {
+	display: block;
+  }
+}

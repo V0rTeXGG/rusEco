@@ -1,0 +1,31 @@
+.rating{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  flex-direction: row-reverse;
+  gap: 10px;
+  width: fit-content;
+  &__input{
+	@include size(1px, 1px);
+	position: absolute;
+	opacity: 0;
+  }
+
+  &__item{
+	fill: $color-black;
+	transition: $transition;
+	@at-root label#{&} {
+	  cursor: pointer;
+	}
+	&-icon{
+	  @include size(39px, 39px);
+	}
+
+	.rating__input:checked + &,
+	.rating__input:checked ~ &,
+	&.checked,
+	&.checked ~ &{
+	  fill: $color-star;
+	}
+  }
+}

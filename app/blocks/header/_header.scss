@@ -1,0 +1,104 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 5;
+  background-color: $color-white;
+
+  &__row {
+    padding: 13px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1048px;
+    width: 100%;
+  }
+
+  &__lang {
+    position: relative;
+    transition: all $transition;
+
+    &:hover {
+      color: $color-blue;
+
+      &:after {
+        width: 100%;
+      }
+    }
+    &:before {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: -2px;
+      width: 100%;
+      height: 2px;
+      background-color: $color-black-blue;
+    }
+
+    &:after {
+      content: '';
+      position: absolute;
+      z-index: 2;
+      left: 0;
+      bottom: -2px;
+      width: 0;
+      height: 2px;
+      background: $color-gradient;
+      transition: all $transition;
+    }
+  }
+
+  &__phone {
+    position: relative;
+    transition: all $transition;
+    &:hover {
+      color: $color-blue;
+
+      &:before {
+        width: 100%;
+      }
+    }
+
+    &:before {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: -2px;
+      width: 0;
+      height: 2px;
+      background: $color-gradient;
+      transition: all $transition;
+    }
+  }
+
+  &__cart {
+    position: relative;
+    &-icon {
+      width: 25px;
+      height: 25px;
+    }
+
+    &-item {
+      display: block;
+      position: absolute;
+      top: 0;
+      right: -3px;
+      background: $color-red;
+      padding: 2px 5px 0;
+      border-radius: 8px;
+      font-size: 12px;
+      line-height: 100%;
+      font-weight: 700;
+      color: $color-white;
+    }
+  }
+
+}
+

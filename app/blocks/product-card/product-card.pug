@@ -1,0 +1,7 @@
+mixin product-card(data)
+  a(href="").product-card(style=`background-image: url("../../img/image-content/${data.background}")`)&attributes(attributes)
+    .product-card__content
+      .product-card__category=data.category
+      .product-card__name=data.name
+      span.product-card__more Подробнее
+    img.product-card__img(src=`../../img/image-content/${data.image}` alt=`${data.name}`)

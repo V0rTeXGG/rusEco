@@ -1,0 +1,16 @@
+extends ../../template/template.pug
+include ../../blocks/heading/heading
+
+block mainwrapper
+    +heading({
+      breadcrumbs: ["Список страниц"],
+    })
+    .page
+        - var pagesJson = [['Главная', 'index.html'],['Список страниц', 'pages.html']]
+        mixin page(pages)
+            ul.pages-dev(style={color: 'teal', 'font-weight': '700', 'margin-top': '-20px'})
+                each page in pages
+                    li.pages-dev__item(style={'margin-top': '20px', 'font-size': '26px'})
+                        a.pages-dev__link(href=page[1]) #{page[0]}
+        .container(style={flex: '1 1 auto', margin: '40px auto'})
+            +page(pagesJson)

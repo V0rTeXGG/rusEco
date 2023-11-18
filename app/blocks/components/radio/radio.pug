@@ -1,0 +1,20 @@
+mixin radio(data)
+    .radio(class=data.class)
+        input.radio__input(type='radio' id=data.id name=data.name checked=data.checked)&attributes(attributes)
+        label.radio__title(for=data.id)=data.title
+
+//- Примеры использования
+
+//- +radio({
+//-     id: "sberbank",
+//-     title: "Сбербанк",
+//-     name: "payment",
+//-     checked: true,
+//- })
+
+//- +radio({
+//-     id: "cash",
+//-     title: "Наличные",
+//-     class: "payment-radio",
+//-     name: "payment",
+//- })(data-toggle-payment="cash")

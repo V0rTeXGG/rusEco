@@ -1,0 +1,33 @@
+.map {
+  position: relative;
+
+  &__holder {
+	height: 400px;
+  }
+
+  &--no-touch {
+	&:before {
+	  content: '';
+	  position: absolute;
+	  left: 0;
+	  top: 0;
+	  @include size(100%, 100%);
+	  background-color: transparent;
+	  z-index: 1;
+	}
+  }
+
+  &__placemark {
+	display: block;
+	white-space: nowrap;
+	padding: 10px 20px;
+	border: 1px solid #eff2f4;
+	background-color: #031c30;
+	color: #eff2f4;
+	width: fit-content;
+	border-radius: 20px;
+	transform: translate(55px, 4px);
+  }
+
+}
+
