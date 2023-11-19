@@ -1,11 +1,16 @@
 include ../logo/logo.pug
 include ../nav/nav.pug
+include ../../blocks/social/social
 
+
+.ref-header
 header.header(data-lock-scroll)
     .container
         .header__row
+          button.header__burder(data-header-burger)
           +logo("logo.svg")(class="header__logo")
-          .header__menu
+          .header__menu(data-header-menu)
+            .header__subtitle Меню
             +nav([
               {text:"Каталог",
               link: '/catalog'},
@@ -20,8 +25,12 @@ header.header(data-lock-scroll)
               {text:"Контакты",
               link: 'contacts'}])(class="header__nav")
             a(href="/en").header__lang En
+            a(href="/en").header__lang.header__lang--mobile In English
+            .header__subtitle Контакты
             a(href="tel:+74952830748").header__phone +7 495 283 07 48
-            a(href="/cart").header__cart
-              svg.header__cart-icon
-                use(href="#icon-cart")
-              span.header__cart-item 1
+            a(href="mailto:mail@rosecosvet.ru").header__email mail@rosecosvet.ru
+            +social().header__social
+          a(href="/cart").header__cart
+            svg.header__cart-icon
+              use(href="#icon-cart")
+            span.header__cart-item 1

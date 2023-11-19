@@ -21,14 +21,14 @@ const changed = require("gulp-changed");
 let jsLibs = [
   "node_modules/swiper/swiper-bundle.min.js",
   // "node_modules/inputmask/dist/inputmask.min.js",
-  // "node_modules/@fancyapps/ui/dist/fancybox.umd.js",
+  "node_modules/@fancyapps/ui/dist/fancybox.umd.js",
   // 'node_modules/@popperjs/core/dist/umd/popper.min.js',
   // 'node_modules/tippy.js/dist/tippy.umd.min.js',
   // "node_modules/flatpickr/dist/flatpickr.min.js",
 ];
 let cssLibs = [
   "node_modules/swiper/swiper-bundle.min.css",
-  // "node_modules/@fancyapps/ui/dist/fancybox.css",
+  "node_modules/@fancyapps/ui/dist/fancybox.css",
   // 'node_modules/tippy.js/dist/tippy.css',
   // "node_modules/flatpickr/dist/flatpickr.min.css",
 ];

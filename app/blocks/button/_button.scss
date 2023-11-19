@@ -6,8 +6,18 @@
   background: $color-gradient;
   font-size: 20px;
   font-weight: 700;
+  line-height: 130%;
   cursor: pointer;
   transition: $transition;
+  @include media(max, 450) {
+    width: 100%;
+    min-height: 49px;
+    padding: 12px 35px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 130%;
+  }
 
   &:hover {
     color: $color-white;
@@ -31,18 +41,19 @@
       content: '';
       z-index: 2;
       position: absolute;
-      top: 1.5px;
-      left: 1.5px;
-      width: calc(100% - 3px);
-      height: calc(100% - 3px);
+      top: 2px;
+      left: 2px;
+      width: calc(100% - 4px);
+      height: calc(100% - 4px);
       border-radius: 40px;
       background-color: $color-white;
       transition: all $transition;
     }
   }
 
-  &--center {
-    margin: 0 auto;
+  &-center {
+    display: flex;
+    justify-content: center;
   }
 
   span {

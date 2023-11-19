@@ -6,6 +6,22 @@ main {
     font-size: 110px;
     font-weight: 400;
     line-height: 90%;
+    @include media(max, 991) {
+      font-size: 80px;
+    }
+    @include media(max, 690) {
+      font-size: 55px;
+    }
+    @include media(max, 550) {
+      text-align: center;
+      font-size: 40px;
+    }
+    @include media(max, 450) {
+      margin-bottom: 30px;
+      text-align: center;
+      font-size: 34px;
+      line-height: 100%;
+    }
   }
   h2 {
     margin-bottom: 80px;
@@ -13,6 +29,11 @@ main {
     font-size: 61px;
     font-weight: 400;
     line-height: 110%;
+    @include media(max, 450) {
+      margin-bottom: 30px;
+      font-size: 34px;
+      line-height: 100%;
+    }
   }
   h3 {
     font-size: 41px;
@@ -23,5 +44,9 @@ main {
   h5,
   h6 {
     margin: 0;
+  }
+
+  .h2--mb-70 {
+    margin-bottom: 70px;
   }
 }

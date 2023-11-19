@@ -1,7 +1,8 @@
 mixin news(data)
   a(href="").news__item
     if(data.image)
-      img.news__item-image(src=`../../img/image-content/${data.image}`)
+      .news__item-image-wrapper
+        img.news__item-image(src=`../../img/image-content/${data.image}`)
     p.news__item-date=data.date
     p.news__item-title=data.title
     if(data.underline)

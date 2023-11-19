@@ -7,4 +7,19 @@ const sliderProjects = new Swiper('[data-swipper="partner"]', {
     el: '[data-swiper="partner-pagination"]',
     type: "progressbar",
   },
+  breakpoints: {
+    991: {
+      slidesPerView: 6,
+    },
+    768: {
+      slidesPerView: 4,
+    },
+    550: {
+      slidesPerView: 3,
+    },
+    0: {
+      slidesPerView: 2,
+      spaceBetween: 20,
+    }
+  }
 });

@@ -1,19 +1,40 @@
-.logo-slider {
-  margin-bottom: 100px;
-}
-
 .logo-slide {
-  width: 215px;
 
   &__img {
-    max-height: 153px;
+    height: 153px;
     margin: 0 auto 15px auto;
+    @include media(max, 1200) {
+      height: 123px;
+    }
+    @include media(max, 360) {
+      height: 69px;
+      margin: 0 0 15px 0;
+    }
+  }
+
+  &__name {
+    margin-left: 10px;
+    @include media(max, 360) {
+      margin-left: 5px;
+      font-size: 12px;
+      letter-spacing: 0.12px;
+    }
   }
 }
 
 .swiper {
   &-wrapper {
     margin-bottom: 100px;
+    @include media(max, 550) {
+      margin-bottom: 40px;
+    }
+  }
+
+  &, &-container {
+    @include media(max, 1400) {
+      overflow: visible;
+    }
+
   }
 
   &-pagination {

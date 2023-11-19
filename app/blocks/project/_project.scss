@@ -1,13 +1,28 @@
 .project-card {
   width: 100%;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
+  grid-template-columns: minmax(615px, 705px) minmax(507px, 582px);
+  gap: 153px;
   margin-bottom: 100px;
   padding-bottom: 100px;
   border-bottom: 1px solid $color-grey-light;
+  @include media(max, 1400) {
+    grid-template-columns: minmax(450px, 615px) minmax(350px, 507px);
+    gap: 133px;
+  }
+  @include media(max, 1200) {
+    align-items: center;
+    gap: 70px;
+  }
+  @include media(max, 991) {
+    grid-template-columns: 1fr;
+  }
+  @include media(max, 991) {
+    margin-bottom: 40px;
+    padding-bottom: 40px;
+  }
 
-  &:last-of-type{
+  &:last-child{
     padding: 0;
     margin-bottom: 50px;
     border: none;
@@ -15,7 +30,13 @@
 
   &__img-wrapper {
     max-width: 705px;
-    max-height: 580px;
+    @include media(max, 991) {
+      position: relative;
+      left: 0;
+      transform: translateX(-20px);
+      max-width: 100%;
+      width: 100vw;
+    }
   }
 
   &__img {
@@ -25,19 +46,39 @@
   }
 
   &__content {
-    margin: 100px 0 0 133px;
+    max-width: 582px;
+    width: 100%;
+    margin-top: 100px;
+    @include media(max, 1200) {
+      margin-top: 0;
+    }
+    @include media(max, 360) {
+      max-width: 280px;
+    }
   }
 
   &__subtitle {
     margin-bottom: 30px;
     font-size: 27px;
+    line-height: 130%;
     color: $color-grey;
+    @include media(max, 450) {
+      margin-bottom: 10px;
+      text-align: center;
+      font-size: 21px;
+      line-height: 120%;
+    }
   }
 
   &__title {
     margin-bottom: 50px;
     font-size: 41px;
     line-height: 120%;
+    @include media(max, 450) {
+      margin-bottom: 30px;
+      text-align: center;
+      font-size: 23px;
+    }
   }
 }
 

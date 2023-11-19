@@ -79,9 +79,16 @@ body {
   width: 100%;
   padding: 0 20px;
   max-width: 1480px;
+  @include media(max, 1400) {
+    max-width: 1300px;
+  }
 }
 .section {
+  margin-bottom: 100px;
   &--no-overflow {
     overflow: hidden;
+  }
+  @include media(max, 450) {
+    margin-bottom: 40px;
   }
 }

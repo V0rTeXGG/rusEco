@@ -1,11 +1,23 @@
 .banner {
   &__container {
     width: 100%;
+    margin-bottom: 100px;
+    @include media(max, 991) {
+      position: relative;
+      left: 0;
+      width: 100vw;
+      max-width: unset;
+      transform: translateX(-20px);
+    }
+    @include media(max, 450) {
+      margin-bottom: 40px;
+    }
   }
 
   &__img {
     width: 100%;
     aspect-ratio: 16/9;
+
   }
 }
 
@@ -22,35 +34,68 @@
     display: flex;
     flex-wrap: wrap;
     gap: 30px;
+    margin-bottom: 50px;
   }
 }
 
 .video {
   &__content {
     display: grid;
-    grid-template-columns: 950px 459px;
+    grid-template-columns: minmax(650px, 950px) minmax(220px, 459px);
     grid-template-rows: repeat(2, 259px);
     gap: 30px;
     margin-bottom: 50px;
+    @include media(max, 1400) {
+      grid-template-rows: repeat(2, 224px);
+    }
+    @include media(max, 1200) {
+      grid-template-rows: repeat(2, 200px);
+    }
+    @include media(max, 1050) {
+      grid-template-rows: repeat(2, 170px);
+    }
+    @include media(max, 991) {
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr;
+    }
+    @include media(max, 450) {
+      gap: 20px;
+    }
+  }
+
+  &-item {
+    @include media(max, 991) {
+      position: relative;
+      left: 0;
+      transform: translateX(-20px);
+      width: 100vw;
+      max-width: unset;
+    }
+
   }
 
   &__content > :first-child {
     grid-column-start: 1;
     grid-row-start: 1;
     grid-row-end: 3;
+    @include media(max, 991) {
+      grid-row-end: 1;
+    }
   }
 
   &__link {
     position: relative;
-    display: block;
-    margin: 0 auto 100px auto;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    margin-bottom: 108px;
     font-size: 20px;
 
     &:before {
       content: '';
       position: absolute;
       left: 0;
-      bottom: -2px;
+      bottom: -8px;
       width: 100%;
       height: 1px;
       background-color: $color-black-blue;
@@ -70,11 +115,31 @@
     grid-template-columns: 705px 582px;
     gap: 30px 153px;
     margin-bottom: 56px;
+    @include media(max, 1400) {
+      grid-template-columns: minmax(500px, 615px) minmax(400px, 505px);
+      gap: 30px 140px;
+    }
+    @include media(max, 1400) {
+      gap: 30px 90px;
+    }
+    @include media(max, 991) {
+      grid-template-columns: 1fr;
+      justify-items: center;
+    }
+
+    .news__item-image-wrapper {
+      @include media(max, 768) {
+        display: none;
+      }
+    }
 
     & > :first-child {
       grid-column-start: 1;
       grid-row-start: 1;
       grid-row-end: 4;
+      @include media(max, 768) {
+        grid-row-end: 1;
+      }
     }
   }
 
