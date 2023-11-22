@@ -7,6 +7,7 @@
   font-size: 20px;
   font-weight: 700;
   line-height: 130%;
+  text-align: center;
   cursor: pointer;
   transition: $transition;
   @include media(max, 450) {
@@ -54,6 +55,23 @@
   &-center {
     display: flex;
     justify-content: center;
+  }
+
+  &--order {
+    position: fixed;
+    z-index: 4;
+    bottom: 30px;
+    right: 30px;
+    max-width: 215px;
+    @include media(max, 550) {
+      min-height: 37px;
+      padding: 9px 15px;
+      font-size: 14px;
+    }
+  }
+
+  &--text-white {
+    color: $color-white;
   }
 
   span {

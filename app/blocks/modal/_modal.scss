@@ -21,6 +21,45 @@
   background-color: $color-white;
   z-index: 11;
   border-radius: 4px;
+  &[data-modal="cookie"] {
+    top: auto;
+    bottom: 20px;
+    max-width: 950px;
+    border-radius: 0;
+    transform: translateX(-50%);
+    @include media(max, 991) {
+      max-width: calc(100% - 40px);
+    }
+    @include media(max, 450) {
+      bottom: 0;
+      max-width: 100%;
+    }
+
+    .modal__container {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 15px;
+      padding: 30px 50px 40px 50px;
+      @include media(max, 991) {
+        padding: 30px 40px 20px 40px;
+      }
+      @include media(max, 450) {
+        flex-direction: column;
+        padding: 20px;
+      }
+    }
+
+    .modal__text {
+      font-size: 20px;
+      font-weight: 700;
+      line-height: 140%;
+      @include media(max, 450) {
+        font-size: 18px;
+        line-height: 130%;
+      }
+    }
+  }
   &__close {
     position: absolute;
     top: 20px;

@@ -25,6 +25,7 @@
 
 //pages
 @import "index/_index";
+@import "product/_product";
 
 //components
 @import 'components/slider/_slider';
@@ -34,7 +35,7 @@
 //@import 'components/password-toggle/_password-toggle';
 //@import 'components/rating/_rating';
 //@import 'components/accordion/_accordion';
-//@import 'components/tabs/_tabs';
+@import 'components/tabs/_tabs';
 //@import 'components/map/_map';
 //@import 'components/counter/_counter';
 //@import 'components/tooltip/_tooltip';

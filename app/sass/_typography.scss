@@ -13,12 +13,11 @@ main {
       font-size: 55px;
     }
     @include media(max, 550) {
-      text-align: center;
       font-size: 40px;
     }
     @include media(max, 450) {
       margin-bottom: 30px;
-      text-align: center;
+      padding: 0 20px;
       font-size: 34px;
       line-height: 100%;
     }

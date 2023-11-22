@@ -6,7 +6,7 @@ block mainwrapper
       breadcrumbs: ["Список страниц"],
     })
     .page
-        - var pagesJson = [['Главная', 'index.html'],['Список страниц', 'pages.html']]
+        - var pagesJson = [['Главная', 'index.html'], ['Товар Детальная', 'product.html'],['Список страниц', 'pages.html']]
         mixin page(pages)
             ul.pages-dev(style={color: 'teal', 'font-weight': '700', 'margin-top': '-20px'})
                 each page in pages

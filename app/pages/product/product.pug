@@ -1,0 +1,68 @@
+extends ../../template/template.pug
+include ../../blocks/heading/heading
+include ../../blocks/components/tabs/tabs
+
+block mainwrapper
+  +heading({
+    breadcrumbs: ["Каталог", "Техническое освещение", "NVH-04"],
+    title: "NVH-04",
+  })
+  section.section.product
+    .container
+      .section-container
+        .product__top
+          .product__img-wrapper
+            img.product__img(src="../../img/image-content/product-image.png")
+          .product__buttons
+            button.button.button--text-white Выбрать модификацию
+            button.button.button--border
+              span Все проекты
+  section.section
+    .container
+      .section-container.section-container--pb-100
+        +tabs()
+        //.tabs(data-tabs="")
+        //  .tabs__nav
+        //    .tabs__nav-item.active(data-tabs-nav="application")
+        //      span Применение
+        //    .tabs__nav-item(data-tabs-nav="installation")
+        //      span Установка
+        //    .tabs__nav-item(data-tabs-nav="construction")
+        //      span Конструкция
+        //    .tabs__nav-item(data-tabs-nav="specifications")
+        //      span Характеристики
+        //    .tabs__nav-item(data-tabs-nav="optical")
+        //      span Оптическая часть
+        //    .tabs__nav-item(data-tabs-nav="management")
+        //      span Управление
+        //  .tabs__folds
+        //    .tabs__fold.open(data-tabs-fold="application")
+        //      .tabs__fit
+        //        .tabs__fit-content
+        //          .tabs__fit-text
+        //            p Освещение улиц, дорог, площадей, парков, бульваров, коттеджных посёлков, автостоянок, железнодорожных платформ, дворовых территорий, площадей перед торговыми центрами
+        //    .tabs__fold(data-tabs-fold="installation")
+        //      .tabs__fit
+        //        .tabs__fit-content
+        //          .tabs__fit-text
+        //            p Освещение улиц, дорог, площадей, парков, бульваров, коттеджных посёлков, автостоянок, железнодорожных платформ, дворовых территорий, площадей перед торговыми центрами
+        //    .tabs__fold(data-tabs-fold="construction")
+        //      .tabs__fit
+        //        .tabs__fit-content
+        //          .tabs__fit-text
+        //            p Освещение улиц, дорог, площадей, парков, бульваров, коттеджных посёлков, автостоянок, железнодорожных платформ, дворовых территорий, площадей перед торговыми центрами
+        //    .tabs__fold(data-tabs-fold="specifications")
+        //      .tabs__fit
+        //        .tabs__fit-content
+        //          .tabs__fit-text
+        //            p Освещение улиц, дорог, площадей, парков, бульваров, коттеджных посёлков, автостоянок, железнодорожных платформ, дворовых территорий, площадей перед торговыми центрами
+        //    .tabs__fold(data-tabs-fold="optical")
+        //      .tabs__fit
+        //        .tabs__fit-content
+        //          .tabs__fit-text
+        //            p Освещение улиц, дорог, площадей, парков, бульваров, коттеджных посёлков, автостоянок, железнодорожных платформ, дворовых территорий, площадей перед торговыми центрами
+        //    .tabs__fold(data-tabs-fold="management")
+        //      .tabs__fit
+        //        .tabs__fit-content
+        //          .tabs__fit-text
+        //            p Освещение улиц, дорог, площадей, парков, бульваров, коттеджных посёлков, автостоянок, железнодорожных платформ, дворовых территорий, площадей перед торговыми центрами

@@ -18,13 +18,44 @@
     @include media(max, 991) {
       flex-direction: row-reverse;
     }
+    @include media(max, 450) {
+      padding: 17px 0 9px 0;
+    }
   }
 
   &__burder {
+    position: relative;
     display: none;
     width: 25px;
     height: 25px;
-    background-color: $color-black-blue;
+
+    span {
+      position: absolute;
+      top: 8px;
+      width: 25px;
+      height: 2px;
+      background-color: $color-black-blue;
+      transition: all $transition;
+
+      &:last-of-type {
+        top: 15px;
+        width: 17px;
+      }
+    }
+
+    &.active {
+      span {
+        &:first-of-type {
+          transform: rotate(45deg);
+        }
+        &:last-of-type {
+          top: 8px;
+          width: 25px;
+          transform: rotate(-45deg);
+        }
+      }
+    }
+
     @include media(max, 991) {
       display: block;
     }
@@ -32,6 +63,7 @@
 
   &__logo {
     max-height: 23px;
+
     img {
       min-height: 23px;
     }
@@ -50,24 +82,24 @@
     }
     @include media(max, 991) {
       position: absolute;
-      top: 58px;
+      top: 57px;
       bottom: 0;
       left: 0;
       right: 0;
       flex-direction: column;
       justify-content: flex-start;
       align-items: flex-start;
-      max-width: 100%;
       height: 0;
       margin: 0;
       padding: 0 33px;
       overflow: hidden;
       background-color: $color-white;
-      transition: all .3s linear;
+      transition: all $transition;
 
       &.active {
         height: 100vh;
         padding: 50px 33px;
+        overflow: auto;
       }
     }
   }
@@ -141,6 +173,7 @@
     @include media(max, 1024) {
       width: 530px;
     }
+
     .nav__list {
       @include media(max, 991) {
         flex-direction: column;
@@ -166,6 +199,7 @@
       font-size: 30px;
       line-height: 110%;
     }
+
     &:hover {
       color: $color-blue;
 
@@ -194,10 +228,11 @@
     }
   }
 
-  &__social {
+  &__social.social {
     display: none;
     @include media(max, 991) {
-      display: block;
+      display: flex;
+      padding-bottom: 50px;
     }
   }
 
@@ -205,6 +240,7 @@
     position: relative;
     margin-right: 12px;
     transform: translateY(3px);
+
     &-icon {
       width: 25px;
       height: 25px;
