@@ -15,54 +15,168 @@ block mainwrapper
             img.product__img(src="../../img/image-content/product-image.png")
           .product__buttons
             button.button.button--text-white Выбрать модификацию
-            button.button.button--border
+            button.button.button--border.product__button
               span Все проекты
-  section.section
+  section.section.information
     .container
       .section-container.section-container--pb-100
         +tabs()
-        //.tabs(data-tabs="")
-        //  .tabs__nav
-        //    .tabs__nav-item.active(data-tabs-nav="application")
-        //      span Применение
-        //    .tabs__nav-item(data-tabs-nav="installation")
-        //      span Установка
-        //    .tabs__nav-item(data-tabs-nav="construction")
-        //      span Конструкция
-        //    .tabs__nav-item(data-tabs-nav="specifications")
-        //      span Характеристики
-        //    .tabs__nav-item(data-tabs-nav="optical")
-        //      span Оптическая часть
-        //    .tabs__nav-item(data-tabs-nav="management")
-        //      span Управление
-        //  .tabs__folds
-        //    .tabs__fold.open(data-tabs-fold="application")
-        //      .tabs__fit
-        //        .tabs__fit-content
-        //          .tabs__fit-text
-        //            p Освещение улиц, дорог, площадей, парков, бульваров, коттеджных посёлков, автостоянок, железнодорожных платформ, дворовых территорий, площадей перед торговыми центрами
-        //    .tabs__fold(data-tabs-fold="installation")
-        //      .tabs__fit
-        //        .tabs__fit-content
-        //          .tabs__fit-text
-        //            p Освещение улиц, дорог, площадей, парков, бульваров, коттеджных посёлков, автостоянок, железнодорожных платформ, дворовых территорий, площадей перед торговыми центрами
-        //    .tabs__fold(data-tabs-fold="construction")
-        //      .tabs__fit
-        //        .tabs__fit-content
-        //          .tabs__fit-text
-        //            p Освещение улиц, дорог, площадей, парков, бульваров, коттеджных посёлков, автостоянок, железнодорожных платформ, дворовых территорий, площадей перед торговыми центрами
-        //    .tabs__fold(data-tabs-fold="specifications")
-        //      .tabs__fit
-        //        .tabs__fit-content
-        //          .tabs__fit-text
-        //            p Освещение улиц, дорог, площадей, парков, бульваров, коттеджных посёлков, автостоянок, железнодорожных платформ, дворовых территорий, площадей перед торговыми центрами
-        //    .tabs__fold(data-tabs-fold="optical")
-        //      .tabs__fit
-        //        .tabs__fit-content
-        //          .tabs__fit-text
-        //            p Освещение улиц, дорог, площадей, парков, бульваров, коттеджных посёлков, автостоянок, железнодорожных платформ, дворовых территорий, площадей перед торговыми центрами
-        //    .tabs__fold(data-tabs-fold="management")
-        //      .tabs__fit
-        //        .tabs__fit-content
-        //          .tabs__fit-text
-        //            p Освещение улиц, дорог, площадей, парков, бульваров, коттеджных посёлков, автостоянок, железнодорожных платформ, дворовых территорий, площадей перед торговыми центрами
+  section.section.characteristics
+    .container
+      .section-container.section-container--pb-100
+        h2 Технические характеристики
+        table.characteristics__table
+          thead.characteristics__table-head
+            tr.characteristics__table-row
+              th Модель
+              th Номинальная мощность (Вт)
+              th Угол (°)
+              th Цветовая температура (К)
+              th Световой поток (Лм)
+              th Диапазон напряжения (В)
+              th Габариты
+              th.characteristics__table-cell
+          tbody.characteristics__table-body
+            tr.characteristics__table-row
+              td.characteristics__table-cell NVH-04-xxx-040-1 - 5000 - 70
+              td.characteristics__table-cell 40
+              td.characteristics__table-cell 50x35, 28x100, 60, 90, 120
+              td.characteristics__table-cell 5 000
+              td.characteristics__table-cell 5 800
+              td.characteristics__table-cell AC176~264
+              td.characteristics__table-cell 320x138x85
+              td.characteristics__table-cell.characteristics__table-cell--button
+                button.characteristics__table-button
+                 svg.characteristics__table-button__img
+                  use(href="#icon-cart-add")
+            tr.characteristics__table-row
+              td.characteristics__table-cell NVH-04-xxx-040-1 - 5000 - 70
+              td.characteristics__table-cell 50
+              td.characteristics__table-cell 50x35, 28x100, 60, 90, 120
+              td.characteristics__table-cell 5 000
+              td.characteristics__table-cell 7 000
+              td.characteristics__table-cell AC176~264
+              td.characteristics__table-cell 320x138x85
+              td.characteristics__table-cell.characteristics__table-cell--button
+                button.characteristics__table-button
+                  svg.characteristics__table-button__img
+                    use(href="#icon-cart-add")
+            tr.characteristics__table-row
+              td.characteristics__table-cell NVH-04-xxx-040-1 - 5000 - 70
+              td.characteristics__table-cell 60
+              td.characteristics__table-cell 50x35, 28x100, 60, 90, 120
+              td.characteristics__table-cell 5 000
+              td.characteristics__table-cell 8 100
+              td.characteristics__table-cell AC176~264
+              td.characteristics__table-cell 350x138x85
+              td.characteristics__table-cell.characteristics__table-cell--button
+                button.characteristics__table-button
+                  svg.characteristics__table-button__img
+                    use(href="#icon-cart-add")
+            tr.characteristics__table-row
+              td.characteristics__table-cell NVH-04-xxx-040-1 - 5000 - 70
+              td.characteristics__table-cell 80
+              td.characteristics__table-cell 50x35, 28x100, 60, 90, 120
+              td.characteristics__table-cell 5 000
+              td.characteristics__table-cell 11 600
+              td.characteristics__table-cell AC176~264
+              td.characteristics__table-cell 600x138x85
+              td.characteristics__table-cell.characteristics__table-cell--button
+                button.characteristics__table-button
+                  svg.characteristics__table-button__img
+                    use(href="#icon-cart-add")
+            tr.characteristics__table-row
+              td.characteristics__table-cell NVH-04-xxx-040-1 - 5000 - 70 - E
+              td.characteristics__table-cell 80 / 30
+              td.characteristics__table-cell 50x35, 28x100, 60, 90, 120
+              td.characteristics__table-cell 5 000
+              td.characteristics__table-cell 11 600 / 4 800
+              td.characteristics__table-cell AC176~264
+              td.characteristics__table-cell 600x138x85
+              td.characteristics__table-cell.characteristics__table-cell--button
+                button.characteristics__table-button
+                  svg.characteristics__table-button__img
+                    use(href="#icon-cart-add")
+            tr.characteristics__table-row
+              td.characteristics__table-cell NVH-04-xxx-040-1 - 5000 - 70 - E
+              td.characteristics__table-cell 100
+              td.characteristics__table-cell 50x35, 28x100, 60, 90, 120
+              td.characteristics__table-cell 5 000
+              td.characteristics__table-cell 14 000
+              td.characteristics__table-cell AC176~264
+              td.characteristics__table-cell 600x138x85
+              td.characteristics__table-cell.characteristics__table-cell--button
+                button.characteristics__table-button
+                  svg.characteristics__table-button__img
+                    use(href="#icon-cart-add")
+            tr.characteristics__table-row
+              td.characteristics__table-cell NVH-04-xxx-040-1 - 5000 - 70 - E
+              td.characteristics__table-cell 100 / 40
+              td.characteristics__table-cell 50x35, 28x100, 60, 90, 120
+              td.characteristics__table-cell 5 000
+              td.characteristics__table-cell 14 000 / 5 600
+              td.characteristics__table-cell AC176~264
+              td.characteristics__table-cell 600x138x85
+              td.characteristics__table-cell.characteristics__table-cell--button
+                button.characteristics__table-button
+                  svg.characteristics__table-button__img
+                    use(href="#icon-cart-add")
+            tr.characteristics__table-row
+              td.characteristics__table-cell NVH-04-xxx-040-1 - 5000 - 70 - E
+              td.characteristics__table-cell 120
+              td.characteristics__table-cell 50x35, 28x100, 60, 90, 120
+              td.characteristics__table-cell 5 000
+              td.characteristics__table-cell 16 200
+              td.characteristics__table-cell AC176~264
+              td.characteristics__table-cell 600x138x85
+              td.characteristics__table-cell.characteristics__table-cell--button
+                button.characteristics__table-button
+                  svg.characteristics__table-button__img
+                    use(href="#icon-cart-add")
+            tr.characteristics__table-row
+              td.characteristics__table-cell NVH-04-xxx-040-1 - 5000 - 70 - E
+              td.characteristics__table-cell 150
+              td.characteristics__table-cell 50x35, 28x100, 60, 90, 120
+              td.characteristics__table-cell 5 000
+              td.characteristics__table-cell 21 000
+              td.characteristics__table-cell AC176~264
+              td.characteristics__table-cell 934x138x85
+              td.characteristics__table-cell.characteristics__table-cell--button
+                button.characteristics__table-button
+                  svg.characteristics__table-button__img
+                    use(href="#icon-cart-add")
+            tr.characteristics__table-row
+              td.characteristics__table-cell NVH-04-xxx-040-1 - 5000 - 70 - E
+              td.characteristics__table-cell 180
+              td.characteristics__table-cell 50x35, 28x100, 60, 90, 120
+              td.characteristics__table-cell 5 000
+              td.characteristics__table-cell 24 300
+              td.characteristics__table-cell AC176~264
+              td.characteristics__table-cell 974x138x85
+              td.characteristics__table-cell.characteristics__table-cell--button
+                button.characteristics__table-button
+                  svg.characteristics__table-button__img
+                    use(href="#icon-cart-add")
+  section.section.files
+    .container
+      .section-container.section-container--pb-100
+        h2 Скачать
+        .files__block
+          a(href="").files__item
+            p.files__item-title Какой-то документ
+            p.files__item-size 571,61 КБ
+          a(href="").files__item
+            p.files__item-title Какой-то документ
+            p.files__item-size 571,61 КБ
+          a(href="").files__item
+            p.files__item-title Какой-то документ с длинным названием в несколько строк
+            p.files__item-size 571,61 КБ
+          a(href="").files__item
+            p.files__item-title Какой-то документ с длинным названием в несколько строк
+            p.files__item-size 571,61 КБ
+  section.section.consultation
+    .container
+      .section-container.section-container--pb-100.consultation__container
+        h2 Получить консультацию
+        p.consultation__text Позвоните и мы проконсультируем вас
+        a.consultation__number(href="tel:+74952830748") +7 495 283 07 48

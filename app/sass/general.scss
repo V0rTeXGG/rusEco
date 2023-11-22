@@ -93,3 +93,21 @@ body {
     margin-bottom: 40px;
   }
 }
+
+table {
+  th {
+    color: $color-grey;
+    padding-bottom: 15px;
+    vertical-align: bottom;
+  }
+
+  td, th {
+    padding: 20px;
+    text-align: left;
+    font-weight: normal;
+  }
+
+  td:not(:last-child), table th:not(:last-child) {
+    padding-right: 10px;
+  }
+}
