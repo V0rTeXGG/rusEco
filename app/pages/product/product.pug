@@ -1,7 +1,7 @@
 extends ../../template/template.pug
 include ../../blocks/heading/heading
 include ../../blocks/components/tabs/tabs
-
+include ../../blocks/consultation/consultation
 block mainwrapper
   +heading({
     breadcrumbs: ["Каталог", "Техническое освещение", "NVH-04"],
@@ -14,7 +14,8 @@ block mainwrapper
           .product__img-wrapper
             img.product__img(src="../../img/image-content/product-image.png")
           .product__buttons
-            button.button.button--text-white Выбрать модификацию
+            button.button.button--text-white.button--hover-grey
+              span Выбрать модификацию
             button.button.button--border.product__button
               span Все проекты
   section.section.information
@@ -177,6 +178,4 @@ block mainwrapper
   section.section.consultation
     .container
       .section-container.section-container--pb-100.consultation__container
-        h2 Получить консультацию
-        p.consultation__text Позвоните и мы проконсультируем вас
-        a.consultation__number(href="tel:+74952830748") +7 495 283 07 48
+        +consultation()

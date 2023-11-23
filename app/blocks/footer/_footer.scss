@@ -55,6 +55,10 @@
   &__text {
     font-size: 27px;
     line-height: 130%;
+    transition: all $transition;
+    @include hover() {
+      color: $color-blue;
+    }
     @include media(max, 450) {
       text-align: center;
     }

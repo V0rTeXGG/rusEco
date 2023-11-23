@@ -61,6 +61,35 @@
     &-content {
       max-width: 705px;
     }
+    &-text {
+      p {
+        &:not(:last-child) {
+          margin-bottom: 25px;
+        }
+      }
+
+      ul {
+        padding-left: 23px;
+        li {
+          position: relative;
+
+          &:before {
+            content: '';
+            position: absolute;
+            left: -23px;
+            top: 8px;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            border: 2px solid $color-grey;
+          }
+
+          &:not(:last-child) {
+            padding-bottom: 20px;
+          }
+        }
+      }
+    }
   }
 
   &__fold {
