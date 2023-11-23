@@ -1,0 +1,66 @@
+.policy {
+    &__container {
+      margin: auto;
+      h2 {
+        margin-bottom: 50px;
+
+        &:not(:first-of-type) {
+          margin-top: 80px;
+        }
+      }
+
+      p {
+        max-width: 705px;
+        margin: auto;
+        line-height: 150%;
+        &:not(:last-child) {
+          margin-bottom: 50px;
+        }
+      }
+
+      ul, ol {
+        max-width: 705px;
+        margin: auto;
+        padding-left: 23px;
+        li {
+          position: relative;
+
+          &:not(:last-child) {
+            padding-bottom: 20px;
+          }
+        }
+      }
+
+      ul {
+        li {
+          position: relative;
+
+          &:before {
+            content: '';
+            position: absolute;
+            left: -23px;
+            top: 8px;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            border: 2px solid $color-grey;
+          }
+
+        }
+      }
+
+      ol {
+        counter-reset: counter;
+        li {
+          &:before {
+            position: absolute;
+            left: -23px;
+            counter-increment: counter;
+            content: counters(counter, ".") ". ";
+            color: $color-grey;
+          }
+
+        }
+      }
+    }
+}
