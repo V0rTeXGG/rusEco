@@ -1,0 +1,15 @@
+extends ../../template/template.pug
+include ../../blocks/heading/heading
+
+block mainwrapper
+  +heading({
+    breadcrumbs: ["404"],
+    title: "Страница не найдена",
+  })
+  section.section.not-found
+    .container
+      .section-container.section-container--pb-100
+        .not-found__container
+          p.not-found-title Кто-то ошибся адресом
+          img(src="../../img/image-content/404.png").not-found__img
+          button.button.button--hover-grey.button--text-white.not-found__button На главную
