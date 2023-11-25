@@ -2,6 +2,9 @@
   display: flex;
   flex-wrap: wrap;
   margin-bottom: 80px;
+  @include media(max, 450) {
+    margin-bottom: 30px;
+  }
   &__item {
 	position: relative;
 	color: $color-black;

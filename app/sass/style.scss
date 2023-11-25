@@ -29,6 +29,9 @@
 @import "product/_product";
 @import "not-found/_not-found";
 @import "policy/_policy";
+@import "contacts/_contacts";
+@import "feedback/_feedback";
+@import "about/_about";
 
 //components
 @import 'components/slider/_slider';
@@ -39,7 +42,7 @@
 //@import 'components/rating/_rating';
 //@import 'components/accordion/_accordion';
 @import 'components/tabs/_tabs';
-//@import 'components/map/_map';
+@import 'components/map/_map';
 //@import 'components/counter/_counter';
 //@import 'components/tooltip/_tooltip';
 //@import 'components/scroll-top/_scroll-top';

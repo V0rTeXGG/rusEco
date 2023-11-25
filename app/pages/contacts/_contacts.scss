@@ -1,0 +1,75 @@
+.contacts {
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+    max-width: 1318px;
+    width: 100%;
+    margin-bottom: 100px;
+    @include media(max, 850) {
+      flex-direction: column;
+      gap: 40px;
+    }
+    &-block {
+      max-width: 579px;
+      &:first-of-type {
+        max-width: 583px;
+      }
+      @include media(max, 1400) {
+        max-width: 508px;
+        &:first-of-type {
+          max-width: 506px;
+        }
+      }
+    }
+
+    &-title {
+      margin-bottom: 17px;
+      font-size: 20px;
+      font-weight: 700;
+      line-height: 140%;
+      color: $color-grey;
+      @include media(max, 450) {
+        font-size: 18px;
+      }
+
+      &--blue {
+        position: relative;
+        color: $color-blue;
+        padding-left: 40px;
+
+        &:before {
+          content: '';
+          position: absolute;
+          top: 50%;
+          left: 0;
+          width: 20px;
+          height: 1px;
+          transform: translateY(-50%);
+          background-color: $color-blue;
+        }
+      }
+    }
+
+    &-text {
+      display: block;
+      font-size: 27px;
+      line-height: 130%;
+      transition: all $transition;
+      @include media(max, 450) {
+        font-size: 22px;
+      }
+
+      &:not(:last-child) {
+        margin-bottom: 20px;
+      }
+
+      &--hover {
+        @include hover() {
+          color: $color-blue;
+        }
+      }
+    }
+  }
+}

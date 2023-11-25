@@ -1,0 +1,195 @@
+.about {
+
+  &__top {
+    padding-bottom: 100px;
+    border-bottom: 1px solid $color-grey-light;
+    @include media(max, 450) {
+      padding-bottom: 50px;
+    }
+    &-text {
+      max-width: 704px;
+      font-size: 35px;
+      font-weight: 700;
+      line-height: 120%;
+      @include media(max, 991) {
+        font-size: 30px;
+      }
+      @include media(max, 650) {
+        max-width: 100%;
+        font-size: 25px;
+      }
+      @include media(max, 450) {
+        font-size: 20px;
+      }
+    }
+  }
+
+  &__img-wrapper {
+    overflow: hidden;
+    margin-bottom: 80px;
+    @include media(max, 991) {
+      position: relative;
+      left: 0;
+      width: 100vw;
+      max-width: unset;
+      transform: translateX(-20px);
+    }
+    @include media(max, 650) {
+      margin-bottom: 50px;
+    }
+  }
+
+  &__img {
+    aspect-ratio: 16/9;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  &__rows {
+    padding-top: 100px;
+    @include media(max, 450) {
+      padding-top: 50px;
+    }
+  }
+
+  &__row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    padding-bottom: 100px;
+    border-bottom: 1px solid $color-grey-light;
+    @include media(max, 991) {
+      flex-direction: column;
+      gap: 40px;
+    }
+    @include media(max, 450) {
+      padding-bottom: 50px;
+    }
+    &:not(:first-child) {
+      padding-top: 100px;
+      @include media(max, 450) {
+        padding-top: 50px;
+      }
+    }
+    &:nth-child(even) {
+      flex-direction: row-reverse;
+      @include media(max, 991) {
+        flex-direction: column;
+      }
+    }
+
+    &-img-wrapper {
+      max-width: 705px;
+      width: 100%;
+      overflow: hidden;
+      @include media(max, 1400) {
+        max-width: 615px;
+      }
+    }
+
+    &-img {
+      aspect-ratio: 4/3;
+      object-fit: cover;
+    }
+
+    &-text {
+      max-width: 582px;
+      width: 100%;
+      max-height: 580px;
+      overflow-y: auto;
+      line-height: 150%;
+      @include media(max, 1400) {
+        max-width: 506px;
+      }
+
+      p {
+        &:not(:last-child) {
+          margin-bottom: 50px;
+        }
+      }
+    }
+  }
+
+  &__has-project {
+    padding: 100px 0;
+    border-bottom: 1px solid $color-grey-light;
+    @include media(max, 450) {
+      padding: 50px 0;
+    }
+
+    &__title {
+      text-align: center;
+      font-size: 61px;
+      line-height: 110%;
+      @include media(max, 450) {
+        font-size: 40px;
+      }
+    }
+
+    &__link {
+      position: relative;
+
+      &:before {
+        content: '';
+        position: absolute;
+        bottom: -5px;
+        left: 0;
+        width: 100%;
+        height: 1px;
+        background-color: $color-black-blue;
+      }
+    }
+  }
+
+  &__blockquote {
+    max-width: 950px;
+    width: 100%;
+    margin: auto;
+    padding-top: 100px;
+    @include media(max, 1400) {
+      max-width: 830px;
+    }
+    @include media(max, 450) {
+      padding-top: 50px;
+    }
+
+    &-author {
+      position: relative;
+      line-height: 150%;
+      color: $color-grey;
+      margin-bottom: 19px;
+      padding-left: 40px;
+      @include media(max, 360) {
+        margin-bottom: 15px;
+        font-size: 16px;
+      }
+
+      &:before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 20px;
+        height: 1px;
+        transform: translateY(50%);
+        background-color: $color-grey;
+      }
+    }
+
+    &-text {
+      font-size: 41px;
+      line-height: 120%;
+      @include media(max, 991) {
+        font-size: 30px;
+      }
+      @include media(max, 650) {
+        font-size: 22px;
+      }
+      @include media(max, 360) {
+        font-size: 18px;
+      }
+    }
+  }
+}

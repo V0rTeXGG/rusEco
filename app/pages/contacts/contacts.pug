@@ -1,0 +1,28 @@
+extends ../../template/template.pug
+include ../../blocks/heading/heading
+include ../../blocks/components/map/map
+
+block mainwrapper
+  +heading({
+    breadcrumbs: ["Контакты"],
+    title: "Контакты",
+  })
+  button.button.button--order.button--text-white Заказать проект
+  section.section.contacts
+    .container
+      .section-container.section-container--pb-100
+        .contacts__container
+          .contacts__top
+            .contacts__top-block
+              p.contacts__top-title.contacts__top-title--blue Офис продаж
+              a(href="https://yandex.ru/profile/-/CDe1QXYf").contacts__top-text.contacts__top-text--hover 143026, Инновационный центр «Сколково», Большой бульвар, 40, БЦ «Амальтея», Сектор С, офис 1.01
+              p.contacts__top-text Часы работы 9 - 18
+              a.contacts__top-text.contacts__top-text--hover(href="tel:+74952830748") +7 495 283 07 48
+              a.contacts__top-text.contacts__top-text--hover(href="mailto:mail@rosecosvet.ru") mail@rosecosvet.ru
+            .contacts__top-block
+              p.contacts__top-title Производство
+              a.contacts__top-text.contacts__top-text--hover(href="https://yandex.ru/maps/-/CDe1UQ0Z") 142204, Московская обл., г. Серпухов, Северное шоссе, 14
+          +map({
+             icon: "../../img/image/placemark.png",
+             coords: "55.769221, 39.165801",
+           })

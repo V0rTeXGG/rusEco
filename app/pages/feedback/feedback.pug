@@ -1,0 +1,13 @@
+extends ../../template/template.pug
+include ../../blocks/heading/heading
+
+block mainwrapper
+  +heading({
+    breadcrumbs: ["Контакты", "Обратная связь"],
+    title: "Всегда на связи! Пишите нам",
+  })
+    section.section.form
+      .container
+        .section-container.section-container--pb-100
+          .feedback(data-form="feedback")
+            h2.h2 Меня интересует...

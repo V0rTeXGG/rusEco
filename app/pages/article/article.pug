@@ -1,0 +1,13 @@
+extends ../../template/template.pug
+include ../../blocks/heading/heading
+
+block mainwrapper
+  +heading({
+    breadcrumbs: ["Новости", "Эксперты утверждают, что новая модель организационной деятельности одухотворила всех причастных"],
+    title: "Эксперты утверждают, что новая модель организационной деятельности одухотворила всех причастных",
+  })
+  section.section.article
+  .container
+    .section-container.section-container--pb-100
+      .article__banner-wrapper
+        img.article__banner(src="../../img/image-content/article-banner.png")
