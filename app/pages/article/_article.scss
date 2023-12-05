@@ -3,4 +3,400 @@
     overflow: hidden;
     margin-bottom: 80px;
   }
+
+  &__banner {
+    aspect-ratio: 16/9;
+    width: 100%;
+  }
+
+  &__date {
+    position: absolute;
+    left: 0;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 140%;
+    @include media(max, 1024) {
+      position: initial;
+      display: block;
+      margin-bottom: 30px;
+    }
+    @include media(max, 450) {
+      font-size: 18px;
+    }
+  }
+
+  &__content {
+    position: relative;
+
+    .table-wrapper {
+      overflow: auto;
+      max-width: 950px;
+      margin: 50px auto 50px auto;
+
+      &::-webkit-scrollbar {
+        height: 3px;
+        background: $color-grey-light;
+      }
+
+      &::-webkit-scrollbar-thumb {
+        background: $color-gradient;
+      }
+      @include media(max, 450) {
+        margin: 30px auto 40px auto;
+        padding-bottom: 20px;
+      }
+    }
+
+    &-blockquote {
+      max-width: 950px;
+      margin: 50px auto 50px auto;
+      @include media(max, 450) {
+        margin: 30px auto 30px auto;
+      }
+      &__name {
+        position: relative;
+        display: inline-block;
+        margin-bottom: 20px;
+        padding-left: 40px;
+        line-height: 150%;
+        color: $color-grey;
+        @include media(max, 450) {
+          margin-bottom: 10px;
+          padding-left: 35px;
+          font-size: 16px;
+        }
+
+        &:before {
+          content: '';
+          position: absolute;
+          top: 13px;
+          left: 0;
+          width: 20px;
+          height: 1px;
+          background-color: $color-grey;
+        }
+      }
+    }
+
+    p {
+      max-width: 705px;
+      margin: 0 auto 25px auto;
+      line-height: 150%;
+      @include media(max, 450) {
+        margin: 0 auto 15px auto;
+        font-size: 16px;
+      }
+      &:first-of-type {
+        margin-bottom: 50px;
+        @include media(max, 450) {
+          margin-bottom: 30px;
+        }
+      }
+
+    }
+
+    ul, ol {
+      max-width: 705px;
+      margin: 0 auto 25px auto;
+      padding-left: 23px;
+      @include media(max, 450) {
+        padding-left: 18px;
+        margin: 0 auto 15px auto;
+      }
+
+      li {
+        position: relative;
+        &:not(:last-child) {
+          margin-bottom: 20px;
+          @include media(max, 450) {
+            margin-bottom: 10px;
+          }
+        }
+
+      }
+    }
+
+    ul {
+      li {
+        &:before {
+          content: '';
+          position: absolute;
+          width: 8px;
+          height: 8px;
+          border: 2px solid $color-grey-medium;
+          left: -23px;
+          top: 8px;
+          border-radius: 100%;
+          @include media(max, 450) {
+            left: -18px;
+          }
+        }
+      }
+    }
+
+    ol {
+      padding-left: 30px;
+      counter-reset: counter;
+      @include media(max, 450) {
+        padding-left: 23px;
+      }
+      li {
+        &:before {
+          position: absolute;
+          left: -30px;
+          counter-increment: counter;
+          content: counters(counter, ".") ". ";
+          color: $color-grey;
+          @include media(max, 450) {
+            left: -23px;
+          }
+        }
+      }
+
+      ol {
+        margin-top: 20px;
+        @include media(max, 450) {
+          margin-top: 10px;
+        }
+      }
+    }
+
+    figure {
+      max-width: 950px;
+      margin: 50px auto 50px auto;
+      @include media(max, 450) {
+        position: relative;
+        left: 0;
+        width: 100vw;
+        max-width: unset;
+        transform: translateX(-20px);
+        margin: 30px auto 30px auto;
+      }
+    }
+
+    img {
+      aspect-ratio: 16/9;
+      margin-bottom: 25px;
+    }
+
+    figcaption {
+      font-size: 16px;
+      line-height: 130%;
+      color: $color-grey;
+      @include media(max, 450) {
+        margin-left: 20px;
+        font-size: 14px;
+      }
+    }
+
+    h2 {
+      margin: 80px 0 50px 0;
+      font-size: 61px;
+      line-height: 110%;
+      @include media(max, 450) {
+        margin: 40px 0 30px 0;
+        font-size: 34px;
+        line-height: 100%;
+      }
+    }
+
+    h3 {
+      margin: 80px 0 50px 0;
+      font-size: 41px;
+      line-height: 120%;
+      @include media(max, 450) {
+        margin: 40px 0 30px 0;
+        font-size: 23px;
+      }
+    }
+
+    blockquote {
+      font-size: 41px;
+      line-height: 120%;
+      @include media(max, 450) {
+        font-size: 23px;
+      }
+    }
+
+    table {
+      max-width: 100%;
+
+      thead {
+        th {
+          padding: 0 20px 15px 20px;
+          &:first-child {
+            padding-left: 25px;
+          }
+          &:last-child {
+            padding-right: 25px;
+          }
+        }
+      }
+
+      tbody {
+        tr {
+          &:nth-child(odd) {
+            background-color: $color-bg;
+          }
+        }
+
+        td {
+          padding: 20px;
+          &:first-child {
+            padding-left: 25px;
+          }
+          &:last-child {
+            padding-right: 25px;
+          }
+        }
+      }
+    }
+  }
+
+  &__bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 705px;
+    margin: 50px auto 50px auto;
+    @include media(max, 550) {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 30px;
+      margin: 40px auto 30px auto;
+    }
+    &-left {
+      display: flex;
+      gap: 7px;
+      &__text {
+        line-height: 150%;
+        color: $color-grey;
+      }
+      &__link {
+        position: relative;
+        line-height: 120%;
+
+        &:before {
+          content: '';
+          position: absolute;
+          left: 0;
+          bottom: -5px;
+          width: 100%;
+          height: 1px;
+          background-color: $color-black-blue;
+        }
+      }
+    }
+
+    .ya-share2 {
+      &__list {
+        display: flex;
+        gap: 20px;
+      }
+
+      .ya-share2__container_size_l .ya-share2__badge .ya-share2__icon {
+        width: 61px;
+        height: 61px;
+        @include media(max, 550) {
+          width: 55px;
+          height: 55px;
+        }
+      }
+
+      &__item_service_vkontakte  .ya-share2__badge {
+        background: url("../../img/image/vk-icon.png");
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+
+      &__item_service_odnoklassniki .ya-share2__badge {
+        background: url("../../img/image/facebook-icon.png");
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+
+      &__item_service_telegram .ya-share2__badge {
+        background: url("../../img/image/twitter-icon.png");
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+
+      &__item_service_twitter .ya-share2__badge {
+        background: url("../../img/image/telegram-icon.png");
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+
+      &__item_service_vkontakte .ya-share2__icon {
+        background: transparent;
+      }
+
+      &__item_service_odnoklassniki .ya-share2__icon {
+        background: transparent;
+      }
+
+      &__item_service_telegram .ya-share2__icon {
+        background: transparent;
+      }
+
+      &__item_service_twitter .ya-share2__icon {
+        background: transparent;
+      }
+
+    }
+
+    &-social {
+      display: block;
+    }
+
+  }
+}
+
+.read-more {
+  margin-bottom: 100px;
+  &__list {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 30px;
+    @include media(max, 850) {
+      flex-direction: column;
+      gap: 20px;
+    }
+  }
+
+  &__item {
+    max-width: 460px;
+    width: 100%;
+    @include media(max, 850) {
+      max-width: 100%;
+      padding-bottom: 20px;
+      &:not(:last-child) {
+        border-bottom: 1px solid $color-grey-light;
+      }
+
+    }
+
+    &:hover {
+      .read-more__item-title {
+        border-color: $color-grey;
+      }
+    }
+
+    &-date {
+      margin-bottom: 10px;
+      font-size: 20px;
+      font-weight: 700;
+      line-height: 140%;
+      color: $color-grey;
+    }
+
+    &-title {
+      border-bottom: 1px solid transparent;
+      font-size: 35px;
+      font-weight: 700;
+      line-height: 120%;
+      transition: all $transition;
+    }
+  }
 }

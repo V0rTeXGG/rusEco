@@ -1,0 +1,15 @@
+extends ../../template/template.pug
+include ../../blocks/heading/heading
+
+block mainwrapper
+  +heading({
+    breadcrumbs: ["Новости"],
+    title: "Новости",
+  })
+  section.section.news
+    .container
+      .news__tabs
+        a(href="/").news__tabs-item Все
+        a(href="/news").news__tabs-item Новости
+        a(href="/articles").news__tabs-item Статьи
+
