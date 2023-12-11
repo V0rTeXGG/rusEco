@@ -23,6 +23,8 @@
 @import 'news/_news';
 @import 'container/_container';
 @import 'consultation/_consultation';
+@import "page-content/_page-content";
+@import "heading/_heading";
 
 //pages
 @import "index/_index";
@@ -33,7 +35,9 @@
 @import "feedback/_feedback";
 @import "about/_about";
 @import "article/_article";
-@import "news/_news";
+@import "news/_new";
+@import "services/_services";
+
 
 //components
 @import 'components/slider/_slider';
@@ -45,6 +49,7 @@
 //@import 'components/accordion/_accordion';
 @import 'components/tabs/_tabs';
 @import 'components/map/_map';
+@import 'components/form/_form';
 //@import 'components/counter/_counter';
 //@import 'components/tooltip/_tooltip';
 //@import 'components/scroll-top/_scroll-top';

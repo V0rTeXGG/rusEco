@@ -1,3 +1,22 @@
 include ../input/input.pug
 
 mixin incut-form(data)
+  .incut-form-wrapper(data-form=`${data.form}`)
+    form.incut-form.invalid(data-validate-form="" data-form-body="" data-show-thanks)
+      span.error-text.error-text--backend(data-error-text="backend")
+      .incut-form__fields
+        +input({
+          temp: "name",
+          label: 'Ваше имя *',
+        })
+        +input({
+          temp: "phone",
+          mask: true,
+        })&attributes(attributes)(data-mask-tel)
+        +input({
+          temp: "email",
+        })
+        .inputholder.form__inputholder
+          label.inputholder__label(data-default-label) Расскажите о проекте
+          textarea.inputholder__textarea(data-form-field)
+        a(href="/policy.html")(target="_blank").incut-form__policy Отправляя данную форму, я соглашаюсь на обработку персональных данных
