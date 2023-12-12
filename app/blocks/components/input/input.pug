@@ -1,33 +1,40 @@
 mixin input(data)
-    -
-        if (data.temp) {
-            if (data.temp === "name") {
-                data.label = "ФИО";
-                data.type = "text";
-                data.placeholder = "Иванов Иван Иванович";
-                data.required = true;
-            }
+  -
+    if (data.temp) {
+      if (data.temp === "name") {
+        data.label = "Ваше имя *";
+        data.type = "name";
+        data.required = true;
+        data.error = 'Заполните поле';
+      }
 
-            if (data.temp === "phone") {
-                data.label = "Телефон *";
-                data.type = "tel";
-                data.placeholder = "+7 (777) 000 00-00";
-                data.required = true;
-                data.error = "phone";
-            }
+      if (data.temp === "phone") {
+        data.label = "Ваш телефон *"
+        data.type = "tel";
+        data.required = true;
+        data.mask = true;
+        data.error = "Заполните поле";
+      }
 
-            if (data.temp === "email") {
-                data.label = "Email";
-                data.type = "email";
-                data.placeholder = "Введите вашу электронную почту";
-                data.required = true;
-                data.error = "email";
-            }
-        }
-    .inputholder.form__inputholder(class=(data.width ? `inputholder--width-${data.width}` : ""))
-        if data.label
-            label.inputholder__label(data-default-label)=data.label
-        input.inputholder__input(type=(data.type || "text") placeholder=(data.placeholder) data-required=(data.required) data-text-error=(data.error))&attributes(attributes)
+      if (data.temp === "email") {
+        data.label = "Ваш Email";
+        data.type = "email";
+        data.error = "Заполните поле";
+      }
+      if(data.temp === "text") {
+        data.label = "Расскажите о проекте";
+        data.type = "text";
+      }
+    }
+  .inputholder.form__inputholder(class=(data.width ? `inputholder--width-${data.width}` : ""))(data-custom-mask=data.mask ? true : undefined)
+    if data.label
+      label.inputholder__label(data-default-label)=data.label
+    input.inputholder__input(type=(data.type || "text") placeholder=(data.placeholder) data-required=(data.required) data-text-error=(data.error))&attributes(attributes)(data-input)
+    if data.error
+      label.error-text=data.error
+    if data.imageError
+      svg.image-error(class=(data.customErrorClass ? `image-error-${data.customErrorClass}` : ""))
+        use(href=`#icon-${data.imageError}`)
 
 //- Примеры использования
 

@@ -1,0 +1,61 @@
+.service {
+  &__img-wrapper {
+    width: 100%;
+    margin-bottom: 80px;
+    @include media(max, 991) {
+      position: relative;
+      left: 0;
+      width: 100vw;
+      max-width: unset;
+      transform: translateX(-20px);
+    }
+    @include media(max, 450) {
+      margin-bottom: 40px;
+    }
+  }
+
+  &__img {
+    width: 100%;
+    aspect-ratio: 16/9;
+  }
+}
+
+.write {
+  &__text {
+    text-align: center;
+    font-size: 61px;
+    line-height: 110%;
+    @include media(max, 450) {
+      font-size: 34px;
+      line-height: 100%;
+    }
+
+    a {
+      display: block;
+      width: fit-content;
+      margin: auto;
+      padding-bottom: 5px;
+      border-bottom: 1px solid $color-black-blue;
+      transition: all $transition;
+      @include hover() {
+        border-color: transparent;
+      }
+    }
+  }
+}
+
+.stages {
+  &__content {
+    max-width: 705px;
+    margin: 0 auto;
+    p {
+      line-height: 150%;
+      @include media(max, 450) {
+        font-size: 16px;
+      }
+      &:not(:last-child) {
+        margin-bottom: 25px;
+      }
+    }
+  }
+}

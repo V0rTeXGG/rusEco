@@ -1,0 +1,75 @@
+extends ../../template/template.pug
+include ../../blocks/heading/heading
+include ../../blocks/components/form/form
+
+block mainwrapper
+  +heading({
+    breadcrumbs: ["Услуги"],
+    title: "Услуги",
+    text: "Оказываем полный комплекс услуг по проектированию и строительно-монтажным работам уличного, промышленного, ландшафтного, архитектурного и офисного освещения",
+  })
+  button.button.button--order.button--text-white Заказать проект
+  section.section.services
+    .container
+      .section-container.section-container--pb-100
+        .services__list
+          a(href="").services__item
+            img(src="../../img/image-content/services-item-image.png").services__item__img
+            .services__item-background
+            p.services__item-title Дизайн и сценарии освещения
+            span.services__item-link Подробнее
+          a(href="").services__item
+            img(src="../../img/image-content/services-item-image.png").services__item__img
+            .services__item-background
+            p.services__item-title Поставка осветительного оборудования
+            span.services__item-link Подробнее
+          a(href="").services__item
+            img(src="../../img/image-content/services-item-image.png").services__item__img
+            .services__item-background
+            p.services__item-title Разработка и реализация проектов освещения
+            span.services__item-link Подробнее
+          a(href="").services__item
+            img(src="../../img/image-content/services-item-image.png").services__item__img
+            .services__item-background
+            p.services__item-title Внедрение систем управления освещением
+            span.services__item-link Подробнее
+          a(href="").services__item
+            img(src="../../img/image-content/services-item-image.png").services__item__img
+            .services__item-background
+            p.services__item-title Разработка и производство специализированных светильников
+            span.services__item-link Подробнее
+          a(href="").services__item
+            img(src="../../img/image-content/services-item-image.png").services__item__img
+            .services__item-background
+            p.services__item-title Энергосервисные контракты
+            span.services__item-link Подробнее
+  section.section.order
+    .container
+      .section-container.section-container--pb-100
+        .order__container
+          .order__left
+            h2.order__left-title Заказать услугу
+            p.order__left-text Проконсультироваться относительно услуг можно по телефону
+            a(href="tel:+74952830748").order__left-phone +7 495 283 07 48
+          +incut-form({form: "order-services",})
+  section.section.criteria
+    .container
+      .section-container.section-container--pb-100
+        h2 Критерии реализации успешного проекта
+        .criteria__list
+          .criteria__item
+            img(src="../../img/image/criteris-img-1.png").criteria__item-img
+            p.criteria__item-title Сплоченная команда
+            p.criteria__item-text Рыбатекст используется дизайнерами, проектировщиками и фронтендерами, когда нужно быстро заполнить макеты или прототипы содержимым
+          .criteria__item
+            img(src="../../img/image/criteris-img-2.png").criteria__item-img
+            p.criteria__item-title Соблюдение сроков
+            p.criteria__item-text Рыбатекст используется дизайнерами, проектировщиками и фронтендерами, когда нужно быстро заполнить макеты или прототипы содержимым
+          .criteria__item
+            img(src="../../img/image/criteris-img-3.png").criteria__item-img
+            p.criteria__item-title Решение любых задач
+            p.criteria__item-text Рыбатекст используется дизайнерами, проектировщиками и фронтендерами, когда нужно быстро заполнить макеты или прототипы содержимым
+          .criteria__item
+            img(src="../../img/image/criteris-img-4.png").criteria__item-img
+            p.criteria__item-title Современный подход
+            p.criteria__item-text Рыбатекст используется дизайнерами, проектировщиками и фронтендерами, когда нужно быстро заполнить макеты или прототипы содержимым

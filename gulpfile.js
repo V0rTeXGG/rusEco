@@ -20,7 +20,7 @@ const changed = require("gulp-changed");
 
 let jsLibs = [
   "node_modules/swiper/swiper-bundle.min.js",
-  // "node_modules/inputmask/dist/inputmask.min.js",
+  "node_modules/inputmask/dist/inputmask.min.js",
   "node_modules/@fancyapps/ui/dist/fancybox.umd.js",
   // 'node_modules/@popperjs/core/dist/umd/popper.min.js',
   // 'node_modules/tippy.js/dist/tippy.umd.min.js',
@@ -50,10 +50,10 @@ let commonJsLibs = [
   // 'app/js/custom-libs/select.js',
   // 'app/js/custom-libs/accordion.js',
   'app/js/custom-libs/tabs.js',
-  // 'app/js/custom-libs/input-file-class.js',
-  // 'app/js/custom-libs/input-mask-list.js',
-  // 'app/js/custom-libs/input-mask.js',
-  // 'app/js/custom-libs/simple-map.js',
+  'app/js/custom-libs/input-file-class.js',
+  'app/js/custom-libs/input-mask-list.js',
+  'app/js/custom-libs/input-mask.js',
+  'app/js/custom-libs/simple-map.js',
   // 'app/js/custom-libs/sticky-element-class.js',
   // 'app/js/custom-libs/table-of-contents.js',
 ];
