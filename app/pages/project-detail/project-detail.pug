@@ -1,0 +1,58 @@
+extends ../../template/template.pug
+include ../../blocks/heading/heading
+include ../../blocks/video/video.pug
+block mainwrapper
+  +heading({
+    breadcrumbs: ["Проекты", "Здание городской думы"],
+    title: "Здание городской думы",
+  })
+  button.button.button--order.button--text-white Заказать проект
+  section.section.project
+    .container
+      .section-container.section-container--pb-100
+        .project__img-wrapper
+          img(src="../../img/image-content/project-banner.png").project__img
+        .project__top
+          .project__top__block
+            .project__top-item
+              p.project__top-item__title Заказчик
+              p.project__top-item__text АО «Центральная ППК»
+            .project__top-item
+              p.project__top-item__title Город
+              p.project__top-item__text Санкт Петербург
+          .project__top__block
+            .project__top-item
+              p.project__top-item__title Оборудование
+              p.project__top-item__text NVS05, NVX13
+            .project__top-item
+              p.project__top-item__title Сроки
+              p.project__top-item__text 2021
+      .project__content.section-container.section-container--not-border.section-container--pb-100
+        .page-content
+          p Кирпичное здание городской думы - объект культурного наследия государственного значения, памятник архитектуры второй половины XIX века. Величественное здание с богато декорированными фасадами было заложено в 1879 году на средства знаменитого благотворителя Ивана Фирсанова. В соответствии с концепцией архитектурно-художественного освещения Московской области и особенностей расположения здания, проектом предусмотрена подсветка главного фасада, использованы статические осветительные приборы.
+          +video-item({image: 'video-1.png', link: 'https://www.youtube.com/embed/4qk6Xlp-6RY'}).fancy.video-item--page-content(data-fancybox="project")
+
+          .page-content__img-block
+            img(src="../../img/image-content/project-detail-1.png")
+            img(src="../../img/image-content/project-detail-2.png")
+          p
+            | Чтобы сохранить визуальный облик здания в дневное время, использовались только компактные архитектурные светильники. Корпуса покрашены в соответствие с колористическими паспортами фасадов, и в дневное время светильники практически не заметны. Крепежи для монтажа приборов изготовлены из нержавеющей стали – это позволяет исключить коррозию металла, которая могла бы негативно повлиять на фасад.
+            br
+            | Наиболее ярко выделены нижний ярус и верхний фриз. В межоконных промежутках нижнего яруса размещены прожекторы с узколучевой оптикой. Выбраны приборы мощности 10 Вт – так удалось добиться красивого акцентного освещения нижнего яруса и в то же время избежать лишнего пересвета.
+          figure
+            img(src="../../img/image-content/article-img-1.png")
+          p
+            |Под окна второго и третьего ярусов установлены линейные светильники с эллиптической оптикой 10х65°.
+            br
+            |Такие же светильники установлены под карнизом верхнего фриза.
+            br
+            |Чтобы придать дому ажурность и подчеркнуть оригинальную форму крыши, слуховые окна акцентированы прожекторами со среднелучевой вторичной оптикой.
+      .section-container.section-container--pb-100
+        p.project__order-title
+          |Есть проект?
+          a(href="/") Напишите нам
+        .button-center
+          a.button.button--border(href="")
+            span Вернуться к проектам
+
+

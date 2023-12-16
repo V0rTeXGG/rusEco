@@ -2,6 +2,21 @@
   position: relative;
   width: 100%;
 
+  &.video-item--page-content {
+    display: block;
+    max-width: 950px;
+    margin: 0 auto;
+    @include media(max, 991) {
+      max-width: initial;
+    }
+    .video-item__image {
+      width: initial;
+      @include media(max, 991) {
+        width: 100%;
+      }
+    }
+  }
+
   &__image {
     aspect-ratio: 16/9;
     width: 100%;

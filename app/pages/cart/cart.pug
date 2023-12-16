@@ -1,0 +1,27 @@
+extends ../../template/template.pug
+include ../../blocks/heading/heading
+include ../../blocks/components/form/form
+
+block mainwrapper
+  +heading({
+    breadcrumbs: ["Корзина"],
+    title: "Корзина",
+  })
+  section.section.cart
+    .container
+      .section-container.section-container--pb-100
+        .cart__container
+          .cart__list
+            .cart__item
+              img(src="../../img/image-content/cart-1.png").cart__item-img
+              .cart__item-info
+                p.cart__item-chapter
+          .cart__side
+            p.cart__side-title Оформить заказ
+            p.cart__side-counter 3 товара
+            +incut-form({
+              form: "cart",
+              thanksTitle: "Спасибо за интерес к нашей компании",
+              thanksText: "Мы свяжемся с вами в ближайшее время",
+              organization: true,
+            })

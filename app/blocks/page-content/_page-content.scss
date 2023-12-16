@@ -64,7 +64,9 @@
         margin-bottom: 30px;
       }
     }
-
+    &:last-of-type {
+      margin-bottom: 0;
+    }
   }
 
   ul, ol {
@@ -131,6 +133,26 @@
       @include media(max, 450) {
         margin-top: 10px;
       }
+    }
+  }
+
+  figure {
+    max-width: 950px;
+    margin: 50px auto 50px auto;
+    @include media(max, 991) {
+      position: relative;
+      left: 0;
+      max-width: unset;
+      width: 100vw;
+      transform: translateX(-20px);
+    }
+  }
+
+  img {
+    aspect-ratio: 16/9;
+    margin-bottom: 25px;
+    @include media(max, 991) {
+      width: 100%;
     }
   }
 
@@ -216,6 +238,13 @@
     margin: 50px auto;
     @include media(max, 650) {
       grid-template-columns: 1fr;
+    }
+    @include media(max, 450) {
+      position: relative;
+      left: 0;
+      width: 100vw;
+      max-width: unset;
+      transform: translateX(-20px)
     }
 
     img {

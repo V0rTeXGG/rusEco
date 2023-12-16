@@ -3,12 +3,84 @@
   width: 100%;
 
   &-wrapper {
-    width: 100%;
+    width: fit-content;
+    @include media(max, 450) {
+      width: 100%;
+    }
   }
 
   &__fields {
     display: flex;
     flex-direction: column;
     gap: 20px;
+  }
+
+  &__policy {
+    position: relative;
+    max-width: 340px;
+    font-size: 16px;
+    @include media(max, 450) {
+      font-size: 14px;
+    }
+
+    a {
+      padding-bottom: 5px;
+      border-bottom: 1px solid $color-black-blue;
+      transition: all $transition;
+      @include hover() {
+        border-color: transparent;
+      }
+      @include media(max, 450) {
+        display: block;
+        width: fit-content;
+        padding-bottom: 0;
+      }
+    }
+  }
+
+  &__submit {
+
+  }
+}
+
+.form__thanks {
+  display: none;
+  flex-direction: column;
+  gap: 50px;
+  max-width: 705px;
+  width: 100%;
+  @include media(max, 767) {
+    gap: 30px;
+    text-align: center;
+  }
+
+  &-title {
+    font-size: 61px;
+    line-height: 110%;
+    @include media(max, 767) {
+      font-size: 40px;
+    }
+    @include media(max, 450) {
+      font-size: 34px;
+    }
+  }
+
+  &-text {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 140%;
+    @include media(max, 767) {
+      font-size: 40px;
+    }
+    @include media(max, 450) {
+      font-size: 18px;
+    }
+  }
+}
+
+.buttonholder {
+  margin-top: 56px;
+  @include media(max, 450) {
+    margin-top: 46px;
   }
 }

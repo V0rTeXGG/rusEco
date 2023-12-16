@@ -1,0 +1,42 @@
+extends ../../template/template.pug
+include ../../blocks/heading/heading
+include ../../blocks/project/project
+
+block mainwrapper
+  +heading({
+    breadcrumbs: ["Проекты"],
+    title: "Проекты",
+  })
+  button.button.button--order.button--text-white Заказать проект
+  section.section.projects
+    .container
+      .section-container.section-container--pb-100
+        form(action="/projects").projects__filters
+          button.button.button--text-white.projects__filters-submits
+           span Применить
+          a(href="/projects").button.button--border
+            span Сбросить
+        .projects__list
+          +project({
+            img: 'project-1.png',
+            subtitle: "Уличное и дорожное освещение",
+            title: "Бульварное кольцо"
+          })
+          +project({
+            img: 'project-2.png',
+            subtitle: "Архитерктурное освещение",
+            title: "Введенский Владычный женский монастырь"
+          })
+          +project({
+            img: 'project-3.png',
+            subtitle: "Промышленные и складские объекты",
+            title: "Складской комплекс класса «А»"
+          })
+          +project({
+            img: 'project-4.png',
+            subtitle: "Уличное и дорожное освещение",
+            title: "Цифровые модули «Ситипорт» на территории ИЦ «Сколково»"
+          })
+        .button-center
+          button.button.button--border
+            span Показать еще

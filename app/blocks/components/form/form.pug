@@ -16,7 +16,22 @@ mixin incut-form(data)
         +input({
           temp: "email",
         })
+        if(data.organization)
+          +input({
+            temp: "organization",
+          })
         .inputholder.form__inputholder
           label.inputholder__label(data-default-label) Расскажите о проекте
-          textarea.inputholder__textarea(data-form-field)
-        a(href="/policy.html")(target="_blank").incut-form__policy Отправляя данную форму, я соглашаюсь на обработку персональных данных
+          textarea.inputholder__textarea(data-form-field)(data-textarea)
+        if(data.file)
+          .fileupload(name-nameinput="file")(data-acceptedfiles="image/*")(data-minfiles="1")(data-maxfiles="1")(data-fileupload)
+            .fileupload__button(data-fileupload-button)
+              span Прикрепить файл
+        span.incut-form__policy Отправляя данную форму, я соглашаюсь на
+          a(href="/policy.html")(target="_blank")  обработку персональных данных
+      .buttonholder.button-wrapper(data-form-trigger="")
+        button.button.button--text-white.form-incut__submit(disabled="true" data-form-button="")
+          span Отправить
+    .form__thanks(data-form-thanks="")
+      p.form__thanks-title=data.thanksTitle
+      p.form-thanks-text=data.thanksText
