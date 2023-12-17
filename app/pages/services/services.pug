@@ -51,7 +51,13 @@ block mainwrapper
             h2.order__left-title Заказать услугу
             p.order__left-text Проконсультироваться относительно услуг можно по телефону
             a(href="tel:+74952830748").order__left-phone +7 495 283 07 48
-          +incut-form({form: "order-services",})
+          .order__form
+            +incut-form({
+              form: "order-services",
+              thanksTitle: "Спасибо за интерес к нашей компании",
+              thanksText: "Мы свяжемся с вами в ближайшее время",
+              buttonText: 'Отправить',
+              file: true,})
   section.section.criteria
     .container
       .section-container.section-container--pb-100

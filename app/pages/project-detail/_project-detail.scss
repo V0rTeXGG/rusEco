@@ -1,0 +1,97 @@
+.project {
+  &__img-wrapper {
+    margin-bottom: 80px;
+    @include media(max, 991) {
+      position: relative;
+      left: 0;
+      width: 100vw;
+      max-width: unset;
+      transform: translateX(-20px);
+    }
+    @include media(max, 451) {
+      margin-bottom: 40px;
+    }
+  }
+
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    @include media(max, 850) {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    &__block {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+      max-width: 520px;
+      width: 100%;
+      @include media(max, 850) {
+        max-width: 100%;
+      }
+      @include media(max, 550) {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+
+    &-item {
+      &__title {
+        margin-bottom: 5px;
+        font-size: 20px;
+        font-weight: 700;
+        line-height: 140%;
+        color: $color-grey;
+        @include media(max, 450) {
+          font-size: 18px;
+        }
+      }
+
+      &__text {
+        font-size: 20px;
+        font-weight: 700;
+        line-height: 140%;
+        @include media(max, 450) {
+          font-size: 18px;
+        }
+      }
+    }
+  }
+
+  &__content {
+    padding-top: 100px;
+    @include media(max, 451) {
+      padding-top: 40px;
+    }
+  }
+
+  &__order-title {
+    margin-bottom: 73px;
+    text-align: center;
+    font-size: 61px;
+    line-height: 110%;
+    @include media(max, 650) {
+      font-size: 50px;
+      font-weight: 400;
+      line-height: 110%;
+    }
+    @include media(max, 451) {
+      font-size: 30px;
+    }
+    a {
+      display: block;
+      width: fit-content;
+      margin: 0 auto;
+      padding-bottom: 5px;
+      border-bottom: 1px solid $color-black-blue;
+      transition: all $transition;
+      @include hover() {
+        border-color: transparent;
+      }
+    }
+  }
+}

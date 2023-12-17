@@ -43,7 +43,7 @@ let commonJsLibs = [
   'app/js/custom-libs/cookie-class.js',
   // "app/js/custom-libs/tooltip.js",
   // "app/js/custom-libs/scroll-top.js",
-  // 'app/js/custom-libs/counter.js',
+  'app/js/custom-libs/counter.js',
   // 'app/js/custom-libs/float-label.js',
   // 'app/js/custom-libs/anchor-scroll.js',
   // 'app/js/custom-libs/password-toggle.js',

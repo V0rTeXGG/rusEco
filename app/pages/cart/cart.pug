@@ -1,0 +1,68 @@
+extends ../../template/template.pug
+include ../../blocks/heading/heading
+include ../../blocks/components/form/form
+include ../../blocks/components/counter/counter
+
+block mainwrapper
+  +heading({
+    breadcrumbs: ["Корзина"],
+    title: "Корзина",
+  })
+  section.section.cart
+    .container
+      .section-container.section-container--pb-100
+        .cart__container
+          .cart__list
+            .cart__item
+              img(src="../../img/image-content/cart-1.png").cart__item-img
+              .cart__item-info
+                p.cart__item-chapter Техническое освещение
+                a(href="#").cart__item-name NVH-04-xxx-040-1-5000-70
+                p.cart__item-subname 40 Вт, 6 000 лм, широкая боковая, IP66
+              .cart__item-counter
+                +counter({
+                  min: 1,
+                  max: 9999,
+                })
+              button.cart__item-delete(data-modal-open="delete")
+                svg.cart__item-delete__img
+                  use(href="#icon-bin")
+            .cart__item
+              img(src="../../img/image-content/cart-2.png").cart__item-img
+              .cart__item-info
+                p.cart__item-chapter Городские цифровые модули Ситипорт
+                a(href="#").cart__item-name СИТИПОРТ RSP002
+                p.cart__item-subname 40 Вт, 6 000 лм, широкая боковая, IP66
+              .cart__item-counter
+                +counter({
+                  min: 1,
+                  max: 9999,
+                })
+              button.cart__item-delete(data-modal-open="delete")
+                svg.cart__item-delete__img
+                  use(href="#icon-bin")
+            .cart__item
+              img(src="../../img/image-content/cart-3.png").cart__item-img
+              .cart__item-info
+                p.cart__item-chapter Уличные светильники
+                a(href="#").cart__item-name RSL006C 040/53/740 0-10V W4 TG GR (Nema, SC)
+                p.cart__item-subname 40 Вт, 6 000 лм, широкая боковая, IP66
+              .cart__item-counter
+                +counter({
+                  min: 1,
+                  max: 9999,
+                })
+              button.cart__item-delete(data-modal-open="delete")
+                svg.cart__item-delete__img
+                  use(href="#icon-bin")
+          .cart__side
+            p.cart__side-title Оформить заказ
+            p.cart__side-counter 3 товара
+            +incut-form({
+              form: "cart",
+              thanksTitle: "Спасибо за интерес к нашей компании",
+              thanksText: "Мы свяжемся с вами в ближайшее время",
+              buttonText: 'Оформить заказ',
+              organization: true,
+              order: true,
+            })

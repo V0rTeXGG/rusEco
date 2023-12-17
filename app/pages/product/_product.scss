@@ -3,13 +3,27 @@
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    gap: 20px;
-    margin-left: 243px;
+    gap: 30px;
+    margin: 0 0 100px 243px;
+    @include media(max, 1400) {
+      margin: 0 0 100px 128px;
+    }
+    @include media(max, 991) {
+      flex-direction: column;
+      margin: 0 0 100px 0;
+    }
+    @include media(max, 450) {
+      flex-direction: column;
+      margin: 0 0 40px 0;
+    }
   }
 
   &__img-wrapper {
     max-width: 860px;
     overflow: hidden;
+    @include media(max, 1400) {
+      max-width: 765px;
+    }
   }
 
   &__img {
@@ -22,10 +36,19 @@
     flex-direction: column;
     gap: 30px;
     margin-top: 87px;
+    @include media(max, 991) {
+      margin: 0;
+    }
+    @include media(max, 450) {
+      width: 100%;
+    }
   }
 
   &__button {
     width: fit-content;
+    @include media(max, 450) {
+      width: 100%;
+    }
   }
 }
 
@@ -105,12 +128,18 @@
     max-width: 1200px;
     width: 100%;
     margin: auto;
+    @include media(max, 550) {
+      grid-template-columns: repeat(1, 1fr);
+    }
   }
 
   &__item {
     padding: 20px 20px 20px 73px;
     border: 1px solid $color-grey;
     border-radius: 4px;
+    @include media(max, 450) {
+      padding: 10px 10px 10px 48px;
+    }
     @include hover() {
       border-color: $color-black-blue;
 
@@ -122,16 +151,20 @@
     &-title {
       position: relative;
       display: inline-block;
-      padding-bottom: 5px;
-      margin-bottom: 5px;
-      border-bottom: 1px solid $color-black-blue;
+      margin-bottom: 10px;
+      text-underline-offset: 10px;
+      text-decoration: underline;
       line-height: 130%;
       transition: all $transition;
-
+      @include media(max, 450) {
+        margin-bottom: 6px;
+        font-size: 16px;
+        text-underline-offset: 6px;
+      }
       &:before {
         content: "";
         position: absolute;
-        left: -53px;
+        left: -38px;
         width: 23px;
         height: 22px;
         background-image: url("../../img/image/pdf-file.png");
@@ -145,6 +178,10 @@
       line-height: 130%;
       letter-spacing: 0.14px;
       color: $color-grey;
+      @include media(max, 450) {
+        font-size: 12px;
+        letter-spacing: 0.12px;
+      }
     }
   }
 }

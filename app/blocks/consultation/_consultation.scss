@@ -12,12 +12,20 @@
     text-align: center;
     font-size: 41px;
     line-height: 120%;
+    @include media(max, 450) {
+      font-size: 23px;
+      line-height: 120%;
+    }
   }
 
   &__number {
     font-size: 61px;
     line-height: 110%;
     transition: all $transition;
+    @include media(max, 550) {
+      font-size: 34px;
+      line-height: 100%;
+    }
     @include hover {
       color: $color-blue;
     }

@@ -1,17 +1,4 @@
 .overlay(data-overlay="")
+include modal--delete
+include modal--question
 
-.modal(data-modal="modal")
-    .modal__close(data-modal-close="")
-    .modal__title
-        span Поп ап с формой
-    .modal__container(data-scroll-container="" data-form="")
-        form.form.invalid(data-validate-modal="" data-form-body="")
-            .inputholder.form__inputholder
-                input.inputholder__input(type="text" placeholder="Ваше имя*" data-required="")
-            .inputholder.form__inputholder
-                input.inputholder__input(type="tel" placeholder="Ваш телефон*" data-required="" data-mask-tel="")
-            .form__buttonholder(data-form-trigger="")
-                button.form__button.button(disabled="" data-form-button="")
-                    span Оставить заявку
-        .modal__thanks(data-form-thanks="")
-            p Спасибо!

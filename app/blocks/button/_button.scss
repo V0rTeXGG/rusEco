@@ -103,7 +103,8 @@
   }
 
   &[disabled] {
-    opacity: 0.7;
+    background: $color-grey-medium;
+    color: $color-white;
     pointer-events: none;
   }
 }

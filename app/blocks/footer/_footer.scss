@@ -24,17 +24,16 @@
       font-weight: 400;
       line-height: 90%;
       transition: all $transition;
-      @include hover() {
-        a {
-          border-color: transparent;
-        }
-      }
+
       a {
         display: block;
         width: fit-content;
         height: fit-content;
         padding-bottom: 27px;
         border-bottom: 1px solid $color-black-blue;
+        @include hover() {
+          border-color: transparent;
+        }
         @include media(max, 650) {
           padding-bottom: 3px;
         }

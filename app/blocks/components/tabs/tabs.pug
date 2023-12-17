@@ -1,18 +1,19 @@
 mixin tabs(data)
   .tabs(data-tabs="")
-    .tabs__nav
-      .tabs__nav-item.active(data-tabs-nav="application")
-        span Применение
-      .tabs__nav-item(data-tabs-nav="installation")
-        span Установка
-      .tabs__nav-item(data-tabs-nav="construction")
-        span Конструкция
-      .tabs__nav-item(data-tabs-nav="specifications")
-        span Характеристики
-      .tabs__nav-item(data-tabs-nav="optical")
-        span Оптическая часть
-      .tabs__nav-item(data-tabs-nav="management")
-        span Управление
+    .tabs__nav-container
+      .tabs__nav
+        .tabs__nav-item.active(data-tabs-nav="application")
+          span Применение
+        .tabs__nav-item(data-tabs-nav="installation")
+          span Установка
+        .tabs__nav-item(data-tabs-nav="construction")
+          span Конструкция
+        .tabs__nav-item(data-tabs-nav="specifications")
+          span Характеристики
+        .tabs__nav-item(data-tabs-nav="optical")
+          span Оптическая часть
+        .tabs__nav-item(data-tabs-nav="management")
+          span Управление
     .tabs__folds
       .tabs__fold.open(data-tabs-fold="application")
         .tabs__fit

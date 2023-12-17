@@ -3,9 +3,13 @@
     display: flex;
     align-items: center;
     width: fit-content;
-    margin-bottom: 80px;
     border: 1px solid $color-grey;
     border-radius: 10px;
+    &-container {
+      width: calc(100% + 20px);
+      overflow: auto;
+      margin-bottom: 80px;
+    }
 	&-item {
     z-index: 2;
     position: relative;
@@ -23,6 +27,7 @@
     span {
       position: relative;
       z-index: 3;
+      text-wrap: nowrap;
     }
 	  &.active {
       padding: 17px 34px;
@@ -54,7 +59,7 @@
   }
 
   &__folds {
-    padding-left: 368px;
+    //padding-left: 368px;
   }
 
   &__fit {
@@ -65,14 +70,26 @@
       p {
         &:not(:last-child) {
           margin-bottom: 25px;
+          @include media(max, 450) {
+            margin-bottom: 15px;
+          }
+        }
+        @include media(max, 450) {
+          font-size: 16px;
+          line-height: 150%;
         }
       }
 
       ul {
         padding-left: 23px;
+        @include media(max, 450) {
+          padding-left: 18px;
+        }
         li {
           position: relative;
-
+          @include media(max, 450) {
+            font-size: 16px;
+          }
           &:before {
             content: '';
             position: absolute;
@@ -82,10 +99,16 @@
             height: 8px;
             border-radius: 50%;
             border: 2px solid $color-grey;
+            @include media(max, 450) {
+              left: -18px;
+            }
           }
 
           &:not(:last-child) {
             padding-bottom: 20px;
+            @include media(max, 450) {
+              padding-bottom: 10px;
+            }
           }
         }
       }

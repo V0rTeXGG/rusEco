@@ -6,7 +6,7 @@
   width: 100%;
   height: 100%;
   display: none;
-  background: rgba(17, 17, 17, 0.3);
+  background: rgba(9, 31, 53, 0.50);
 }
 
 .modal {
@@ -20,7 +20,27 @@
   max-height: 80vh;
   background-color: $color-white;
   z-index: 11;
-  border-radius: 4px;
+  border-radius: 6px;
+  &[data-modal="question"] {
+    max-width: 836px;
+  }
+  &[data-modal="delete"] {
+    max-width: 515px;
+    width: 100%;
+    @include media(max, 650) {
+      top: 0;
+      bottom: 0;
+      left: 0;
+      transform: translate(0%, 0%);
+      max-width: 100%;
+      max-height: 100vh;
+    }
+
+    .modal__close {
+      top: 15px;
+      right: 20px;
+    }
+  }
   &[data-modal="cookie"] {
     top: auto;
     bottom: 20px;
@@ -48,6 +68,8 @@
         flex-direction: column;
         padding: 20px;
       }
+
+
     }
 
     .modal__text {
@@ -62,8 +84,8 @@
   }
   &__close {
     position: absolute;
-    top: 20px;
-    right: 20px;
+    top: 25px;
+    right: 25px;
     width: 32px;
     height: 32px;
     cursor: pointer;
@@ -81,17 +103,71 @@
       transform: translate(-50%, -50%) rotate(-45deg);
     }
   }
-  &__container {
-    padding: 0 20px 20px;
-    max-height: calc(80vh - 70px);
-    overflow: auto;
+
+  &__container--another {
+    padding: 50px;
+    @include media(max, 650) {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      height: 100%;
+    }
+    @include media(max, 450) {
+      padding: 20px;
+    }
+
+    .modal__content {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+    }
+
+    .modal__btns {
+      align-items: flex-end;
+    }
   }
+
   &__title {
-    font-size: 26px;
-    line-height: 1.2;
-    padding: 20px;
+    margin-bottom: 50px;
+    font-size: 41px;
+    line-height: 120%;
+    @include media(max, 450) {
+      margin-bottom: 30px;
+      font-size: 23px;
+    }
+  }
+
+  &__content {
+    max-width: 382px;
+    width: 100%;
+    margin-bottom: 20px;
+    @include media(max, 650) {
+      text-align: center;
+    }
+    p {
+      line-height: 150%;
+      @include media(max, 450) {
+        font-size: 16px;
+      }
+    }
+  }
+
+  &__btns {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 366px;
+    width: 100%;
+    @include media(max, 450) {
+      flex-direction: column;
+      justify-content: flex-end;
+      gap: 30px;
+    }
   }
   &__thanks{
     display: none;
+
+
   }
 }
+
