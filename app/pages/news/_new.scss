@@ -22,7 +22,7 @@
     }
   }
 
-  &__item {
+  &__block {
     display: flex;
     max-width: 1103px;
     margin-bottom: 30px;
@@ -38,7 +38,7 @@
       margin-bottom: 20px;
     }
     @include hover() {
-      .news__item-img-wrapper {
+      .news__block-img-wrapper {
         &:before {
           opacity: .5;
         }

@@ -1,6 +1,7 @@
 extends ../../template/template.pug
 include ../../blocks/heading/heading
 include ../../blocks/project/project
+include ../../blocks/form-filters/form-filters
 
 block mainwrapper
   +heading({
@@ -11,11 +12,7 @@ block mainwrapper
   section.section.projects
     .container
       .section-container.section-container--pb-100
-        form(action="/projects").projects__filters
-          button.button.button--text-white.projects__filters-submits
-           span Применить
-          a(href="/projects").button.button--border
-            span Сбросить
+        +form-filter(['Уличное и дорожное освещение', 'Архитерктурное освещение'])
         .projects__list
           +project({
             img: 'project-1.png',

@@ -36,10 +36,16 @@
 
 .catalog {
   &__content {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     gap: 30px;
     margin-bottom: 50px;
+    @include media(max, 851) {
+      grid-template-columns: 1fr;
+    }
+    @include media(max, 451) {
+      gap: 20px;
+    }
   }
 }
 

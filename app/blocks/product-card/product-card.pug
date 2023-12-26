@@ -1,8 +1,9 @@
 mixin product-card(data)
   a(href="").product-card(style=`background-image: url("../../img/image-content/${data.background}")`)&attributes(attributes)
     .product-card__content
-      .product-card__category=data.category
-      .product-card__name=data.name
+      if(data.category)
+        .product-card__category=data.category
+      .product-card__name(class=data.nameClass)=data.name
       span.product-card__more Подробнее
-    img.product-card__img(src=`../../img/image-content/${data.image}` alt=`${data.name}`)
-    //img.product-card__background(src=`../../img/image-content/${data.background}`)
+    .product-card__img-wrapper
+      img.product-card__img(src=`../../img/image-content/${data.image}` alt=`${data.name}`)

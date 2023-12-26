@@ -1,76 +1,50 @@
 .radio {
-    display: block;
-    width: fit-content;
-    min-height: 28px;
-    position: relative;
-    cursor: pointer;
+  display: block;
+  width: fit-content;
+  position: relative;
+  cursor: pointer;
+  border-radius: 40px;
+  transition: all $transition;
     .radio__input {
         width: 1px;
         height: 1px;
         position: absolute;
         opacity: 0;
-        @include hover {
-            &:hover {
-                +label,
-                +span {
-                    &::before {
-                        border-color: #bfc8cb;
-                    }
-                }
-            }
-        }
+
         +label,
         +span {
-            display: inline-flex;
-            align-items: center;
-            position: relative;
-            padding-left: 38px;
-            min-height: 28px;
+          display: block;
+          width: fit-content;
+          padding: 17px 35px;
+          font-size: 20px;
+          line-height: 130%;
+          cursor: pointer;
+          border: 1px solid $color-grey-medium;
+          border-radius: 40px;
+          background-color: $color-white;
+          transition: all $transition;
+          @include media(max, 851) {
+            padding: 12px 25px;
+            font-size: 16px;
+          }
+          @include media(max, 451) {
             font-size: 14px;
-            font-weight: 300;
-            cursor: pointer;
-            &::before {
-                content: "";
-                position: absolute;
-                left: 0;
-                top: 0;
-                width: 24px;
-                height: 24px;
-                background-color: #fff;
-                border: 2px solid #dbe4e7;
-                border-radius: 50%;
-                transition: $transition;
-            }
-            &::after {
-                content: "";
-                position: absolute;
-                top: 5px;
-                left: 5px;
-                width: 18px;
-                height: 18px;
-                background-color: #ca4592;
-                border-radius: 50%;
-                transition: $transition;
-            }
+          }
+          @include hover() {
+            border-color: $color-blue;
+          }
         }
         &:not(:checked) {
-            +label,
-            +span {
-                &::after {
-                    transform: scale(0);
-                }
-            }
+
         }
         &:checked {
-            +label,
-            +span {
-                &::before {
-                    border-color: #ca4592;
-                }
-                &::after {
-                    transform: scale(1);
-                }
-            }
+
+          +label,
+          +span {
+            background-color: $color-blue;
+            color: $color-white;
+            border-color: $color-blue;
+          }
         }
     }
 }

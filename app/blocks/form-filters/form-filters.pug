@@ -1,0 +1,21 @@
+include ../components/select/select
+
+mixin form-filter(data)
+  .form-filters(data-form-filters)
+    button.form-filters__button(data-form-filters-button) Выберите назначение
+    form.form-filters__form(data-form-filters-form)
+      .form-filters__form-top
+        span.form-filters__title Фильтры
+        button(type="button").form-filters__form-close(data-form-filters-close)
+      +select({
+        type: "checkbox",
+        name: "checkbox-group",
+        textBefore: "Выберите мощность ",
+        items: data
+      })
+      .form-filters__btns
+        button(type="submit").form-filters__submit.button.button--text-white
+         span Применить
+        button.button.button--border
+         span Сбросить
+

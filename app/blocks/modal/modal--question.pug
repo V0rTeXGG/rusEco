@@ -1,6 +1,16 @@
+include ../components/form/form
+
 .modal(data-modal="question")
   .modal__container--another
     .modal__close(data-modal-close="")
-    .modal__title
-      span Ответим на все ваши вопросы
+    +incut-form({
+      form: "question",
+      formTitle: "Ответим на все ваши вопросы ",
+      thanksTitle: "Спасибо за заявку!",
+      thanksText: "Наши менеджеры свяжутся с вами в ближайшее время",
+      thanksButton: true,
+      buttonText: 'Отправить',
+      class: 'incut-form__fields--grid',
+      questionForm: true,
+    })
 

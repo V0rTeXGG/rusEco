@@ -1,0 +1,24 @@
+.form {
+  &__tags {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    max-width: 1121px;
+    margin-bottom: 80px;
+    @include media(max, 851) {
+      gap: 10px;
+    }
+    @include media(max, 451) {
+      margin-bottom: 40px;
+    }
+  }
+
+  &__inputs {
+    max-width: 394px;
+    width: 100%;
+    @include media(max, 768) {
+      max-width: 100%;
+    }
+  }
+}

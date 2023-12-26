@@ -25,6 +25,7 @@
 @import 'consultation/_consultation';
 @import "page-content/_page-content";
 @import "heading/_heading";
+@import "form-filters/_form-filters";
 
 //pages
 @import "index/_index";
@@ -41,13 +42,15 @@
 @import "project-detail/_project-detail";
 @import "projects/_projects";
 @import "cart/_cart";
+@import "subcatalog/_subcatalog";
+@import "catalog/_catalog";
 
 
 //components
 @import 'components/slider/_slider';
-//@import 'components/select/_select';
+@import 'components/select/_select';
 //@import 'components/checkbox/_checkbox';
-//@import 'components/radio/_radio';
+@import 'components/radio/_radio';
 //@import 'components/password-toggle/_password-toggle';
 //@import 'components/rating/_rating';
 //@import 'components/accordion/_accordion';

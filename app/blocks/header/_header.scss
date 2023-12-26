@@ -12,13 +12,13 @@
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    @include media(max, 1400) {
+    @include media(max, 1401) {
       gap: 15px;
     }
     @include media(max, 991) {
       flex-direction: row-reverse;
     }
-    @include media(max, 450) {
+    @include media(max, 451) {
       padding: 17px 0 9px 0;
     }
   }
@@ -77,8 +77,11 @@
     width: 100%;
     margin-left: auto;
     margin-right: 70px;
-    @include media(max, 1400) {
+    @include media(max, 1401) {
       margin-right: 60px;
+    }
+    @include media(max, 1024) {
+      max-width: 100%;
     }
     @include media(max, 991) {
       position: absolute;
@@ -97,9 +100,9 @@
       transition: all $transition;
 
       &.active {
-        height: 100vh;
         padding: 50px 33px;
         overflow: auto;
+        @include adaptive-height();
       }
     }
   }
@@ -148,7 +151,7 @@
       position: absolute;
       z-index: 2;
       left: 0;
-      bottom: -2px;
+      bottom: -4px;
       width: 0;
       height: 2px;
       background: $color-gradient;

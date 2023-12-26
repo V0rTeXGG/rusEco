@@ -1,0 +1,53 @@
+extends ../../template/template.pug
+include ../../blocks/heading/heading
+include ../../blocks/consultation/consultation
+include ../../blocks/form-filters/form-filters
+block mainwrapper
+  +heading({
+    breadcrumbs: ["Каталог", "Техническое освещение"],
+    title: "Техническое освещение",
+  })
+  section.section.subcatalog
+    .container
+      .section-container.section-container--pb-100
+        +form-filter(['≤ 10 W', '10 ÷ 20 W', '20÷ 30 W', '30 ÷ 50 W', '50 ÷100 W', '100 ÷ 150 W', '150 ÷ 200 W', '≥ 200 W'])
+        .subcatalog__list
+          a(href="#").subcatalog__item
+            .subcatalog__item-img-wrapper
+              img(src="../../img/image-content/subcatalog-1.png").subcatalog__item-img
+            span.subcatalog__item-title NVH-04
+          a(href="#").subcatalog__item
+            .subcatalog__item-img-wrapper
+              img(src="../../img/image-content/subcatalog-2.png").subcatalog__item-img
+            span.subcatalog__item-title NVH-05
+          a(href="#").subcatalog__item
+            .subcatalog__item-img-wrapper
+              img(src="../../img/image-content/subcatalog-3.png").subcatalog__item-img
+            span.subcatalog__item-title RSHB001
+          a(href="#").subcatalog__item
+            .subcatalog__item-img-wrapper
+              img(src="../../img/image-content/subcatalog-4.png").subcatalog__item-img
+            span.subcatalog__item-title RSHB002
+          a(href="#").subcatalog__item
+            .subcatalog__item-img-wrapper
+              img(src="../../img/image-content/subcatalog-5.png").subcatalog__item-img
+            span.subcatalog__item-title NVV-11
+          a(href="#").subcatalog__item
+            .subcatalog__item-img-wrapper
+              img(src="../../img/image-content/subcatalog-6.png").subcatalog__item-img
+            span.subcatalog__item-title RSHВ005
+          a(href="#").subcatalog__item
+            .subcatalog__item-img-wrapper
+              img(src="../../img/image-content/subcatalog-7.png").subcatalog__item-img
+            span.subcatalog__item-title RSPR001
+          a(href="#").subcatalog__item
+            .subcatalog__item-img-wrapper
+              img(src="../../img/image-content/subcatalog-8.png").subcatalog__item-img
+            span.subcatalog__item-title RSPR002
+        .button-center
+          button.button.button--border
+            span Показать еще
+  section.section.consultation
+    .container
+      .section-container.section-container--pb-100.consultation__container
+        +consultation()

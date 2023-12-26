@@ -1,24 +1,29 @@
 .select {
   position: relative;
-  color: $color-black;
+  max-width: 394px;
+  width: 100%;
+  margin-right: 50px;
+  font-size: 16px;
+  color: $color-grey-medium;
   &__active {
-	padding: 10px 20px;
-	border-radius: 7px;
-	border: 1px solid $color-black;
+	padding: 19px 15px 21px 20px;
+	border-radius: 4px;
+	border: 1px solid $color-grey-medium;
 	font-size: 16px;
 	cursor: pointer;
 	position: relative;
 	&:before {
 	  content: '';
 	  position: absolute;
-	  @include size(22px, 22px);
-	  //@include bgImage(no-repeat, center, contain, '../../img/image/select-arrow.svg'); // add your img
+	  @include size(16px, 9px);
+	  @include bgImage(no-repeat, center, contain, '../../img/image/arrow-down.png');
 	  top: 50%;
-	  right: 20px;
+	  right: 15px;
 	  transform: translate(0, -50%);
 	  transition: $transition;
 	}
 	&.open {
+    border: 1px solid $color-black;
 	  &:before {
 		transform: translate(0, -50%) rotate(180deg);
 	  }
@@ -31,24 +36,74 @@
 	-webkit-box-orient: vertical;
   }
   &__drop {
-	display: none;
-	position: absolute;
-	z-index: 1;
-	width: 100%;
-	padding: 10px 20px;
-	border-radius: 7px;
-	border: 1px solid $color-black;
-	font-size: 16px;
-	background-color: #fff;
+    display: none;
+    position: absolute;
+    z-index: 3;
+    width: 100%;
+    padding: 20px 20px 22px 20px;
+    border-radius: 7px;
+    box-shadow: 0px 10px 50px 0px rgba(30, 33, 36, 0.07);
+    background-color: #fff;
   }
 
   &__item {
-	display: block;
-	cursor: pointer;
-	color: $color-black;
+    position: relative;
+    display: block;
+    padding-left: 37px;
+    cursor: pointer;
+    font-size: 16px;
+	  color: $color-grey;
+    @include hover() {
+        &:before {
+          background: $color-gradient;
+      }
+
+      span {
+        color: $color-black-blue;
+      }
+    }
+    &:not(:last-of-type) {
+      margin-bottom: 22px;
+    }
+    &:before {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 22px;
+      height: 22px;
+      background: $color-grey-medium;
+      border-radius: 6px;
+      transition: all $transition;
+    }
+    &:after {
+      content: '';
+      position: absolute;
+      left: 1px;
+      bottom: 1px;
+      width: 20px;
+      height: 20px;
+      background: $color-white;
+      background-image: url("../../img/image/check-item.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+      border-radius: 6px;
+      transition: all $transition;
+    }
 	&.active {
-	  font-weight: 600;
+    color: $color-black-blue;
+
+    &:before {
+      background: $color-gradient;
+    }
+
+    &:after {
+      background-color: transparent;
+    }
 	}
+    span {
+      transition: all $transition;
+    }
   }
 
   &__input {

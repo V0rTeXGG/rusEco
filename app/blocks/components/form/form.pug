@@ -3,8 +3,9 @@ include ../input/input.pug
 mixin incut-form(data)
   .incut-form-wrapper(data-form=`${data.form}`)
     form.incut-form.invalid(data-validate-form="" data-form-body="" data-show-thanks)
+      .incut-form__title=data.formTitle
       span.error-text.error-text--backend(data-error-text="backend")
-      .incut-form__fields
+      .incut-form__fields(class=data.class)
         +input({
           temp: "name",
           label: 'Ваше имя *',
@@ -27,11 +28,21 @@ mixin incut-form(data)
           .fileupload(name-nameinput="file")(data-acceptedfiles="image/*")(data-minfiles="1")(data-maxfiles="1")(data-fileupload)
             .fileupload__button(data-fileupload-button)
               span Прикрепить файл
-        span.incut-form__policy Отправляя данную форму, я соглашаюсь на
-          a(href="/policy.html")(target="_blank")  обработку персональных данных
-      .buttonholder.button-wrapper(data-form-trigger="")
-        button.button.button--text-white.form-incut__submit(disabled="true" data-form-button="")
-          span=data.buttonText
+
+        if(data.questionForm)
+          .incut-form__bottom
+            .buttonholder.button-wrapper(data-form-trigger="")
+              button.button.button--text-white.incut-form__submit(disabled="true" data-form-button="")
+                span=data.buttonText
+            span.incut-form__policy Отправляя данную форму, я соглашаюсь на
+              a(href="/policy.html")(target="_blank")  обработку персональных данных
+        else
+          span.incut-form__policy Отправляя данную форму, я соглашаюсь на
+            a(href="/policy.html")(target="_blank")  обработку персональных данных
+      if(!data.questionForm)
+        .buttonholder.button-wrapper(data-form-trigger="")
+          button.button.button--text-white.incut-form__submit(disabled="true" data-form-button="")
+            span=data.buttonText
     .form__thanks(data-form-thanks="")
       if(data.order)
         p.form__thanks-text Номер заказа No2738947324
@@ -40,3 +51,6 @@ mixin incut-form(data)
       else
         p.form__thanks-title=data.thanksTitle
         p.form__thanks-text=data.thanksText
+        if(data.thanksButton)
+          button.button.button--text-white.form__thanks-button(data-modal-close="question")
+            span Закрыть

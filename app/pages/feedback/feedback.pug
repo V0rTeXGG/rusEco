@@ -1,13 +1,70 @@
 extends ../../template/template.pug
 include ../../blocks/heading/heading
+include ../../blocks/components/radio/radio
+include ../../blocks/components/input/input
 
 block mainwrapper
   +heading({
     breadcrumbs: ["Контакты", "Обратная связь"],
     title: "Всегда на связи! Пишите нам",
   })
-    section.section.form
-      .container
-        .section-container.section-container--pb-100
-          .feedback(data-form="feedback")
+  section.section.form
+    .container
+      .section-container.section-container--pb-100
+        .incut-form-wrapper.feedback(data-form="feedback")
+          form.incut-form--feedback.invalid(data-validate-form="" data-form-body="" data-show-thanks)
+            span.error-text.error-text--backend(data-error-text="backend")
             h2.h2 Меня интересует...
+            .form__tags
+              +radio({
+                id: "1",
+                title: "Уличное и дорожное освещение",
+                name: "group",
+              })
+              +radio({
+                id: "2",
+                title: "Промышленные и складские объекты",
+                name: "group",
+              })
+              +radio({
+                id: "3",
+                title: "Архитектурное освещение",
+                name: "group",
+              })
+              +radio({
+                id: "4",
+                title: "Ландшафтное освещение",
+                name: "group",
+              })
+              +radio({
+                id: "5",
+                title: "Приобрести оборудование",
+                name: "group",
+              })
+            .form__inputs
+              .incut-form__fields
+                +input({
+                  temp: "name",
+                  label: 'Ваше имя *',
+                })
+                +input({
+                  temp: "phone",
+                  mask: true,
+                })(data-mask-tel)
+                +input({
+                  temp: "email",
+                })
+                .inputholder.form__inputholder
+                  label.inputholder__label(data-default-label) Расскажите о проекте
+                  textarea.inputholder__textarea(data-form-field)(data-textarea)
+                .fileupload(name-nameinput="file")(data-acceptedfiles="image/*")(data-minfiles="1")(data-maxfiles="1")(data-fileupload)
+                  .fileupload__button(data-fileupload-button)
+                    span Прикрепить файл
+                .incut-form__bottom
+                  span.incut-form__policy Отправляя данную форму, я соглашаюсь на
+                    a(href="/policy.html")(target="_blank")  обработку персональных данных
+              .buttonholder.button-wrapper(data-form-trigger="")
+                button.button.button--text-white.incut-form__submit(disabled="true" data-form-button="")
+                  span Отправить
+          .form__thanks(data-form-thanks="")
+            p.form__thanks-text Мы свяжемся с вами в ближайшее время

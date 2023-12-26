@@ -37,9 +37,9 @@ block mainwrapper
               th Диапазон напряжения (В)
               th Габариты
               th.characteristics__table-cell
-          tbody.characteristics__table-body
-            tr.characteristics__table-row
-              td.characteristics__table-cell NVH-04-xxx-040-1 - 5000 - 70
+          tbody.characteristics__table-body(data-accordions-group)
+            tr.characteristics__table-row(data-accordion="mobile")
+              td.characteristics__table-cell.characteristics__table-cell--name(data-accordion-toggle="") NVH-04-xxx-040-1 - 5000 - 70
               td.characteristics__table-cell 40
               td.characteristics__table-cell 50x35, 28x100, 60, 90, 120
               td.characteristics__table-cell 5 000
@@ -50,8 +50,30 @@ block mainwrapper
                 button.characteristics__table-button
                  svg.characteristics__table-button__img
                   use(href="#icon-cart-add")
-            tr.characteristics__table-row
-              td.characteristics__table-cell NVH-04-xxx-040-1 - 5000 - 70
+              td.characteristics__table-content(data-accordion-content="")
+                .characteristics__table-item
+                  span.characteristics__table-item__title Номинальная мощность (Вт)
+                  span.characteristics__table-item__caption 40
+                .characteristics__table-item
+                  span.characteristics__table-item__title Угол (°)
+                  span.characteristics__table-item__caption 50x35, 28x100, 60, 90, 120
+                .characteristics__table-item
+                  span.characteristics__table-item__title Цветовая температура (К)
+                  span.characteristics__table-item__caption 5 000
+                .characteristics__table-item
+                  span.characteristics__table-item__title Световой поток (Лм)
+                  span.characteristics__table-item__caption 5 800
+                .characteristics__table-item
+                  span.characteristics__table-item__title Диапазон напряжения (В)
+                  span.characteristics__table-item__caption AC176~264
+                .characteristics__table-item
+                  span.characteristics__table-item__title Габариты
+                  span.characteristics__table-item__caption 320x138x85
+                .characteristics__table-item
+                  button.button.button--border.characteristics__table-item__button
+                    span В корзину
+            tr.characteristics__table-row(data-accordion="mobile")
+              td.characteristics__table-cell.characteristics__table-cell--name(data-accordion-toggle="")  NVH-04-xxx-040-1 - 5000 - 70
               td.characteristics__table-cell 50
               td.characteristics__table-cell 50x35, 28x100, 60, 90, 120
               td.characteristics__table-cell 5 000
@@ -62,8 +84,30 @@ block mainwrapper
                 button.characteristics__table-button
                   svg.characteristics__table-button__img
                     use(href="#icon-cart-add")
-            tr.characteristics__table-row
-              td.characteristics__table-cell NVH-04-xxx-040-1 - 5000 - 70
+              td.characteristics__table-content(data-accordion-content="")
+                .characteristics__table-item
+                  span.characteristics__table-item__title Номинальная мощность (Вт)
+                  span.characteristics__table-item__caption 50
+                .characteristics__table-item
+                  span.characteristics__table-item__title Угол (°)
+                  span.characteristics__table-item__caption 50x35, 28x100, 60, 90, 120
+                .characteristics__table-item
+                  span.characteristics__table-item__title Цветовая температура (К)
+                  span.characteristics__table-item__caption 5 000
+                .characteristics__table-item
+                  span.characteristics__table-item__title Световой поток (Лм)
+                  span.characteristics__table-item__caption 7 000
+                .characteristics__table-item
+                  span.characteristics__table-item__title Диапазон напряжения (В)
+                  span.characteristics__table-item__caption AC176~264
+                .characteristics__table-item
+                  span.characteristics__table-item__title Габариты
+                  span.characteristics__table-item__caption 320x138x85
+                .characteristics__table-item
+                  button.button.button--border.characteristics__table-item__button
+                    span В корзину
+            tr.characteristics__table-row(data-accordion="mobile")
+              td.characteristics__table-cell.characteristics__table-cell--name(data-accordion-toggle="")  NVH-04-xxx-040-1 - 5000 - 70
               td.characteristics__table-cell 60
               td.characteristics__table-cell 50x35, 28x100, 60, 90, 120
               td.characteristics__table-cell 5 000
@@ -74,8 +118,30 @@ block mainwrapper
                 button.characteristics__table-button
                   svg.characteristics__table-button__img
                     use(href="#icon-cart-add")
-            tr.characteristics__table-row
-              td.characteristics__table-cell NVH-04-xxx-040-1 - 5000 - 70
+              td.characteristics__table-content(data-accordion-content="")
+                .characteristics__table-item
+                  span.characteristics__table-item__title Номинальная мощность (Вт)
+                  span.characteristics__table-item__caption 60
+                .characteristics__table-item
+                  span.characteristics__table-item__title Угол (°)
+                  span.characteristics__table-item__caption 50x35, 28x100, 60, 90, 120
+                .characteristics__table-item
+                  span.characteristics__table-item__title Цветовая температура (К)
+                  span.characteristics__table-item__caption 5 000
+                .characteristics__table-item
+                  span.characteristics__table-item__title Световой поток (Лм)
+                  span.characteristics__table-item__caption 8 100
+                .characteristics__table-item
+                  span.characteristics__table-item__title Диапазон напряжения (В)
+                  span.characteristics__table-item__caption AC176~264
+                .characteristics__table-item
+                  span.characteristics__table-item__title Габариты
+                  span.characteristics__table-item__caption 350x138x85
+                .characteristics__table-item
+                  button.button.button--border.characteristics__table-item__button
+                    span В корзину
+            tr.characteristics__table-row(data-accordion="mobile")
+              td.characteristics__table-cell.characteristics__table-cell--name(data-accordion-toggle="")  NVH-04-xxx-040-1 - 5000 - 70
               td.characteristics__table-cell 80
               td.characteristics__table-cell 50x35, 28x100, 60, 90, 120
               td.characteristics__table-cell 5 000
@@ -86,8 +152,30 @@ block mainwrapper
                 button.characteristics__table-button
                   svg.characteristics__table-button__img
                     use(href="#icon-cart-add")
-            tr.characteristics__table-row
-              td.characteristics__table-cell NVH-04-xxx-040-1 - 5000 - 70 - E
+              td.characteristics__table-content(data-accordion-content="")
+                .characteristics__table-item
+                  span.characteristics__table-item__title Номинальная мощность (Вт)
+                  span.characteristics__table-item__caption 80
+                .characteristics__table-item
+                  span.characteristics__table-item__title Угол (°)
+                  span.characteristics__table-item__caption 50x35, 28x100, 60, 90, 120
+                .characteristics__table-item
+                  span.characteristics__table-item__title Цветовая температура (К)
+                  span.characteristics__table-item__caption 5 000
+                .characteristics__table-item
+                  span.characteristics__table-item__title Световой поток (Лм)
+                  span.characteristics__table-item__caption 11 600
+                .characteristics__table-item
+                  span.characteristics__table-item__title Диапазон напряжения (В)
+                  span.characteristics__table-item__caption AC176~264
+                .characteristics__table-item
+                  span.characteristics__table-item__title Габариты
+                  span.characteristics__table-item__caption 600x138x85
+                .characteristics__table-item
+                  button.button.button--border.characteristics__table-item__button
+                    span В корзину
+            tr.characteristics__table-row(data-accordion="mobile")
+              td.characteristics__table-cell.characteristics__table-cell--name(data-accordion-toggle="")  NVH-04-xxx-040-1 - 5000 - 70 - E
               td.characteristics__table-cell 80 / 30
               td.characteristics__table-cell 50x35, 28x100, 60, 90, 120
               td.characteristics__table-cell 5 000
@@ -98,8 +186,30 @@ block mainwrapper
                 button.characteristics__table-button
                   svg.characteristics__table-button__img
                     use(href="#icon-cart-add")
-            tr.characteristics__table-row
-              td.characteristics__table-cell NVH-04-xxx-040-1 - 5000 - 70 - E
+              td.characteristics__table-content(data-accordion-content="")
+                .characteristics__table-item
+                  span.characteristics__table-item__title Номинальная мощность (Вт)
+                  span.characteristics__table-item__caption 80 / 30
+                .characteristics__table-item
+                  span.characteristics__table-item__title Угол (°)
+                  span.characteristics__table-item__caption 50x35, 28x100, 60, 90, 120
+                .characteristics__table-item
+                  span.characteristics__table-item__title Цветовая температура (К)
+                  span.characteristics__table-item__caption 5 000
+                .characteristics__table-item
+                  span.characteristics__table-item__title Световой поток (Лм)
+                  span.characteristics__table-item__caption 11 600 / 4 800
+                .characteristics__table-item
+                  span.characteristics__table-item__title Диапазон напряжения (В)
+                  span.characteristics__table-item__caption AC176~264
+                .characteristics__table-item
+                  span.characteristics__table-item__title Габариты
+                  span.characteristics__table-item__caption 600x138x85
+                .characteristics__table-item
+                  button.button.button--border.characteristics__table-item__button
+                    span В корзину
+            tr.characteristics__table-row(data-accordion="mobile")
+              td.characteristics__table-cell.characteristics__table-cell--name(data-accordion-toggle="")  NVH-04-xxx-040-1 - 5000 - 70 - E
               td.characteristics__table-cell 100
               td.characteristics__table-cell 50x35, 28x100, 60, 90, 120
               td.characteristics__table-cell 5 000
@@ -110,8 +220,30 @@ block mainwrapper
                 button.characteristics__table-button
                   svg.characteristics__table-button__img
                     use(href="#icon-cart-add")
-            tr.characteristics__table-row
-              td.characteristics__table-cell NVH-04-xxx-040-1 - 5000 - 70 - E
+              td.characteristics__table-content(data-accordion-content="")
+                .characteristics__table-item
+                  span.characteristics__table-item__title Номинальная мощность (Вт)
+                  span.characteristics__table-item__caption 100
+                .characteristics__table-item
+                  span.characteristics__table-item__title Угол (°)
+                  span.characteristics__table-item__caption 50x35, 28x100, 60, 90, 120
+                .characteristics__table-item
+                  span.characteristics__table-item__title Цветовая температура (К)
+                  span.characteristics__table-item__caption 5 000
+                .characteristics__table-item
+                  span.characteristics__table-item__title Световой поток (Лм)
+                  span.characteristics__table-item__caption 14 000
+                .characteristics__table-item
+                  span.characteristics__table-item__title Диапазон напряжения (В)
+                  span.characteristics__table-item__caption AC176~264
+                .characteristics__table-item
+                  span.characteristics__table-item__title Габариты
+                  span.characteristics__table-item__caption 600x138x85
+                .characteristics__table-item
+                  button.button.button--border.characteristics__table-item__button
+                    span В корзину
+            tr.characteristics__table-row(data-accordion="mobile")
+              td.characteristics__table-cell.characteristics__table-cell--name(data-accordion-toggle="")  NVH-04-xxx-040-1 - 5000 - 70 - E
               td.characteristics__table-cell 100 / 40
               td.characteristics__table-cell 50x35, 28x100, 60, 90, 120
               td.characteristics__table-cell 5 000
@@ -122,8 +254,30 @@ block mainwrapper
                 button.characteristics__table-button
                   svg.characteristics__table-button__img
                     use(href="#icon-cart-add")
-            tr.characteristics__table-row
-              td.characteristics__table-cell NVH-04-xxx-040-1 - 5000 - 70 - E
+              td.characteristics__table-content(data-accordion-content="")
+                .characteristics__table-item
+                  span.characteristics__table-item__title Номинальная мощность (Вт)
+                  span.characteristics__table-item__caption 100 / 40
+                .characteristics__table-item
+                  span.characteristics__table-item__title Угол (°)
+                  span.characteristics__table-item__caption 50x35, 28x100, 60, 90, 120
+                .characteristics__table-item
+                  span.characteristics__table-item__title Цветовая температура (К)
+                  span.characteristics__table-item__caption 5 000
+                .characteristics__table-item
+                  span.characteristics__table-item__title Световой поток (Лм)
+                  span.characteristics__table-item__caption 14 000 / 5 600
+                .characteristics__table-item
+                  span.characteristics__table-item__title Диапазон напряжения (В)
+                  span.characteristics__table-item__caption AC176~264
+                .characteristics__table-item
+                  span.characteristics__table-item__title Габариты
+                  span.characteristics__table-item__caption 600x138x85
+                .characteristics__table-item
+                  button.button.button--border.characteristics__table-item__button
+                    span В корзину
+            tr.characteristics__table-row(data-accordion="mobile")
+              td.characteristics__table-cell.characteristics__table-cell--name(data-accordion-toggle="")  NVH-04-xxx-040-1 - 5000 - 70 - E
               td.characteristics__table-cell 120
               td.characteristics__table-cell 50x35, 28x100, 60, 90, 120
               td.characteristics__table-cell 5 000
@@ -134,8 +288,30 @@ block mainwrapper
                 button.characteristics__table-button
                   svg.characteristics__table-button__img
                     use(href="#icon-cart-add")
-            tr.characteristics__table-row
-              td.characteristics__table-cell NVH-04-xxx-040-1 - 5000 - 70 - E
+              td.characteristics__table-content(data-accordion-content="")
+                .characteristics__table-item
+                  span.characteristics__table-item__title Номинальная мощность (Вт)
+                  span.characteristics__table-item__caption 120
+                .characteristics__table-item
+                  span.characteristics__table-item__title Угол (°)
+                  span.characteristics__table-item__caption 50x35, 28x100, 60, 90, 120
+                .characteristics__table-item
+                  span.characteristics__table-item__title Цветовая температура (К)
+                  span.characteristics__table-item__caption 5 000
+                .characteristics__table-item
+                  span.characteristics__table-item__title Световой поток (Лм)
+                  span.characteristics__table-item__caption 16 200
+                .characteristics__table-item
+                  span.characteristics__table-item__title Диапазон напряжения (В)
+                  span.characteristics__table-item__caption AC176~264
+                .characteristics__table-item
+                  span.characteristics__table-item__title Габариты
+                  span.characteristics__table-item__caption 600x138x85
+                .characteristics__table-item
+                  button.button.button--border.characteristics__table-item__button
+                    span В корзину
+            tr.characteristics__table-row(data-accordion="mobile")
+              td.characteristics__table-cell.characteristics__table-cell--name(data-accordion-toggle="")  NVH-04-xxx-040-1 - 5000 - 70 - E
               td.characteristics__table-cell 150
               td.characteristics__table-cell 50x35, 28x100, 60, 90, 120
               td.characteristics__table-cell 5 000
@@ -146,8 +322,30 @@ block mainwrapper
                 button.characteristics__table-button
                   svg.characteristics__table-button__img
                     use(href="#icon-cart-add")
-            tr.characteristics__table-row
-              td.characteristics__table-cell NVH-04-xxx-040-1 - 5000 - 70 - E
+              td.characteristics__table-content(data-accordion-content="")
+                .characteristics__table-item
+                  span.characteristics__table-item__title Номинальная мощность (Вт)
+                  span.characteristics__table-item__caption 150
+                .characteristics__table-item
+                  span.characteristics__table-item__title Угол (°)
+                  span.characteristics__table-item__caption 50x35, 28x100, 60, 90, 120
+                .characteristics__table-item
+                  span.characteristics__table-item__title Цветовая температура (К)
+                  span.characteristics__table-item__caption 5 000
+                .characteristics__table-item
+                  span.characteristics__table-item__title Световой поток (Лм)
+                  span.characteristics__table-item__caption 21 000
+                .characteristics__table-item
+                  span.characteristics__table-item__title Диапазон напряжения (В)
+                  span.characteristics__table-item__caption AC176~264
+                .characteristics__table-item
+                  span.characteristics__table-item__title Габариты
+                  span.characteristics__table-item__caption 934x138x85
+                .characteristics__table-item
+                  button.button.button--border.characteristics__table-item__button
+                    span В корзину
+            tr.characteristics__table-row(data-accordion="mobile")
+              td.characteristics__table-cell.characteristics__table-cell--name(data-accordion-toggle="")  NVH-04-xxx-040-1 - 5000 - 70 - E
               td.characteristics__table-cell 180
               td.characteristics__table-cell 50x35, 28x100, 60, 90, 120
               td.characteristics__table-cell 5 000
@@ -158,6 +356,28 @@ block mainwrapper
                 button.characteristics__table-button
                   svg.characteristics__table-button__img
                     use(href="#icon-cart-add")
+              td.characteristics__table-content(data-accordion-content="")
+                .characteristics__table-item
+                  span.characteristics__table-item__title Номинальная мощность (Вт)
+                  span.characteristics__table-item__caption 180
+                .characteristics__table-item
+                  span.characteristics__table-item__title Угол (°)
+                  span.characteristics__table-item__caption 50x35, 28x100, 60, 90, 120
+                .characteristics__table-item
+                  span.characteristics__table-item__title Цветовая температура (К)
+                  span.characteristics__table-item__caption 5 000
+                .characteristics__table-item
+                  span.characteristics__table-item__title Световой поток (Лм)
+                  span.characteristics__table-item__caption 24 300
+                .characteristics__table-item
+                  span.characteristics__table-item__title Диапазон напряжения (В)
+                  span.characteristics__table-item__caption AC176~264
+                .characteristics__table-item
+                  span.characteristics__table-item__title Габариты
+                  span.characteristics__table-item__caption 934x138x85
+                .characteristics__table-item
+                  button.button.button--border.characteristics__table-item__button
+                    span В корзину
   section.section.files
     .container
       .section-container.section-container--pb-100

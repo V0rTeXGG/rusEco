@@ -16,18 +16,36 @@
   left: 50%;
   transform: translate(-50%, -50%);
   max-width: 500px;
-  width: 100%;
+  width: calc(100% - 20px);
   max-height: 80vh;
   background-color: $color-white;
   z-index: 11;
   border-radius: 6px;
   &[data-modal="question"] {
-    max-width: 836px;
+    max-width: max-content;
+    @include media(max, 651) {
+      width: 100%;
+      max-width: 100%;
+      max-height: 100vh;
+      @include adaptive-height();
+      border-radius: 0;
+    }
+
+    .modal__container--another {
+      padding: 50px;
+      @include media(max, 650) {
+        padding: 45px 20px 20px 20px;
+      }
+    }
+    .modal__close {
+      top: 15px;
+      right: 20px;
+    }
   }
   &[data-modal="delete"] {
     max-width: 515px;
     width: 100%;
-    @include media(max, 650) {
+    @include media(max, 651) {
       top: 0;
       bottom: 0;
       left: 0;
@@ -106,7 +124,7 @@
 
   &__container--another {
     padding: 50px;
-    @include media(max, 650) {
+    @include media(max, 651) {
       display: flex;
       justify-content: center;
       flex-wrap: wrap;
@@ -141,7 +159,7 @@
     max-width: 382px;
     width: 100%;
     margin-bottom: 20px;
-    @include media(max, 650) {
+    @include media(max, 651) {
       text-align: center;
     }
     p {

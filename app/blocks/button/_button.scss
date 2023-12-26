@@ -22,43 +22,48 @@
     line-height: 130%;
   }
   @include hover() {
-    color: $color-white;
+    &:after {
+      opacity: 1;
+    }
   }
-  &--hover-grey {
 
-    &:before {
-      content: '';
-      position: absolute;
-      z-index: 2;
-      left: 0;
-      top: 0;
-      width: 100%;
-      height: 100%;
-      opacity: 0;
-      border-radius: 40px;
-      background: $color-blue;
-      transition: all $transition;
-    }
-    @include hover() {
-      &:before {
-        opacity: 1;
-      }
-    }
+  &:after {
+    content: '';
+    position: absolute;
+    z-index: 2;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    border-radius: 40px;
+    background: $color-blue;
+    transition: all $transition;
+  }
 
+  span {
+    z-index: 3;
+    position: relative;
+    color: $color-white;
+    transition: all $transition
   }
 
   &--border {
     position: relative;
     z-index: 1;
     @include hover() {
-      .button {
-        background-color: $color-blue;
-        color: $color-white;
-      }
 
       &:before {
         opacity: 0;
       }
+
+      span {
+        color: $color-white;
+      }
+    }
+
+    span {
+      color: $color-black-blue;
     }
 
     &:before {
@@ -91,15 +96,6 @@
       padding: 9px 15px;
       font-size: 14px;
     }
-  }
-
-  &--text-white {
-    color: $color-white;
-  }
-
-  span {
-    position: relative;
-    z-index: 3;
   }
 
   &[disabled] {

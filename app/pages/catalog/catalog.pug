@@ -1,0 +1,64 @@
+extends ../../template/template.pug
+include ../../blocks/heading/heading
+include ../../blocks/form-filters/form-filters
+include ../../blocks/product-card/product-card.pug
+block mainwrapper
+  +heading({
+    breadcrumbs: ["Каталог"],
+    title: "Каталог",
+  })
+  section.section.catalog
+    .container
+      .section-container.section-container--pb-100
+        +form-filter(['≤ 10 W', '10 ÷ 20 W', '20÷ 30 W', '30 ÷ 50 W', '50 ÷100 W', '100 ÷ 150 W', '150 ÷ 200 W', '≥ 200 W'])
+        .catalog__list
+          +product-card({
+            name: 'Техническое освещение',
+            image: 'product-2.png',
+            background: 'product-bg-circle-small.png',
+            nameClass: 'product-card__name--min',
+          })
+          +product-card({
+            name: 'Архитектурное освещение',
+            image: 'product-3.png',
+            background: 'product-bg-square.png',
+            nameClass: 'product-card__name--min',
+          })
+          +product-card({
+            name: 'Техническое освещение',
+            image: 'product-1.png',
+            background: 'product-bg-polygon-big.png'
+          }).product-card--large
+          +product-card({
+            name: 'Городские цифровые модули «Ситипорт»',
+            image: 'product-4.png',
+            background: 'product-bg-triangle.png',
+            nameClass: 'product-card__name--min',
+          })
+          +product-card({
+            name: 'Специализированные светильники',
+            image: 'product-5.png',
+            background: 'product-bg-parallelepiped.png',
+            nameClass: 'product-card__name--min',
+          })
+          +product-card({
+            name: 'Административно-офисные светильники',
+            image: 'product-6.png',
+            background: 'product-bg-circle.png'
+          }).product-card--large
+          +product-card({
+            name: 'Городские цифровые модули «Ситипорт»',
+            image: 'product-7.png',
+            background: 'product-bg-square.png',
+            nameClass: 'product-card__name--min',
+          })
+          +product-card({
+            name: 'Специализированные светильники',
+            image: 'product-8.png',
+            background: 'product-bg-polygon.png',
+            nameClass: 'product-card__name--min',
+          })
+      .section-container.section-container--pb-100
+        a(href="/").catalog__link
+          img(src="../../img/image-content/journal.png").catalog__link-img
+          span.catalog__link-text Посмотреть корпоративный каталог
