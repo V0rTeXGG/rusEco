@@ -1,0 +1,16 @@
+.thanksOrder {
+  &__text {
+    margin-bottom: 50px;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 140%;
+    @include media(max, 551) {
+      margin-bottom: 30px;
+    }
+    @include media(max, 451) {
+      font-size: 16px;
+      text-align: center;
+    }
+  }
+
+}

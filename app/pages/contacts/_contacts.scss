@@ -7,7 +7,10 @@
     max-width: 1318px;
     width: 100%;
     margin-bottom: 100px;
-    @include media(max, 850) {
+    @include media(max, 1401) {
+      max-width: 1151px;
+    }
+    @include media(max, 851) {
       flex-direction: column;
       gap: 40px;
     }
@@ -16,7 +19,7 @@
       &:first-of-type {
         max-width: 583px;
       }
-      @include media(max, 1400) {
+      @include media(max, 1401) {
         max-width: 508px;
         &:first-of-type {
           max-width: 506px;
@@ -30,7 +33,7 @@
       font-weight: 700;
       line-height: 140%;
       color: $color-grey;
-      @include media(max, 450) {
+      @include media(max, 451) {
         font-size: 18px;
       }
 
@@ -57,7 +60,7 @@
       font-size: 27px;
       line-height: 130%;
       transition: all $transition;
-      @include media(max, 450) {
+      @include media(max, 451) {
         font-size: 22px;
       }
 

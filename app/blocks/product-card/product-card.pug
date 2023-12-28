@@ -1,5 +1,6 @@
 mixin product-card(data)
-  a(href="").product-card(style=`background-image: url("../../img/image-content/${data.background}")`)&attributes(attributes)
+  a(href="").product-card&attributes(attributes)
+    img(src=`../../img/image-content/${data.background}`).product-card__figure
     .product-card__content
       if(data.category)
         .product-card__category=data.category

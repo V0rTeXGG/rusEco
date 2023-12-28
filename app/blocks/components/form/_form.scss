@@ -9,6 +9,10 @@
     }
     &[data-form="feedback"] {
       width: 100%;
+
+      .form__thanks {
+        text-align: start;
+      }
     }
     &[data-form="cart"] {
       @include media(max, 991) {

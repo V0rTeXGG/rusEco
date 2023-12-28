@@ -3,17 +3,23 @@
       margin: auto;
       h2 {
         margin-bottom: 50px;
+        @include media(max, 451) {
+          margin-bottom: 30px;
+        }
 
         &:not(:first-of-type) {
           margin-top: 80px;
+          @include media(max, 451) {
+            margin-top: 40px;
+          }
         }
       }
 
       p {
         max-width: 705px;
-        margin: auto;
+        margin: 0 auto 25px auto;
         line-height: 150%;
-        &:not(:last-child) {
+        &:first-of-type {
           margin-bottom: 50px;
         }
       }
@@ -21,9 +27,13 @@
       ul, ol {
         max-width: 705px;
         margin: auto;
-        padding-left: 23px;
+        padding-left: 30px;
+        @include media(max, 451) {
+          padding-left: 22px;
+        }
         li {
           position: relative;
+          line-height: 130%;
 
           &:not(:last-child) {
             padding-bottom: 20px;
@@ -38,12 +48,15 @@
           &:before {
             content: '';
             position: absolute;
-            left: -23px;
+            left: -30px;
             top: 8px;
             width: 8px;
             height: 8px;
             border-radius: 50%;
             border: 2px solid $color-grey;
+            @include media(max, 451) {
+              left: -23px;
+            }
           }
 
         }
@@ -54,10 +67,13 @@
         li {
           &:before {
             position: absolute;
-            left: -23px;
+            left: -30px;
             counter-increment: counter;
             content: counters(counter, ".") ". ";
             color: $color-grey;
+            @include media(max, 451) {
+              left: -23px;
+            }
           }
 
         }

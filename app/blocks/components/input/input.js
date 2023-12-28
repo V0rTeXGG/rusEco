@@ -6,6 +6,7 @@ let fileInput = document.querySelectorAll('[data-fileupload]');
     input.addEventListener('focus', (e) => {
       let label = input.previousElementSibling
       label.classList.add('focus')
+      input.classList.add('fill')
     })
   })
 
@@ -14,6 +15,7 @@ let fileInput = document.querySelectorAll('[data-fileupload]');
       let label = input.previousElementSibling
       if(!input.value.length > 0) {
         label.classList.remove('focus')
+        input.classList.add('fill')
       }
     })
   })
@@ -30,6 +32,7 @@ formTextareas.forEach((textarea) => {
     let label = textarea.previousElementSibling
     if(!textarea.value.length > 0) {
       label.classList.remove('focus')
+      textarea.classList.add('fill')
     }
   })
 })

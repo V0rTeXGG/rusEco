@@ -30,12 +30,42 @@ function initSimpleMap(mapItem) {
     {
       iconLayout: mapIconCaption ? "default#imageWithContent" : "default#image",
       iconImageHref: mapIcon,
-      iconImageSize: [42, 50],
+      iconImageSize: [80, 80],
       iconImageOffset: [-21, -50],
     }
   );
   myMap.geoObjects.add(myPlacemark);
 }
+
+const layer = new YMapDefaultSchemeLayer({
+  customization: [
+    // Делаем прозрачными все геометрии водных объектов.
+    {
+      tags: {
+        all: ['water']
+      },
+      elements: 'geometry',
+      stylers: [
+        {
+          opacity: 0
+        }
+      ]
+    },
+    // Меняем цвет подписей для всех POI и узлов сети общественного транспорта.
+    {
+      tags: {
+        any: ['poi', 'transit_location']
+      },
+      elements: 'label.text.fill',
+      stylers: [
+        {
+          color: '#0000DD'
+        }
+      ]
+    }
+  ]
+});
+map.addChild(layer);
 
 function initSimpleMapOverlay(mapItem) {
   let mapOverlay = mapItem.closest("[data-map-overlay]");

@@ -15,12 +15,12 @@
     font-size: 20px;
     font-weight: 700;
     line-height: 140%;
-    @include media(max, 1024) {
+    @include media(max, 1025) {
       position: initial;
       display: block;
       margin-bottom: 30px;
     }
-    @include media(max, 450) {
+    @include media(max, 451) {
       font-size: 18px;
     }
   }
@@ -41,7 +41,7 @@
       &::-webkit-scrollbar-thumb {
         background: $color-gradient;
       }
-      @include media(max, 450) {
+      @include media(max, 451) {
         margin: 30px auto 40px auto;
         padding-bottom: 20px;
       }
@@ -50,7 +50,7 @@
     &-blockquote {
       max-width: 950px;
       margin: 50px auto 50px auto;
-      @include media(max, 450) {
+      @include media(max, 451) {
         margin: 30px auto 30px auto;
       }
       &__name {
@@ -60,7 +60,7 @@
         padding-left: 40px;
         line-height: 150%;
         color: $color-grey;
-        @include media(max, 450) {
+        @include media(max, 451) {
           margin-bottom: 10px;
           padding-left: 35px;
           font-size: 16px;
@@ -82,13 +82,13 @@
       max-width: 705px;
       margin: 0 auto 25px auto;
       line-height: 150%;
-      @include media(max, 450) {
+      @include media(max, 451) {
         margin: 0 auto 15px auto;
         font-size: 16px;
       }
       &:first-of-type {
         margin-bottom: 50px;
-        @include media(max, 450) {
+        @include media(max, 451) {
           margin-bottom: 30px;
         }
       }
@@ -99,7 +99,7 @@
       max-width: 705px;
       margin: 0 auto 25px auto;
       padding-left: 23px;
-      @include media(max, 450) {
+      @include media(max, 451) {
         padding-left: 18px;
         margin: 0 auto 15px auto;
       }
@@ -108,7 +108,7 @@
         position: relative;
         &:not(:last-child) {
           margin-bottom: 20px;
-          @include media(max, 450) {
+          @include media(max, 451) {
             margin-bottom: 10px;
             font-size: 16px;
           }
@@ -128,7 +128,7 @@
           left: -23px;
           top: 8px;
           border-radius: 100%;
-          @include media(max, 450) {
+          @include media(max, 451) {
             left: -18px;
           }
         }
@@ -138,8 +138,8 @@
     ol {
       padding-left: 30px;
       counter-reset: counter;
-      @include media(max, 450) {
-        padding-left: 23px;
+      @include media(max, 451) {
+        padding-left: 22px;
       }
       li {
         &:before {
@@ -148,15 +148,15 @@
           counter-increment: counter;
           content: counters(counter, ".") ". ";
           color: $color-grey;
-          @include media(max, 450) {
-            left: -23px;
+          @include media(max, 451) {
+            left: -22px;
           }
         }
       }
 
       ol {
         margin-top: 20px;
-        @include media(max, 450) {
+        @include media(max, 451) {
           margin-top: 10px;
         }
       }
@@ -165,7 +165,7 @@
     figure {
       max-width: 950px;
       margin: 50px auto 50px auto;
-      @include media(max, 450) {
+      @include media(max, 451) {
         position: relative;
         left: 0;
         width: 100vw;
@@ -184,7 +184,7 @@
       font-size: 16px;
       line-height: 130%;
       color: $color-grey;
-      @include media(max, 450) {
+      @include media(max, 451) {
         margin-left: 20px;
         font-size: 14px;
       }
@@ -194,7 +194,7 @@
       margin: 80px 0 50px 0;
       font-size: 61px;
       line-height: 110%;
-      @include media(max, 450) {
+      @include media(max, 451) {
         margin: 40px 0 30px 0;
         font-size: 34px;
         line-height: 100%;
@@ -205,7 +205,7 @@
       margin: 80px 0 50px 0;
       font-size: 41px;
       line-height: 120%;
-      @include media(max, 450) {
+      @include media(max, 451) {
         margin: 40px 0 30px 0;
         font-size: 23px;
       }
@@ -214,7 +214,7 @@
     blockquote {
       font-size: 41px;
       line-height: 120%;
-      @include media(max, 450) {
+      @include media(max, 451) {
         font-size: 23px;
       }
     }
@@ -260,7 +260,7 @@
     justify-content: space-between;
     max-width: 705px;
     margin: 50px auto 50px auto;
-    @include media(max, 550) {
+    @include media(max, 551) {
       flex-direction: column;
       align-items: flex-start;
       gap: 30px;
@@ -298,7 +298,7 @@
       .ya-share2__container_size_l .ya-share2__badge .ya-share2__icon {
         width: 61px;
         height: 61px;
-        @include media(max, 550) {
+        @include media(max, 551) {
           width: 55px;
           height: 55px;
         }
@@ -355,12 +355,15 @@
 
 .read-more {
   margin-bottom: 100px;
+  @include media(max, 451) {
+    margin-bottom: 40px;
+  }
   &__list {
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
     gap: 30px;
-    @include media(max, 850) {
+    @include media(max, 851) {
       flex-direction: column;
       gap: 20px;
     }
@@ -369,10 +372,10 @@
   &__item {
     max-width: 460px;
     width: 100%;
-    @include media(max, 850) {
+    @include media(max, 851) {
       max-width: 100%;
-      padding-bottom: 20px;
       &:not(:last-child) {
+        padding-bottom: 20px;
         border-bottom: 1px solid $color-grey-light;
       }
 
@@ -390,6 +393,10 @@
       font-weight: 700;
       line-height: 140%;
       color: $color-grey;
+      @include media(max, 451) {
+        font-size: 18px;
+        line-height: 130%;
+      }
     }
 
     &-title {
@@ -398,6 +405,10 @@
       font-weight: 700;
       line-height: 120%;
       transition: all $transition;
+      @include media(max, 451) {
+        font-size: 20px;
+        line-height: 110%;
+      }
     }
   }
 }

@@ -22,6 +22,10 @@
     background-size: 271px;
   }
   @include hover() {
+    .product-card__figure {
+      opacity: 0;
+    }
+
     .product-card__more {
       &:before {
         opacity: 0;
@@ -35,6 +39,14 @@
       background-image: $color-gradient
     }
   }
+
+  &__figure {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    transition: all $transition;
+  }
+
   &--large {
     grid-column: 1 / span 2;
     max-width: 100%;

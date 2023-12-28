@@ -6,7 +6,7 @@ block mainwrapper
       breadcrumbs: ["Список страниц"],
     })
     .page
-        - var pagesJson = [['Главная', 'index.html'], ['Товар Детальная', 'product.html'], ['404', 'not-found.html'], ['Политика конфиденциальности', 'policy.html'], ['Обратная связь', 'feedback.html'], ['Контакты', 'contacts.html'], ['О компании', 'about.html'], ['Статья детальная', 'article.html'], ['Новости', 'news.html'], ['Услуга детальная', 'service.html'], ['Услуги', 'services.html'], ['Проект детальная', 'project-detail.html'], ['Проекты', 'projects.html'], ['Корзина', 'cart.html'], ['Каталог 2 уровня', 'subcatalog.html'], ['Каталог ', 'catalog.html'], ['Список страниц', 'pages.html'],]
+        - var pagesJson = [['Главная', 'index.html'], ['Товар Детальная', 'product.html'], ['404', 'not-found.html'], ['Политика конфиденциальности', 'policy.html'], ['Обратная связь', 'feedback.html'], ['Контакты', 'contacts.html'], ['О компании', 'about.html'], ['Статья детальная', 'article.html'], ['Новости', 'news.html'], ['Услуга детальная', 'service.html'], ['Услуги', 'services.html'], ['Проект детальная', 'project-detail.html'], ['Проекты', 'projects.html'], ['Корзина', 'cart.html'], ['Спасибка после заказа ', 'thanksOrder.html'], ['Каталог 2 уровня', 'subcatalog.html'], ['Каталог ', 'catalog.html'], ['Список страниц', 'pages.html'],]
         mixin page(pages)
             ul.pages-dev(style={color: 'teal', 'font-weight': '700', 'margin-top': '-20px'})
                 each page in pages

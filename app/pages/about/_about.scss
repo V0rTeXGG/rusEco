@@ -3,7 +3,7 @@
   &__top {
     padding-bottom: 100px;
     border-bottom: 1px solid $color-grey-light;
-    @include media(max, 450) {
+    @include media(max, 451) {
       padding-bottom: 50px;
     }
     &-text {
@@ -14,11 +14,11 @@
       @include media(max, 991) {
         font-size: 30px;
       }
-      @include media(max, 650) {
+      @include media(max, 651) {
         max-width: 100%;
         font-size: 25px;
       }
-      @include media(max, 450) {
+      @include media(max, 451) {
         font-size: 20px;
       }
     }
@@ -34,7 +34,7 @@
       max-width: unset;
       transform: translateX(-20px);
     }
-    @include media(max, 650) {
+    @include media(max, 651) {
       margin-bottom: 50px;
     }
   }
@@ -48,7 +48,7 @@
 
   &__rows {
     padding-top: 100px;
-    @include media(max, 450) {
+    @include media(max, 451) {
       padding-top: 50px;
     }
   }
@@ -64,12 +64,12 @@
       flex-direction: column;
       gap: 40px;
     }
-    @include media(max, 450) {
+    @include media(max, 451) {
       padding-bottom: 50px;
     }
     &:not(:first-child) {
       padding-top: 100px;
-      @include media(max, 450) {
+      @include media(max, 451) {
         padding-top: 50px;
       }
     }
@@ -87,6 +87,12 @@
       @include media(max, 1400) {
         max-width: 615px;
       }
+      @include media(max, 551) {
+        position: relative;
+        left: 0;
+        width: 100vw;
+        max-width: unset;
+      }
     }
 
     &-img {
@@ -103,10 +109,16 @@
       @include media(max, 1400) {
         max-width: 506px;
       }
+      @include media(max, 991) {
+        max-height: fit-content;
+      }
 
       p {
         &:not(:last-child) {
           margin-bottom: 50px;
+          @include media(max, 451) {
+            margin-bottom: 30px;
+          }
         }
       }
     }
@@ -115,7 +127,7 @@
   &__has-project {
     padding: 100px 0;
     border-bottom: 1px solid $color-grey-light;
-    @include media(max, 450) {
+    @include media(max, 451) {
       padding: 50px 0;
     }
 
@@ -123,8 +135,8 @@
       text-align: center;
       font-size: 61px;
       line-height: 110%;
-      @include media(max, 450) {
-        font-size: 40px;
+      @include media(max, 451) {
+        font-size: 30px;
       }
     }
 
@@ -151,7 +163,7 @@
     @include media(max, 1400) {
       max-width: 830px;
     }
-    @include media(max, 450) {
+    @include media(max, 451) {
       padding-top: 50px;
     }
 
@@ -161,7 +173,7 @@
       color: $color-grey;
       margin-bottom: 19px;
       padding-left: 40px;
-      @include media(max, 360) {
+      @include media(max, 361) {
         margin-bottom: 15px;
         font-size: 16px;
       }
@@ -184,10 +196,10 @@
       @include media(max, 991) {
         font-size: 30px;
       }
-      @include media(max, 650) {
+      @include media(max, 651) {
         font-size: 22px;
       }
-      @include media(max, 360) {
+      @include media(max, 361) {
         font-size: 18px;
       }
     }

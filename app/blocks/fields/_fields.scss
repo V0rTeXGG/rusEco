@@ -4,6 +4,10 @@
   &__input,
   &__textarea {
     font-family: inherit;
+
+    &.fill {
+      border-color: $color-black-blue;
+    }
   }
   &__label {
     position: absolute;

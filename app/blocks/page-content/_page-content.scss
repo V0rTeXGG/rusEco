@@ -71,7 +71,7 @@
 
   ul, ol {
     max-width: 705px;
-    margin: 0 auto 25px auto;
+    margin: 25px auto 25px auto;
     padding-left: 23px;
     @include media(max, 450) {
       padding-left: 18px;
@@ -113,7 +113,7 @@
     padding-left: 30px;
     counter-reset: counter;
     @include media(max, 450) {
-      padding-left: 23px;
+      padding-left: 22px;
     }
     li {
       &:before {
@@ -123,7 +123,7 @@
         content: counters(counter, ".") ". ";
         color: $color-grey;
         @include media(max, 450) {
-          left: -23px;
+          left: -22px;
         }
       }
     }

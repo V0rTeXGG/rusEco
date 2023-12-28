@@ -3,7 +3,8 @@ include ../input/input.pug
 mixin incut-form(data)
   .incut-form-wrapper(data-form=`${data.form}`)
     form.incut-form.invalid(data-validate-form="" data-form-body="" data-show-thanks)
-      .incut-form__title=data.formTitle
+      if(data.formTitle)
+        .incut-form__title=data.formTitle
       span.error-text.error-text--backend(data-error-text="backend")
       .incut-form__fields(class=data.class)
         +input({
@@ -47,7 +48,8 @@ mixin incut-form(data)
       if(data.order)
         p.form__thanks-text Номер заказа No2738947324
         p.form__thanks-text В течении суток с вами свяжется менеджер
-        a(href="/catalog").button.button--text-white Вернуться на главную
+        a(href="/catalog").button.button--text-white
+          span Вернуться на главную
       else
         p.form__thanks-title=data.thanksTitle
         p.form__thanks-text=data.thanksText

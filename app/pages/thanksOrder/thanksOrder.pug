@@ -1,0 +1,15 @@
+extends ../../template/template.pug
+include ../../blocks/heading/heading
+
+block mainwrapper
+  +heading({
+    breadcrumbs: ["Каталог"],
+    title: "Ваш заказ принят",
+  })
+  section.section.thanksOrder
+    .container
+      .section-container.section-container--pb-100
+        p.thanksOrder__text Номер заказа No2738947324
+        p.thanksOrder__text В течении суток с вами свяжется менеджер
+        a(href="/").button.thanksOrder__button
+          span Вернуться на главную
