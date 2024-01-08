@@ -42,7 +42,7 @@
     font-weight: 700;
     line-height: 140%;
     color: $color-grey;
-    @include media(max, 450) {
+    @include media(max, 451) {
       margin-bottom: 15px;
       font-size: 18px;
     }
@@ -55,7 +55,7 @@
     line-height: 120%;
     transition: all $transition;
     border-bottom: 1px solid transparent;
-    @include media(max, 450) {
+    @include media(max, 451) {
       font-size: 20px;
     }
   }

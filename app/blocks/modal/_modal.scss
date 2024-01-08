@@ -33,7 +33,7 @@
 
     .modal__container--another {
       padding: 50px;
-      @include media(max, 650) {
+      @include media(max, 651) {
         padding: 45px 20px 20px 20px;
       }
     }
@@ -68,7 +68,7 @@
     @include media(max, 991) {
       max-width: calc(100% - 40px);
     }
-    @include media(max, 450) {
+    @include media(max, 451) {
       bottom: 0;
       max-width: 100%;
     }
@@ -82,7 +82,7 @@
       @include media(max, 991) {
         padding: 30px 40px 20px 40px;
       }
-      @include media(max, 450) {
+      @include media(max, 451) {
         flex-direction: column;
         padding: 20px;
       }
@@ -94,7 +94,7 @@
       font-size: 20px;
       font-weight: 700;
       line-height: 140%;
-      @include media(max, 450) {
+      @include media(max, 451) {
         font-size: 18px;
         line-height: 130%;
       }
@@ -130,7 +130,7 @@
       flex-wrap: wrap;
       height: 100%;
     }
-    @include media(max, 450) {
+    @include media(max, 451) {
       padding: 20px;
     }
 
@@ -149,7 +149,7 @@
     margin-bottom: 50px;
     font-size: 41px;
     line-height: 120%;
-    @include media(max, 450) {
+    @include media(max, 451) {
       margin-bottom: 30px;
       font-size: 23px;
     }
@@ -164,7 +164,7 @@
     }
     p {
       line-height: 150%;
-      @include media(max, 450) {
+      @include media(max, 451) {
         font-size: 16px;
       }
     }
@@ -176,7 +176,7 @@
     align-items: center;
     max-width: 366px;
     width: 100%;
-    @include media(max, 450) {
+    @include media(max, 451) {
       flex-direction: column;
       justify-content: flex-end;
       gap: 30px;

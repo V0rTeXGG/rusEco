@@ -3,7 +3,7 @@
   align-items: center;
   justify-content: space-between;
   width: 78px;
-  @include media(max, 450) {
+  @include media(max, 451) {
     width: 97px;
   }
   .input {

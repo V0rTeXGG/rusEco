@@ -6,33 +6,37 @@ block mainwrapper
     breadcrumbs: ["Проекты", "Здание городской думы"],
     title: "Здание городской думы",
   })
-  button.button.button--order.button--text-white Заказать проект
+  button.button.button--order
+    span Заказать проект
   section.section.project
     .container
       .section-container.section-container--pb-100
         .project__img-wrapper
           img(src="../../img/image-content/project-banner.png").project__img
         .project__top
-          .project__top__block
-            .project__top-item
-              p.project__top-item__title Заказчик
-              p.project__top-item__text АО «Центральная ППК»
-            .project__top-item
-              p.project__top-item__title Город
-              p.project__top-item__text Санкт Петербург
-          .project__top__block
-            .project__top-item
-              p.project__top-item__title Оборудование
-              p.project__top-item__text NVS05, NVX13
-            .project__top-item
-              p.project__top-item__title Сроки
-              p.project__top-item__text 2021
+          .project__top-item
+            p.project__top-item__title Заказчик
+            p.project__top-item__text АО «Центральная ППК»
+          .project__top-item
+            p.project__top-item__title Город
+            p.project__top-item__text Санкт Петербург
+          .project__top-item
+            p.project__top-item__title Оборудование
+            p.project__top-item__text NVS05, NVX13
+          .project__top-item
+            p.project__top-item__title Сроки
+            p.project__top-item__text 2021
       .project__content.section-container.section-container--not-border.section-container--pb-100
         .page-content
-          p Кирпичное здание городской думы - объект культурного наследия государственного значения, памятник архитектуры второй половины XIX века. Величественное здание с богато декорированными фасадами было заложено в 1879 году на средства знаменитого благотворителя Ивана Фирсанова. В соответствии с концепцией архитектурно-художественного освещения Московской области и особенностей расположения здания, проектом предусмотрена подсветка главного фасада, использованы статические осветительные приборы.
+          p
+            span Кирпичное здание городской думы - объект культурного наследия государственного значения, памятник архитектуры второй половины XIX века.
+            br
+            span Величественное здание с богато декорированными фасадами было заложено в 1879 году на средства знаменитого благотворителя Ивана Фирсанова.
+            br
+            span В соответствии с концепцией архитектурно-художественного освещения Московской области и особенностей расположения здания, проектом предусмотрена подсветка главного фасада, использованы статические осветительные приборы.
           +video-item({image: 'video-1.png', link: 'https://www.youtube.com/embed/4qk6Xlp-6RY'}).fancy.video-item--page-content(data-fancybox="project")
 
-          .page-content__img-block
+          .img-block
             img(src="../../img/image-content/project-detail-1.png")
             img(src="../../img/image-content/project-detail-2.png")
           p

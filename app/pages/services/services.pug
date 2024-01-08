@@ -8,7 +8,8 @@ block mainwrapper
     title: "Услуги",
     text: "Оказываем полный комплекс услуг по проектированию и строительно-монтажным работам уличного, промышленного, ландшафтного, архитектурного и офисного освещения",
   })
-  button.button.button--order.button--text-white Заказать проект
+  button.button.button--order
+    span Заказать проект
   section.section.services
     .container
       .section-container.section-container--pb-100
@@ -43,7 +44,7 @@ block mainwrapper
             .services__item-background
             p.services__item-title Энергосервисные контракты
             span.services__item-link Подробнее
-  section.section.order
+  section.section.section--mb-80.order
     .container
       .section-container.section-container--pb-100
         .order__container
@@ -64,18 +65,22 @@ block mainwrapper
         h2 Критерии реализации успешного проекта
         .criteria__list
           .criteria__item
-            img(src="../../img/image/criteris-img-1.png").criteria__item-img
+            .criteria__item-img-wrapper
+              img(src="../../img/image/criteris-img-1.png").criteria__item-img
             p.criteria__item-title Сплоченная команда
             p.criteria__item-text Рыбатекст используется дизайнерами, проектировщиками и фронтендерами, когда нужно быстро заполнить макеты или прототипы содержимым
           .criteria__item
-            img(src="../../img/image/criteris-img-2.png").criteria__item-img
+            .criteria__item-img-wrapper
+              img(src="../../img/image/criteris-img-2.png").criteria__item-img
             p.criteria__item-title Соблюдение сроков
             p.criteria__item-text Рыбатекст используется дизайнерами, проектировщиками и фронтендерами, когда нужно быстро заполнить макеты или прототипы содержимым
           .criteria__item
-            img(src="../../img/image/criteris-img-3.png").criteria__item-img
+            .criteria__item-img-wrapper
+              img(src="../../img/image/criteris-img-3.png").criteria__item-img
             p.criteria__item-title Решение любых задач
             p.criteria__item-text Рыбатекст используется дизайнерами, проектировщиками и фронтендерами, когда нужно быстро заполнить макеты или прототипы содержимым
           .criteria__item
-            img(src="../../img/image/criteris-img-4.png").criteria__item-img
+            .criteria__item-img-wrapper
+              img(src="../../img/image/criteris-img-4.png").criteria__item-img
             p.criteria__item-title Современный подход
             p.criteria__item-text Рыбатекст используется дизайнерами, проектировщиками и фронтендерами, когда нужно быстро заполнить макеты или прототипы содержимым

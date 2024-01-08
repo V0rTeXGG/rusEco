@@ -2,7 +2,7 @@
 
   &__container {
     padding-bottom: 78px;
-    @include media(max, 360) {
+    @include media(max, 361) {
       padding-bottom: 30px;
     }
   }
@@ -10,10 +10,10 @@
   &__top {
     max-width: 710px;
     width: 100%;
-    padding-bottom: 27px;
-    margin-bottom: 80px;
+    padding-bottom: 28px;
+    margin-bottom: 55px;
 
-    @include media(max, 450) {
+    @include media(max, 451) {
       margin-bottom: 30px;
       padding-bottom: 3px;
     }
@@ -34,19 +34,19 @@
         @include hover() {
           border-color: transparent;
         }
-        @include media(max, 650) {
+        @include media(max, 651) {
           padding-bottom: 3px;
         }
       }
       @include media(max, 991) {
         font-size: 90px;
       }
-      @include media(max, 650) {
+      @include media(max, 651) {
         font-size: 50px;
         font-weight: 400;
         line-height: 110%;
       }
-      @include media(max, 450) {
+      @include media(max, 451) {
         margin: 0 auto;
         text-align: center;
         font-size: 30px;
@@ -59,11 +59,11 @@
     justify-content: space-between;
     align-items: flex-start;
     margin-bottom: 76px;
-    @include media(max, 1024) {
+    @include media(max, 1025) {
       flex-direction: column;
       gap: 0;
     }
-    @include media(max, 450) {
+    @include media(max, 451) {
       margin-bottom: 40px;
     }
   }
@@ -75,7 +75,7 @@
     @include hover() {
       color: $color-blue;
     }
-    @include media(max, 450) {
+    @include media(max, 451) {
       text-align: center;
     }
 
@@ -93,7 +93,7 @@
     flex-direction: column;
     align-items: flex-start;
     gap: 25px;
-    @include media(max, 1024) {
+    @include media(max, 1025) {
       &:nth-of-type(1) {
         margin-bottom: 25px;
       }
@@ -105,7 +105,7 @@
         margin-bottom: 10px
       }
     }
-    @include media(max, 450) {
+    @include media(max, 451) {
       width: 100%;
       align-items: center;
     }
@@ -116,7 +116,7 @@
         &:not(:last-of-type) {
           margin-bottom: 5px;
         }
-        @include media(max, 1024) {
+        @include media(max, 1025) {
           &:last-of-type {
             margin-bottom: 34px;
           }
@@ -129,14 +129,14 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    @include media(max, 450) {
+    @include media(max, 451) {
       flex-direction: column;
       gap: 10px;
     }
 
     &-text {
       font-size: 16px;
-      @include media(max, 450) {
+      @include media(max, 451) {
         font-size: 14px;
       }
     }

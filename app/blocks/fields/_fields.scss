@@ -18,14 +18,14 @@
     pointer-events: none;
     color: $color-grey;
     transition: all $transition;
-    @include media(max, 450) {
+    @include media(max, 451) {
       top: 15px;
       font-size: 14px;
     }
     &.focus {
       top: 6px;
       font-size: 14px;
-      @include media(max, 450) {
+      @include media(max, 451) {
         top: 5px;
         font-size: 12px;
       }
@@ -40,7 +40,7 @@
     font-size: 16px;
     line-height: 130%;
     transition: all $transition;
-    @include media(max, 450) {
+    @include media(max, 451) {
       padding: 22px 15px 9px;
       height: 49px;
       font-size: 14px;
@@ -70,7 +70,7 @@
     font-size: 16px;
     display: block;
     transition: all $transition;
-    @include media(max, 450) {
+    @include media(max, 451) {
       padding: 22px 15px 9px;
       height: 85px;
       font-size: 14px;
@@ -97,7 +97,7 @@
   font-size: 14px;
   color: $color-red;
   display: none;
-  @include media(max, 450) {
+  @include media(max, 451) {
     margin: 1px 0 0 15px;
   }
   &--backend {
@@ -124,7 +124,7 @@
     @include hover() {
       border-color: transparent;
     }
-    @include media(max, 450) {
+    @include media(max, 451) {
       padding-bottom: 3px;
       font-size: 18px;
     }

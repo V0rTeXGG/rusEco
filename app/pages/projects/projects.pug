@@ -8,7 +8,8 @@ block mainwrapper
     breadcrumbs: ["Проекты"],
     title: "Проекты",
   })
-  button.button.button--order.button--text-white Заказать проект
+  button.button.button--order
+    span Заказать проект
   section.section.projects
     .container
       .section-container.section-container--pb-100
@@ -33,6 +34,11 @@ block mainwrapper
             img: 'project-4.png',
             subtitle: "Уличное и дорожное освещение",
             title: "Цифровые модули «Ситипорт» на территории ИЦ «Сколково»"
+          })
+          +project({
+            img: 'project-5.png',
+            subtitle: "Уличное и дорожное освещение",
+            title: "Проспект Красной Армии, Сергиев Посад"
           })
         .button-center
           button.button.button--border

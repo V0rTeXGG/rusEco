@@ -88,25 +88,29 @@ body {
 }
 .section {
   margin-bottom: 100px;
+  &--mb-80 {
+    margin-bottom: 80px;
+  }
   &--no-overflow {
     overflow: hidden;
   }
-  @include media(max, 450) {
+  @include media(max, 451) {
     margin-bottom: 40px;
   }
 }
 
 table {
-  th {
-    color: $color-grey;
-    padding-bottom: 15px;
-    vertical-align: bottom;
-  }
 
   td, th {
     padding: 20px;
     text-align: left;
     font-weight: normal;
+  }
+
+  th {
+    color: $color-grey;
+    padding: 0 20px 15px 20px;
+    vertical-align: bottom;
   }
 
   td:not(:last-child), table th:not(:last-child) {

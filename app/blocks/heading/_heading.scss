@@ -4,12 +4,19 @@
   font-size: 35px;
   font-weight: 700;
   line-height: 120%;
-  @include media(max, 850) {
+  @include media(max, 851) {
     font-size: 28px;
   }
-  @include media(max, 450) {
+  @include media(max, 451) {
     margin-bottom: 30px;
     font-size: 20px;
     font-weight: 400;
   }
 }
+
+.title-page {
+  &--min {
+    max-width: 1207px;
+  }
+}
+

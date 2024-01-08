@@ -9,7 +9,7 @@
       max-width: unset;
       transform: translateX(-20px);
     }
-    @include media(max, 450) {
+    @include media(max, 451) {
       margin-bottom: 40px;
     }
   }
@@ -25,7 +25,7 @@
     text-align: center;
     font-size: 61px;
     line-height: 110%;
-    @include media(max, 450) {
+    @include media(max, 451) {
       font-size: 34px;
       line-height: 100%;
     }
@@ -50,7 +50,7 @@
     margin: 0 auto;
     p {
       line-height: 150%;
-      @include media(max, 450) {
+      @include media(max, 451) {
         font-size: 16px;
       }
       &:not(:last-child) {

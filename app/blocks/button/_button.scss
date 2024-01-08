@@ -12,7 +12,7 @@
   text-align: center;
   cursor: pointer;
   transition: $transition;
-  @include media(max, 450) {
+  @include media(max, 451) {
     width: 100%;
     min-height: 49px;
     padding: 12px 35px;
@@ -45,6 +45,7 @@
     z-index: 3;
     position: relative;
     color: $color-white;
+    text-wrap: nowrap;
     transition: all $transition
   }
 
@@ -91,7 +92,7 @@
     bottom: 30px;
     right: 30px;
     max-width: 215px;
-    @include media(max, 550) {
+    @include media(max, 551) {
       min-height: 37px;
       padding: 9px 15px;
       font-size: 14px;

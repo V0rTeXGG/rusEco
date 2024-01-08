@@ -23,15 +23,14 @@
 
   &__item {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     width: 100%;
     padding: 30px 0;
     @include media(max, 991) {
       justify-content: space-between;
     }
-    @include media(max, 650) {
+    @include media(max, 651) {
       flex-wrap: wrap;
-      align-items: flex-start;
       justify-content: flex-start;
       padding: 20px 0;
 
@@ -45,8 +44,9 @@
     &-img {
       aspect-ratio: 4/4;
       width: 100px;
+      object-fit: cover;
       margin-right: 35px;
-      @include media(max, 650) {
+      @include media(max, 651) {
         width: 50px;
         margin-right: 15px;
       }
@@ -63,7 +63,7 @@
         max-width: 461px;
         margin: 0;
       }
-      @include media(max, 650) {
+      @include media(max, 651) {
         width: calc(100% - 65px);
       }
     }
@@ -73,7 +73,7 @@
       font-size: 14px;
       line-height: 130%;
       color: $color-grey;
-      @include media(max, 450) {
+      @include media(max, 451) {
         font-size: 12px;
       }
     }
@@ -89,7 +89,7 @@
       @include hover() {
         color: $color-blue;
       }
-      @include media(max, 450) {
+      @include media(max, 451) {
         font-size: 18px;
         line-height: 130%;
       }
@@ -98,7 +98,7 @@
     &-subname {
       font-size: 16px;
       line-height: 130%;
-      @include media(max, 450) {
+      @include media(max, 451) {
         font-size: 14px;
         line-height: 130%;
       }
@@ -107,11 +107,11 @@
     &-counter {
       max-width: 134px;
       width: 100%;
-      margin-right: 35px;
+      margin: 25px 35px 5px 0;
       @include media(max, 1200) {
         max-width: 78px;
       }
-      @include media(max, 650) {
+      @include media(max, 651) {
         max-width: 97px;
         margin: 20px 50px 0 65px;
       }
@@ -120,6 +120,7 @@
     &-delete__img {
       width: 15px;
       height: 15px;
+      margin-top: 25px;
       @include hover() {
         use {
           stroke: $color-black-blue;
@@ -129,7 +130,7 @@
         stroke: $color-grey;
         transition: all $transition;
       }
-      @include media(max, 650) {
+      @include media(max, 651) {
         margin-top: 20px;
       }
     }
@@ -149,7 +150,7 @@
     @include media(max, 991) {
       max-width: 100%;
     }
-    @include media(max, 650) {
+    @include media(max, 651) {
       padding: 15px;
     }
 
@@ -169,7 +170,7 @@
       margin-bottom: 20px;
       font-size: 41px;
       line-height: 120%;
-      @include media(max, 650) {
+      @include media(max, 651) {
         margin-bottom: 15px;
         font-size: 23px;
       }
@@ -179,7 +180,7 @@
       position: relative;
       margin-bottom: 20px;
       line-height: 150%;
-      @include media(max, 650) {
+      @include media(max, 651) {
         margin-bottom: 15px;
         font-size: 16px;
       }

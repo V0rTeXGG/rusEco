@@ -55,7 +55,7 @@
     @include media(max, 991) {
       max-width: calc(100% - 40px)
     }
-    @include media(max, 450) {
+    @include media(max, 451) {
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -67,13 +67,13 @@
     font-size: 27px;
     line-height: 130%;
     color: $color-grey;
-    @include media(max, 450) {
+    @include media(max, 451) {
       margin-bottom: 10px;
       text-align: center;
       font-size: 21px;
       line-height: 120%;
     }
-    @include media(max, 360) {
+    @include media(max, 361) {
       max-width: 280px;
     }
   }
@@ -82,12 +82,12 @@
     margin-bottom: 50px;
     font-size: 41px;
     line-height: 120%;
-    @include media(max, 450) {
+    @include media(max, 451) {
       margin-bottom: 30px;
       text-align: center;
       font-size: 23px;
     }
-    @include media(max, 360) {
+    @include media(max, 361) {
       max-width: 280px;
     }
   }

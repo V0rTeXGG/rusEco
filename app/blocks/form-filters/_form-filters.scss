@@ -1,6 +1,6 @@
 .form-filters {
   margin-bottom: 80px;
-  @include media(max, 450) {
+  @include media(max, 451) {
     margin-bottom: 40px;
   }
   &__form {
@@ -98,7 +98,7 @@
     @include media(max, 851) {
       width: 100%;
     }
-    @include media(max, 450) {
+    @include media(max, 451) {
       gap: 10px;
 
       .button {

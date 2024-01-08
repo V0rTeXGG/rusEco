@@ -12,7 +12,7 @@
       flex-direction: column;
       margin: 0 0 100px 0;
     }
-    @include media(max, 450) {
+    @include media(max, 451) {
       flex-direction: column;
       margin: 0 0 40px 0;
     }
@@ -39,14 +39,14 @@
     @include media(max, 991) {
       margin: 0;
     }
-    @include media(max, 450) {
+    @include media(max, 451) {
       width: 100%;
     }
   }
 
   &__button {
     width: fit-content;
-    @include media(max, 450) {
+    @include media(max, 451) {
       width: 100%;
     }
   }
@@ -230,7 +230,7 @@
       font-size: 18px;
       line-height: 130%;
       color: $color-grey-medium;
-      @include media(max, 450) {
+      @include media(max, 451) {
         font-size: 14px;
       }
     }
@@ -238,7 +238,7 @@
       width: 50%;
       font-size: 18px;
       line-height: 130%;
-      @include media(max, 450) {
+      @include media(max, 451) {
         font-size: 14px;
       }
     }
@@ -258,7 +258,7 @@
     max-width: 1200px;
     width: 100%;
     margin: auto;
-    @include media(max, 550) {
+    @include media(max, 551) {
       grid-template-columns: repeat(1, 1fr);
     }
   }
@@ -267,11 +267,10 @@
     padding: 20px 20px 20px 73px;
     border: 1px solid $color-grey;
     border-radius: 4px;
-    @include media(max, 450) {
+    @include media(max, 451) {
       padding: 10px 10px 10px 48px;
     }
     @include hover() {
-      border-color: $color-black-blue;
 
       .files__item-title {
         border-color: transparent;
@@ -282,11 +281,11 @@
       position: relative;
       display: inline-block;
       margin-bottom: 10px;
-      text-underline-offset: 10px;
-      text-decoration: underline;
+      padding-bottom: 5px;
+      border-bottom: 1px solid $color-black-blue;;
       line-height: 130%;
       transition: all $transition;
-      @include media(max, 450) {
+      @include media(max, 451) {
         margin-bottom: 6px;
         font-size: 16px;
         text-underline-offset: 6px;
@@ -308,7 +307,7 @@
       line-height: 130%;
       letter-spacing: 0.14px;
       color: $color-grey;
-      @include media(max, 450) {
+      @include media(max, 451) {
         font-size: 12px;
         letter-spacing: 0.12px;
       }

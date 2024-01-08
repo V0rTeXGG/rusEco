@@ -9,14 +9,14 @@
       max-width: unset;
       transform: translateX(-20px);
     }
-    @include media(max, 450) {
+    @include media(max, 451) {
       margin-bottom: 40px;
     }
   }
 
   &__title {
+    max-width: 1198px;
     margin-top: 50px;
-    padding: 0 20px;
   }
 
   &__img {
@@ -69,7 +69,7 @@
       grid-template-columns: 1fr;
       grid-template-rows: 1fr;
     }
-    @include media(max, 450) {
+    @include media(max, 451) {
       gap: 20px;
     }
   }

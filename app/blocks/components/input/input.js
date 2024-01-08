@@ -13,9 +13,9 @@ let fileInput = document.querySelectorAll('[data-fileupload]');
   formInputs.forEach((input) => {
     input.addEventListener('blur', (e) => {
       let label = input.previousElementSibling
-      if(!input.value.length > 0) {
+      if(input.value.length <= 0) {
         label.classList.remove('focus')
-        input.classList.add('fill')
+        input.classList.remove('fill')
       }
     })
   })
@@ -24,15 +24,16 @@ formTextareas.forEach((textarea) => {
   textarea.addEventListener('focus', (e) => {
     let label = textarea.previousElementSibling
     label.classList.add('focus')
+    textarea.classList.add('fill')
   })
 })
 
 formTextareas.forEach((textarea) => {
   textarea.addEventListener('blur', (e) => {
     let label = textarea.previousElementSibling
-    if(!textarea.value.length > 0) {
+    if(textarea.value.length <= 0) {
       label.classList.remove('focus')
-      textarea.classList.add('fill')
+      textarea.classList.remove('fill')
     }
   })
 })

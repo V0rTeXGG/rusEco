@@ -2,7 +2,7 @@
   display: flex;
   flex-wrap: wrap;
   margin-bottom: 80px;
-  @include media(max, 450) {
+  @include media(max, 451) {
     margin-bottom: 30px;
   }
   &__item {

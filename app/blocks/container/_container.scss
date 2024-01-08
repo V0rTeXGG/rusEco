@@ -7,7 +7,13 @@
 
   &--pb-100 {
     padding-bottom: 100px;
-    @include media(max, 450) {
+    @include media(max, 451) {
+      padding-bottom: 40px;
+    }
+  }
+  &--pb-80 {
+    padding-bottom: 80px;
+    @include media(max, 451) {
       padding-bottom: 40px;
     }
   }

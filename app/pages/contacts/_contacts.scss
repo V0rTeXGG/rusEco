@@ -7,7 +7,7 @@
     max-width: 1318px;
     width: 100%;
     margin-bottom: 100px;
-    @include media(max, 1401) {
+    @include media(max, 1400) {
       max-width: 1151px;
     }
     @include media(max, 851) {
@@ -19,7 +19,7 @@
       &:first-of-type {
         max-width: 583px;
       }
-      @include media(max, 1401) {
+      @include media(max, 1400) {
         max-width: 508px;
         &:first-of-type {
           max-width: 506px;

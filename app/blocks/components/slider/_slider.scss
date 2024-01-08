@@ -6,7 +6,7 @@
     @include media(max, 1200) {
       height: 123px;
     }
-    @include media(max, 360) {
+    @include media(max, 361) {
       height: 69px;
       margin: 0 0 15px 0;
     }
@@ -14,7 +14,7 @@
 
   &__name {
     margin-left: 10px;
-    @include media(max, 360) {
+    @include media(max, 361) {
       margin-left: 5px;
       font-size: 12px;
       letter-spacing: 0.12px;
@@ -25,7 +25,7 @@
 .swiper {
   &-wrapper {
     margin-bottom: 100px;
-    @include media(max, 550) {
+    @include media(max, 551) {
       margin-bottom: 40px;
     }
   }

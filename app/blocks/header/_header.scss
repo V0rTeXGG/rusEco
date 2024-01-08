@@ -12,7 +12,7 @@
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    @include media(max, 1401) {
+    @include media(max, 1400) {
       gap: 15px;
     }
     @include media(max, 991) {
@@ -73,14 +73,17 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    height: 25px;
     max-width: 953px;
     width: 100%;
-    margin-left: auto;
-    margin-right: 70px;
-    @include media(max, 1401) {
+    //margin-left: auto;
+    //margin-right: 70px;
+    //margin-top: 4px;
+    margin: 4px 70px 0 auto;
+    @include media(max, 1400) {
       margin-right: 60px;
     }
-    @include media(max, 1024) {
+    @include media(max, 1025) {
       max-width: 100%;
     }
     @include media(max, 991) {
@@ -173,7 +176,7 @@
     @include media(max, 1200) {
       width: 600px;
     }
-    @include media(max, 1024) {
+    @include media(max, 1025) {
       width: 530px;
     }
 

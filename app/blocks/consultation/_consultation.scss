@@ -12,7 +12,7 @@
     text-align: center;
     font-size: 41px;
     line-height: 120%;
-    @include media(max, 450) {
+    @include media(max, 451) {
       font-size: 23px;
       line-height: 120%;
     }
@@ -22,7 +22,7 @@
     font-size: 61px;
     line-height: 110%;
     transition: all $transition;
-    @include media(max, 550) {
+    @include media(max, 551) {
       font-size: 34px;
       line-height: 100%;
     }
